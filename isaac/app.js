@@ -1,5 +1,5 @@
-const VERSION = 4;
-const STORE_KEY = "isaacChecklist.v4";
+const VERSION = 6;
+const STORE_KEY = "isaacChecklist.v2";
 const $ = (s) => document.querySelector(s);
 
 let DATA = [];
@@ -344,12 +344,7 @@ async function init(){
       renderError(
         "Nothing rendered. This usually means GitHub is still serving cached files or data.json isn't alongside index.html.",
         null,
-        "Check your repo folder:
-- isaac/index.html
-- isaac/app.js
-- isaac/styles.css
-- isaac/data.json
-Then hard-refresh / clear cache."
+        "Check your repo folder:\n- isaac/index.html\n- isaac/app.js\n- isaac/styles.css\n- isaac/data.json\nThen hard-refresh / clear cache."
       );
 }
   }catch(err){
