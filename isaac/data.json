@@ -1,0 +1,2667 @@
+{
+  "items": [
+    {
+      "id": "char_apollyon",
+      "name": "Apollyon",
+      "type": "character",
+      "icon": "assets/char_Apollyon.png",
+      "instructions": "Defeat Mega Satan once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_azazel",
+      "name": "Azazel",
+      "type": "character",
+      "icon": "assets/char_Azazel.png",
+      "instructions": "Take 3 Devil Deals in one run.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_bethany",
+      "name": "Bethany",
+      "type": "character",
+      "icon": "assets/char_Bethany.png",
+      "instructions": "Beat Mom’s Heart/It Lives! as Lazarus on Hard.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_blue_baby",
+      "name": "Blue Baby",
+      "type": "character",
+      "icon": "assets/char_Blue_Baby.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_cain",
+      "name": "Cain",
+      "type": "character",
+      "icon": "assets/char_Cain.png",
+      "instructions": "Hold 55+ pennies at once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_dark_esau",
+      "name": "Dark Esau",
+      "type": "character",
+      "icon": "assets/char_Dark_Esau.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_dead_tainted_lazarus",
+      "name": "Dead Tainted Lazarus",
+      "type": "character",
+      "icon": "assets/char_Dead_Tainted_Lazarus.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_eden",
+      "name": "Eden",
+      "type": "character",
+      "icon": "assets/char_Eden.png",
+      "instructions": "Defeat Mom’s Heart once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_eve",
+      "name": "Eve",
+      "type": "character",
+      "icon": "assets/char_Eve.png",
+      "instructions": "Go 2 floors in a row without picking up hearts.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_isaac",
+      "name": "Isaac",
+      "type": "character",
+      "icon": "assets/char_Isaac.png",
+      "instructions": "Default character.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_jacob_esau",
+      "name": "Jacob & Esau",
+      "type": "character",
+      "icon": "assets/char_Jacob_Esau.png",
+      "instructions": "Defeat Mother once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_judas_shadow",
+      "name": "Judas' Shadow",
+      "type": "character",
+      "icon": "assets/char_Judas_Shadow.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_judas",
+      "name": "Judas",
+      "type": "character",
+      "icon": "assets/char_Judas.png",
+      "instructions": "Defeat Satan once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_keeper",
+      "name": "Keeper",
+      "type": "character",
+      "icon": "assets/char_Keeper.png",
+      "instructions": "Donate 1000 coins to the Greed Donation Machine.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_lazarus_risen",
+      "name": "Lazarus Risen",
+      "type": "character",
+      "icon": "assets/char_Lazarus_Risen.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_lazarus",
+      "name": "Lazarus",
+      "type": "character",
+      "icon": "assets/char_Lazarus.png",
+      "instructions": "Have 4 Soul/Black hearts at once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_lilith",
+      "name": "Lilith",
+      "type": "character",
+      "icon": "assets/char_Lilith.png",
+      "instructions": "Beat Greed Mode with Azazel.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_magdalene",
+      "name": "Magdalene",
+      "type": "character",
+      "icon": "assets/char_Magdalene.png",
+      "instructions": "Have 7+ red heart containers at once.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_samson",
+      "name": "Samson",
+      "type": "character",
+      "icon": "assets/char_Samson.png",
+      "instructions": "Go 2 floors in a row without taking damage.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_apollyon",
+      "name": "Tainted Apollyon",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Apollyon.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_azazel",
+      "name": "Tainted Azazel",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Azazel.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_bethany",
+      "name": "Tainted Bethany",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Bethany.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_blue_baby",
+      "name": "Tainted Blue Baby",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Blue_Baby.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_eden",
+      "name": "Tainted Eden",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Eden.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_eve",
+      "name": "Tainted Eve",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Eve.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_forgotten",
+      "name": "Tainted Forgotten",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Forgotten.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_isaac",
+      "name": "Tainted Isaac",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Isaac.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_jacob_pain",
+      "name": "Tainted Jacob (Pain)",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Jacob_Pain.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_judas",
+      "name": "Tainted Judas",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Judas.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_keeper",
+      "name": "Tainted Keeper",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Keeper.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_lazarus",
+      "name": "Tainted Lazarus",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Lazarus.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_lilith",
+      "name": "Tainted Lilith",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Lilith.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_lost",
+      "name": "Tainted Lost",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Lost.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_magdalene",
+      "name": "Tainted Magdalene",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Magdalene.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_samson",
+      "name": "Tainted Samson",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Samson.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_tainted_soul",
+      "name": "Tainted Soul",
+      "type": "tainted_character",
+      "icon": "assets/char_Tainted_Soul.png",
+      "instructions": "From a fresh run: reach Home (Ascent route from Depths II). Open the closet in Mom’s bedroom while playing the corresponding character, then touch the tainted version.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_the_forgotten",
+      "name": "The Forgotten",
+      "type": "character",
+      "icon": "assets/char_The_Forgotten.png",
+      "instructions": "Beat Boss <1 min on F1 → bomb start room → get shovel piece → carry Broken Shovel to Boss Rush → finish shovel in Dark Room.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_the_lost",
+      "name": "The Lost",
+      "type": "character",
+      "icon": "assets/char_The_Lost.png",
+      "instructions": "Die in a Sacrifice Room while holding Missing Poster.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "char_the_soul",
+      "name": "The Soul",
+      "type": "character",
+      "icon": "assets/char_The_Soul.png",
+      "instructions": "Unlock varies by version/mods. Use the dropdown links to verify.",
+      "links": [
+        {
+          "label": "Wiki (Characters)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Characters"
+        },
+        {
+          "label": "StrategyWiki (Characters)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
+        }
+      ]
+    },
+    {
+      "id": "boss_baby_plum",
+      "name": "Baby Plum",
+      "type": "boss",
+      "icon": "assets/boss_Baby_Plum.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_big_horn",
+      "name": "Big Horn",
+      "type": "boss",
+      "icon": "assets/boss_Big_Horn.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_blastocyst",
+      "name": "Blastocyst",
+      "type": "boss",
+      "icon": "assets/boss_Blastocyst.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_blighted_ovum",
+      "name": "Blighted Ovum",
+      "type": "boss",
+      "icon": "assets/boss_Blighted_Ovum.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_brownie",
+      "name": "Brownie",
+      "type": "boss",
+      "icon": "assets/boss_Brownie.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_bumbino",
+      "name": "Bumbino",
+      "type": "boss",
+      "icon": "assets/boss_Bumbino.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_c_h_a_d_cute_huge_and_deadly",
+      "name": "C.H.A.D. (Cute, Huge, and Deadly)",
+      "type": "boss",
+      "icon": "assets/boss_C.H.A.D._Cute_Huge_and_Deadly.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_carrion_queen",
+      "name": "Carrion Queen",
+      "type": "boss",
+      "icon": "assets/boss_Carrion_Queen.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_chimera",
+      "name": "Chimera",
+      "type": "boss",
+      "icon": "assets/boss_Chimera.png",
+      "instructions": "From a fresh run: reach Chapter 4.5 (Corpse route bosses). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4.5 (Corpse route bosses)"
+      ]
+    },
+    {
+      "id": "boss_chub",
+      "name": "Chub",
+      "type": "boss",
+      "icon": "assets/boss_Chub.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_clog",
+      "name": "Clog",
+      "type": "boss",
+      "icon": "assets/boss_Clog.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_clutch",
+      "name": "Clutch",
+      "type": "boss",
+      "icon": "assets/boss_Clutch.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_colostomia",
+      "name": "Colostomia",
+      "type": "boss",
+      "icon": "assets/boss_Colostomia.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_conquest",
+      "name": "Conquest",
+      "type": "boss",
+      "icon": "assets/boss_Conquest.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_daddy_long_legs",
+      "name": "Daddy Long Legs",
+      "type": "boss",
+      "icon": "assets/boss_Daddy_Long_Legs.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_dangle",
+      "name": "Dangle",
+      "type": "boss",
+      "icon": "assets/boss_Dangle.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_dark_one",
+      "name": "Dark One",
+      "type": "boss",
+      "icon": "assets/boss_Dark_One.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_death",
+      "name": "Death",
+      "type": "boss",
+      "icon": "assets/boss_Death.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_dingle",
+      "name": "Dingle",
+      "type": "boss",
+      "icon": "assets/boss_Dingle.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_famine",
+      "name": "Famine",
+      "type": "boss",
+      "icon": "assets/boss_Famine.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_fistula",
+      "name": "Fistula",
+      "type": "boss",
+      "icon": "assets/boss_Fistula.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_gemini",
+      "name": "Gemini",
+      "type": "boss",
+      "icon": "assets/boss_Gemini.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_gish",
+      "name": "Gish",
+      "type": "boss",
+      "icon": "assets/boss_Gish.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_great_gideon",
+      "name": "Great Gideon",
+      "type": "boss",
+      "icon": "assets/boss_Great_Gideon.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_gurdy_jr",
+      "name": "Gurdy Jr.",
+      "type": "boss",
+      "icon": "assets/boss_Gurdy_Jr..png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_gurdy",
+      "name": "Gurdy",
+      "type": "boss",
+      "icon": "assets/boss_Gurdy.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_gurglings",
+      "name": "Gurglings",
+      "type": "boss",
+      "icon": "assets/boss_Gurglings.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_hornfel",
+      "name": "Hornfel",
+      "type": "boss",
+      "icon": "assets/boss_Hornfel.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_larry_jr",
+      "name": "Larry Jr.",
+      "type": "boss",
+      "icon": "assets/boss_Larry_Jr..png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_lil_blub",
+      "name": "Lil Blub",
+      "type": "boss",
+      "icon": "assets/boss_Lil_Blub.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_little_horn",
+      "name": "Little Horn",
+      "type": "boss",
+      "icon": "assets/boss_Little_Horn.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_loki",
+      "name": "Loki",
+      "type": "boss",
+      "icon": "assets/boss_Loki.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_lokii_split_loki",
+      "name": "Lokii (Split Loki)",
+      "type": "boss",
+      "icon": "assets/boss_Lokii_Split_Loki.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_mama_gurdy",
+      "name": "Mama Gurdy",
+      "type": "boss",
+      "icon": "assets/boss_Mama_Gurdy.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_mask_of_infamy",
+      "name": "Mask of Infamy",
+      "type": "boss",
+      "icon": "assets/boss_Mask_of_Infamy.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_mega_fatty",
+      "name": "Mega Fatty",
+      "type": "boss",
+      "icon": "assets/boss_Mega_Fatty.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_mega_maw",
+      "name": "Mega Maw",
+      "type": "boss",
+      "icon": "assets/boss_Mega_Maw.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_min_min",
+      "name": "Min-Min",
+      "type": "boss",
+      "icon": "assets/boss_Min-Min.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_monstro_ii",
+      "name": "Monstro II",
+      "type": "boss",
+      "icon": "assets/boss_Monstro_II.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_monstro",
+      "name": "Monstro",
+      "type": "boss",
+      "icon": "assets/boss_Monstro.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_mr_fred",
+      "name": "Mr. Fred",
+      "type": "boss",
+      "icon": "assets/boss_Mr._Fred.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_peep",
+      "name": "Peep",
+      "type": "boss",
+      "icon": "assets/boss_Peep.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_pestilence",
+      "name": "Pestilence",
+      "type": "boss",
+      "icon": "assets/boss_Pestilence.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_pin",
+      "name": "Pin",
+      "type": "boss",
+      "icon": "assets/boss_Pin.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_polycephalus",
+      "name": "Polycephalus",
+      "type": "boss",
+      "icon": "assets/boss_Polycephalus.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_rag_man",
+      "name": "Rag Man",
+      "type": "boss",
+      "icon": "assets/boss_Rag_Man.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_rag_mega",
+      "name": "Rag Mega",
+      "type": "boss",
+      "icon": "assets/boss_Rag_Mega.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_reap_creep",
+      "name": "Reap Creep",
+      "type": "boss",
+      "icon": "assets/boss_Reap_Creep.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_rotgut",
+      "name": "Rotgut",
+      "type": "boss",
+      "icon": "assets/boss_Rotgut.png",
+      "instructions": "From a fresh run: reach Chapter 4.5 (Corpse route bosses). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4.5 (Corpse route bosses)"
+      ]
+    },
+    {
+      "id": "boss_scolex",
+      "name": "Scolex",
+      "type": "boss",
+      "icon": "assets/boss_Scolex.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_singe",
+      "name": "Singe",
+      "type": "boss",
+      "icon": "assets/boss_Singe.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_sisters_vis",
+      "name": "Sisters Vis",
+      "type": "boss",
+      "icon": "assets/boss_Sisters_Vis.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_steven",
+      "name": "Steven",
+      "type": "boss",
+      "icon": "assets/boss_Steven.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_teratoma",
+      "name": "Teratoma",
+      "type": "boss",
+      "icon": "assets/boss_Teratoma.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_the_adversary",
+      "name": "The Adversary",
+      "type": "boss",
+      "icon": "assets/boss_The_Adversary.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_bloat",
+      "name": "The Bloat",
+      "type": "boss",
+      "icon": "assets/boss_The_Bloat.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_cage",
+      "name": "The Cage",
+      "type": "boss",
+      "icon": "assets/boss_The_Cage.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_duke_of_flies",
+      "name": "The Duke of Flies",
+      "type": "boss",
+      "icon": "assets/boss_The_Duke_of_Flies.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_the_fallen",
+      "name": "The Fallen",
+      "type": "boss",
+      "icon": "assets/boss_The_Fallen.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_forsaken",
+      "name": "The Forsaken",
+      "type": "boss",
+      "icon": "assets/boss_The_Forsaken.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_the_frail",
+      "name": "The Frail",
+      "type": "boss",
+      "icon": "assets/boss_The_Frail.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_the_gate",
+      "name": "The Gate",
+      "type": "boss",
+      "icon": "assets/boss_The_Gate.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_haunt",
+      "name": "The Haunt",
+      "type": "boss",
+      "icon": "assets/boss_The_Haunt.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_the_headless_horseman",
+      "name": "The Headless Horseman",
+      "type": "boss",
+      "icon": "assets/boss_The_Headless_Horseman.png",
+      "instructions": "From a fresh run: this is a floor boss drawn from the current floor’s boss pool. Use the links for exact chapter pools/variants.",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": []
+    },
+    {
+      "id": "boss_the_heretic",
+      "name": "The Heretic",
+      "type": "boss",
+      "icon": "assets/boss_The_Heretic.png",
+      "instructions": "From a fresh run: reach Chapter 3.5 (Mausoleum/Gehenna). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3.5 (Mausoleum/Gehenna)"
+      ]
+    },
+    {
+      "id": "boss_the_hollow",
+      "name": "The Hollow",
+      "type": "boss",
+      "icon": "assets/boss_The_Hollow.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_the_horny_boys",
+      "name": "The Horny Boys",
+      "type": "boss",
+      "icon": "assets/boss_The_Horny_Boys.png",
+      "instructions": "From a fresh run: reach Chapter 3.5 (Mausoleum/Gehenna). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3.5 (Mausoleum/Gehenna)"
+      ]
+    },
+    {
+      "id": "boss_the_husk",
+      "name": "The Husk",
+      "type": "boss",
+      "icon": "assets/boss_The_Husk.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_the_matriarch",
+      "name": "The Matriarch",
+      "type": "boss",
+      "icon": "assets/boss_The_Matriarch.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_the_pile",
+      "name": "The Pile",
+      "type": "boss",
+      "icon": "assets/boss_The_Pile.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_the_rainmaker",
+      "name": "The Rainmaker",
+      "type": "boss",
+      "icon": "assets/boss_The_Rainmaker.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_the_scourge",
+      "name": "The Scourge",
+      "type": "boss",
+      "icon": "assets/boss_The_Scourge.png",
+      "instructions": "From a fresh run: reach Chapter 4.5 (Corpse route bosses). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4.5 (Corpse route bosses)"
+      ]
+    },
+    {
+      "id": "boss_the_shell",
+      "name": "The Shell",
+      "type": "boss",
+      "icon": "assets/boss_The_Shell.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_the_siren",
+      "name": "The Siren",
+      "type": "boss",
+      "icon": "assets/boss_The_Siren.png",
+      "instructions": "From a fresh run: reach Chapter 3.5 (Mausoleum/Gehenna). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3.5 (Mausoleum/Gehenna)"
+      ]
+    },
+    {
+      "id": "boss_the_stain",
+      "name": "The Stain",
+      "type": "boss",
+      "icon": "assets/boss_The_Stain.png",
+      "instructions": "From a fresh run: reach Chapter 2. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2"
+      ]
+    },
+    {
+      "id": "boss_the_visage",
+      "name": "The Visage",
+      "type": "boss",
+      "icon": "assets/boss_The_Visage.png",
+      "instructions": "From a fresh run: reach Chapter 3.5 (Mausoleum/Gehenna). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3.5 (Mausoleum/Gehenna)"
+      ]
+    },
+    {
+      "id": "boss_the_wreched",
+      "name": "The Wreched",
+      "type": "boss",
+      "icon": "assets/boss_The_Wreched.png",
+      "instructions": "From a fresh run: this is a floor boss drawn from the current floor’s boss pool. Use the links for exact chapter pools/variants.",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": []
+    },
+    {
+      "id": "boss_triachnid",
+      "name": "Triachnid",
+      "type": "boss",
+      "icon": "assets/boss_Triachnid.png",
+      "instructions": "From a fresh run: reach Chapter 4. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 4"
+      ]
+    },
+    {
+      "id": "boss_tuff_twins",
+      "name": "Tuff Twins",
+      "type": "boss",
+      "icon": "assets/boss_Tuff_Twins.png",
+      "instructions": "From a fresh run: reach Chapter 2.5 (Mines/Ashpit). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 2.5 (Mines/Ashpit)"
+      ]
+    },
+    {
+      "id": "boss_turdlet",
+      "name": "Turdlet",
+      "type": "boss",
+      "icon": "assets/boss_Turdlet.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "boss_turdlings",
+      "name": "Turdlings",
+      "type": "boss",
+      "icon": "assets/boss_Turdlings.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_war",
+      "name": "War",
+      "type": "boss",
+      "icon": "assets/boss_War.png",
+      "instructions": "From a fresh run: reach Chapter 3. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 3"
+      ]
+    },
+    {
+      "id": "boss_widow",
+      "name": "Widow",
+      "type": "boss",
+      "icon": "assets/boss_Widow.png",
+      "instructions": "From a fresh run: reach Chapter 1. This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1"
+      ]
+    },
+    {
+      "id": "boss_wormwood",
+      "name": "Wormwood",
+      "type": "boss",
+      "icon": "assets/boss_Wormwood.png",
+      "instructions": "From a fresh run: reach Chapter 1.5 (Downpour/Dross). This boss is in that chapter’s boss pool (spawn is RNG).",
+      "links": [
+        {
+          "label": "Wiki (All Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/All_Bosses_(Bosses)"
+        },
+        {
+          "label": "StrategyWiki (Bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
+        }
+      ],
+      "spawn": [
+        "Chapter 1.5 (Downpour/Dross)"
+      ]
+    },
+    {
+      "id": "final_mom",
+      "name": "Mom",
+      "type": "final_boss",
+      "icon": "assets/final_Mom.png",
+      "instructions": "From a fresh run: reach Depths II and beat Mom (requires defeating Mom once to unlock Womb progression in general).",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_mom_s_heart",
+      "name": "Mom's Heart",
+      "type": "final_boss",
+      "icon": "assets/final_Mom_s_Heart.png",
+      "instructions": "From a fresh run: reach Womb II and beat Mom’s Heart.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_it_lives",
+      "name": "It Lives!",
+      "type": "final_boss",
+      "icon": "assets/final_It_Lives.png",
+      "instructions": "From a fresh run: after enough Mom’s Heart kills, Mom’s Heart is replaced by It Lives! on Womb II.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_satan",
+      "name": "Satan",
+      "type": "final_boss",
+      "icon": "assets/final_Satan.png",
+      "instructions": "From a fresh run: after Mom’s Heart/It Lives!, take the Devil Room trapdoor to Sheol and beat Satan.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_isaac_boss",
+      "name": "Isaac (Boss)",
+      "type": "final_boss",
+      "icon": "assets/final_Isaac_Boss.png",
+      "instructions": "From a fresh run: after Mom’s Heart/It Lives!, take the Angel Room beam to Cathedral and beat Isaac.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_the_lamb",
+      "name": "The Lamb",
+      "type": "final_boss",
+      "icon": "assets/final_The_Lamb.png",
+      "instructions": "From a fresh run: beat Satan to unlock The Dark Room; The Lamb is the boss at the end of The Dark Room.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_boss",
+      "name": "??? (Boss)",
+      "type": "final_boss",
+      "icon": "assets/final__Boss.png",
+      "instructions": "From a fresh run: beat Isaac to unlock The Chest; ??? is the boss at the end of The Chest.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_mega_satan",
+      "name": "Mega Satan",
+      "type": "final_boss",
+      "icon": "assets/final_Mega_Satan.png",
+      "instructions": "From a fresh run: obtain both Key Pieces from Uriel & Gabriel (Angel Rooms) then open the Mega Satan door in The Chest/Dark Room.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_greed",
+      "name": "Ultra Greed",
+      "type": "final_boss",
+      "icon": "assets/final_Ultra_Greed.png",
+      "instructions": "From a fresh run: play Greed Mode and reach the final floor to fight Ultra Greed.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_greedier",
+      "name": "Ultra Greedier",
+      "type": "final_boss",
+      "icon": "assets/final_Ultra_Greedier.png",
+      "instructions": "From a fresh run: unlock Greedier, then finish Greedier Mode to fight Ultra Greedier.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_hush",
+      "name": "Hush",
+      "type": "final_boss",
+      "icon": "assets/final_Hush.png",
+      "instructions": "From a fresh run: beat Mom’s Heart/It Lives! within the time limit to open the Blue Womb portal; beat Hush at the end.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_delirium",
+      "name": "Delirium",
+      "type": "final_boss",
+      "icon": "assets/final_Delirium.png",
+      "instructions": "From a fresh run: reach The Void via a portal after certain bosses (commonly after Hush / Mega Satan / Chest / Dark Room) and beat Delirium.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_mother",
+      "name": "Mother",
+      "type": "final_boss",
+      "icon": "assets/final_Mother.png",
+      "instructions": "From a fresh run: complete the alternate path (Downpour → Mines → Mausoleum) and assemble the Knife to access Corpse; beat Mother.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_dogma",
+      "name": "Dogma",
+      "type": "final_boss",
+      "icon": "assets/final_Dogma.png",
+      "instructions": "From a fresh run: follow the Ascent route to Home; obtain Dad’s Note, ascend, reach Home, and beat Dogma.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_the_ultra_harbingers",
+      "name": "The Ultra Harbingers",
+      "type": "final_boss",
+      "icon": "",
+      "instructions": "From a fresh run: after Dogma, fight Ultra Famine/Pestilence/War/Death on the way to The Beast.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_the_beast",
+      "name": "The Beast",
+      "type": "final_boss",
+      "icon": "assets/final_The_Beast.png",
+      "instructions": "From a fresh run: after completing the Ascent and beating Dogma + Ultra Harbingers, beat The Beast.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        },
+        {
+          "label": "Wiki (Final Bosses)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_famine_the_beast",
+      "name": "Ultra Famine (The Beast)",
+      "type": "final_boss_variant",
+      "icon": "assets/final_Ultra_Famine_The_Beast.png",
+      "instructions": "From a fresh run: on the Beast route (post-Dogma), defeat this Ultra Harbinger during the ascent fight sequence.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_pestilence_the_beast",
+      "name": "Ultra Pestilence (The Beast)",
+      "type": "final_boss_variant",
+      "icon": "assets/final_Ultra_Pestilence_The_Beast.png",
+      "instructions": "From a fresh run: on the Beast route (post-Dogma), defeat this Ultra Harbinger during the ascent fight sequence.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_war_the_beast",
+      "name": "Ultra War (The Beast)",
+      "type": "final_boss_variant",
+      "icon": "assets/final_Ultra_War_The_Beast.png",
+      "instructions": "From a fresh run: on the Beast route (post-Dogma), defeat this Ultra Harbinger during the ascent fight sequence.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        }
+      ]
+    },
+    {
+      "id": "final_ultra_death_the_beast",
+      "name": "Ultra Death (The Beast)",
+      "type": "final_boss_variant",
+      "icon": "assets/final_Ultra_Death_The_Beast.png",
+      "instructions": "From a fresh run: on the Beast route (post-Dogma), defeat this Ultra Harbinger during the ascent fight sequence.",
+      "links": [
+        {
+          "label": "StrategyWiki (Final bosses)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
+        }
+      ]
+    }
+  ]
+}
