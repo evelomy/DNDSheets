@@ -5,7 +5,7 @@
       "name": "Apollyon",
       "type": "character",
       "icon": "assets/char_Apollyon.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Defeat Mega Satan once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -14,20 +14,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Apollyon"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_azazel",
       "name": "Azazel",
       "type": "character",
       "icon": "assets/char_Azazel.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Take 3 Devil Deals in one run.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -36,13 +31,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Azazel"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_bethany",
@@ -58,13 +48,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Bethany"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_blue_baby",
@@ -80,20 +65,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Blue+Baby"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_cain",
       "name": "Cain",
       "type": "character",
       "icon": "assets/char_Cain.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Hold 55+ pennies at once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -102,13 +82,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Cain"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_dark_esau",
@@ -124,13 +99,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Dark+Esau"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_dead_tainted_lazarus",
@@ -146,20 +116,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Dead+Tainted+Lazarus"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_eden",
       "name": "Eden",
       "type": "character",
       "icon": "assets/char_Eden.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Defeat Mom’s Heart once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -168,13 +133,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Eden"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_eve",
@@ -190,20 +150,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Eve"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_isaac",
       "name": "Isaac",
       "type": "character",
       "icon": "assets/char_Isaac.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Default character.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -212,20 +167,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Isaac"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_jacob_esau",
       "name": "Jacob & Esau",
       "type": "character",
       "icon": "assets/char_Jacob_Esau.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Defeat Mother once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -234,13 +184,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Jacob+&+Esau"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_judas_shadow",
@@ -256,20 +201,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Judas'+Shadow"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_judas",
       "name": "Judas",
       "type": "character",
       "icon": "assets/char_Judas.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Defeat Satan once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -278,13 +218,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Judas"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_keeper",
@@ -300,13 +235,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Keeper"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_lazarus_risen",
@@ -322,20 +252,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Lazarus+Risen"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_lazarus",
       "name": "Lazarus",
       "type": "character",
       "icon": "assets/char_Lazarus.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Have 4 Soul/Black hearts at once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -344,20 +269,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Lazarus"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_lilith",
       "name": "Lilith",
       "type": "character",
       "icon": "assets/char_Lilith.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Beat Greed Mode with Azazel.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -366,20 +286,15 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Lilith"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_magdalene",
       "name": "Magdalene",
       "type": "character",
       "icon": "assets/char_Magdalene.png",
-      "instructions": "## What this is\n- A playable character.\n\n## How unlocking works\n- Unlock conditions are per save file.\n- Once unlocked, you can pick this character at the start menu.\n\n## What to do next\n- Pick the character and complete runs to mark off bosses/endings.",
+      "instructions": "Have 7+ red heart containers at once.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -388,13 +303,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Magdalene"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_samson",
@@ -410,13 +320,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Samson"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_apollyon",
@@ -432,13 +337,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Apollyon"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_azazel",
@@ -454,13 +354,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Azazel"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_bethany",
@@ -476,13 +371,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Bethany"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_blue_baby",
@@ -498,13 +388,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Blue+Baby"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_eden",
@@ -520,13 +405,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Eden"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_eve",
@@ -542,13 +422,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Eve"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_forgotten",
@@ -564,13 +439,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Forgotten"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_isaac",
@@ -586,13 +456,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Isaac"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_jacob_pain",
@@ -608,13 +473,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Jacob+(Pain)"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_judas",
@@ -630,13 +490,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Judas"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_keeper",
@@ -652,13 +507,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Keeper"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_lazarus",
@@ -674,13 +524,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Lazarus"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_lilith",
@@ -696,13 +541,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Lilith"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_lost",
@@ -718,13 +558,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Lost"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_magdalene",
@@ -740,13 +575,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Magdalene"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_samson",
@@ -762,13 +592,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Samson"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_tainted_soul",
@@ -784,13 +609,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tainted+Soul"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_the_forgotten",
@@ -806,13 +626,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Forgotten"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_the_lost",
@@ -828,13 +643,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Lost"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "char_the_soul",
@@ -850,13 +660,8 @@
         {
           "label": "StrategyWiki (Characters)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Characters"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Soul"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "boss_baby_plum",
@@ -872,10 +677,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Baby+Plum"
         }
       ],
       "spawn": [
@@ -896,10 +697,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Big+Horn"
         }
       ],
       "spawn": [
@@ -920,10 +717,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Blastocyst"
         }
       ],
       "spawn": [
@@ -944,10 +737,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Blighted+Ovum"
         }
       ],
       "spawn": [
@@ -968,10 +757,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Brownie"
         }
       ],
       "spawn": [
@@ -992,10 +777,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Bumbino"
         }
       ],
       "spawn": [
@@ -1016,10 +797,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=C.H.A.D.+(Cute,+Huge,+and+Deadly)"
         }
       ],
       "spawn": [
@@ -1040,10 +817,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Carrion+Queen"
         }
       ],
       "spawn": [
@@ -1064,10 +837,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Chimera"
         }
       ],
       "spawn": [
@@ -1088,10 +857,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Chub"
         }
       ],
       "spawn": [
@@ -1112,10 +877,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Clog"
         }
       ],
       "spawn": [
@@ -1136,10 +897,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Clutch"
         }
       ],
       "spawn": [
@@ -1160,10 +917,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Colostomia"
         }
       ],
       "spawn": [
@@ -1184,10 +937,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Conquest"
         }
       ],
       "spawn": [
@@ -1208,10 +957,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Daddy+Long+Legs"
         }
       ],
       "spawn": [
@@ -1232,10 +977,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Dangle"
         }
       ],
       "spawn": [
@@ -1256,10 +997,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Dark+One"
         }
       ],
       "spawn": [
@@ -1280,10 +1017,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Death"
         }
       ],
       "spawn": [
@@ -1304,10 +1037,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Dingle"
         }
       ],
       "spawn": [
@@ -1328,10 +1057,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Famine"
         }
       ],
       "spawn": [
@@ -1352,10 +1077,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Fistula"
         }
       ],
       "spawn": [
@@ -1376,10 +1097,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Gemini"
         }
       ],
       "spawn": [
@@ -1400,10 +1117,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Gish"
         }
       ],
       "spawn": [
@@ -1424,10 +1137,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Great+Gideon"
         }
       ],
       "spawn": [
@@ -1448,10 +1157,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Gurdy+Jr."
         }
       ],
       "spawn": [
@@ -1472,10 +1177,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Gurdy"
         }
       ],
       "spawn": [
@@ -1496,10 +1197,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Gurglings"
         }
       ],
       "spawn": [
@@ -1520,10 +1217,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Hornfel"
         }
       ],
       "spawn": [
@@ -1544,10 +1237,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Larry+Jr."
         }
       ],
       "spawn": [
@@ -1568,10 +1257,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Lil+Blub"
         }
       ],
       "spawn": [
@@ -1592,10 +1277,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Little+Horn"
         }
       ],
       "spawn": [
@@ -1616,10 +1297,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Loki"
         }
       ],
       "spawn": [
@@ -1640,10 +1317,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Lokii+(Split+Loki)"
         }
       ],
       "spawn": [
@@ -1664,10 +1337,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Mama+Gurdy"
         }
       ],
       "spawn": [
@@ -1688,10 +1357,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Mask+of+Infamy"
         }
       ],
       "spawn": [
@@ -1712,10 +1377,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Mega+Fatty"
         }
       ],
       "spawn": [
@@ -1736,10 +1397,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Mega+Maw"
         }
       ],
       "spawn": [
@@ -1760,10 +1417,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Min-Min"
         }
       ],
       "spawn": [
@@ -1784,10 +1437,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Monstro+II"
         }
       ],
       "spawn": [
@@ -1808,10 +1457,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Monstro"
         }
       ],
       "spawn": [
@@ -1832,10 +1477,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Mr.+Fred"
         }
       ],
       "spawn": [
@@ -1856,10 +1497,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Peep"
         }
       ],
       "spawn": [
@@ -1880,10 +1517,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Pestilence"
         }
       ],
       "spawn": [
@@ -1904,10 +1537,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Pin"
         }
       ],
       "spawn": [
@@ -1928,10 +1557,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Polycephalus"
         }
       ],
       "spawn": [
@@ -1952,10 +1577,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Rag+Man"
         }
       ],
       "spawn": [
@@ -1976,10 +1597,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Rag+Mega"
         }
       ],
       "spawn": [
@@ -2000,10 +1617,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Reap+Creep"
         }
       ],
       "spawn": [
@@ -2024,10 +1637,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Rotgut"
         }
       ],
       "spawn": [
@@ -2048,10 +1657,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Scolex"
         }
       ],
       "spawn": [
@@ -2072,10 +1677,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Singe"
         }
       ],
       "spawn": [
@@ -2096,10 +1697,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Sisters+Vis"
         }
       ],
       "spawn": [
@@ -2120,10 +1717,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Steven"
         }
       ],
       "spawn": [
@@ -2144,10 +1737,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Teratoma"
         }
       ],
       "spawn": [
@@ -2168,10 +1757,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Adversary"
         }
       ],
       "spawn": [
@@ -2192,10 +1777,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Bloat"
         }
       ],
       "spawn": [
@@ -2216,10 +1797,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Cage"
         }
       ],
       "spawn": [
@@ -2240,10 +1817,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Duke+of+Flies"
         }
       ],
       "spawn": [
@@ -2264,10 +1837,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Fallen"
         }
       ],
       "spawn": [
@@ -2288,10 +1857,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Forsaken"
         }
       ],
       "spawn": [
@@ -2312,10 +1877,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Frail"
         }
       ],
       "spawn": [
@@ -2336,10 +1897,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Gate"
         }
       ],
       "spawn": [
@@ -2360,10 +1917,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Haunt"
         }
       ],
       "spawn": [
@@ -2384,10 +1937,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Headless+Horseman"
         }
       ],
       "spawn": []
@@ -2406,10 +1955,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Heretic"
         }
       ],
       "spawn": [
@@ -2430,10 +1975,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Hollow"
         }
       ],
       "spawn": [
@@ -2454,10 +1995,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Horny+Boys"
         }
       ],
       "spawn": [
@@ -2478,10 +2015,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Husk"
         }
       ],
       "spawn": [
@@ -2502,10 +2035,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Matriarch"
         }
       ],
       "spawn": [
@@ -2526,10 +2055,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Pile"
         }
       ],
       "spawn": [
@@ -2550,10 +2075,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Rainmaker"
         }
       ],
       "spawn": [
@@ -2574,10 +2095,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Scourge"
         }
       ],
       "spawn": [
@@ -2598,10 +2115,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Shell"
         }
       ],
       "spawn": [
@@ -2622,10 +2135,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Siren"
         }
       ],
       "spawn": [
@@ -2646,10 +2155,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Stain"
         }
       ],
       "spawn": [
@@ -2670,10 +2175,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Visage"
         }
       ],
       "spawn": [
@@ -2694,10 +2195,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=The+Wreched"
         }
       ],
       "spawn": []
@@ -2716,10 +2213,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Triachnid"
         }
       ],
       "spawn": [
@@ -2740,10 +2233,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Tuff+Twins"
         }
       ],
       "spawn": [
@@ -2764,10 +2253,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Turdlet"
         }
       ],
       "spawn": [
@@ -2788,10 +2273,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Turdlings"
         }
       ],
       "spawn": [
@@ -2812,10 +2293,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=War"
         }
       ],
       "spawn": [
@@ -2836,10 +2313,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Widow"
         }
       ],
       "spawn": [
@@ -2860,10 +2333,6 @@
         {
           "label": "StrategyWiki (Bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Bosses"
-        },
-        {
-          "label": "Wiki search",
-          "url": "https://bindingofisaacrebirth.fandom.com/wiki/Special:Search?query=Wormwood"
         }
       ],
       "spawn": [
@@ -2885,8 +2354,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_mom_s_heart",
@@ -2903,8 +2371,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_it_lives",
@@ -2921,8 +2388,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_satan",
@@ -2939,8 +2405,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_isaac_boss",
@@ -2957,8 +2422,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_the_lamb",
@@ -2975,8 +2439,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_boss",
@@ -2993,8 +2456,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_mega_satan",
@@ -3011,8 +2473,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_greed",
@@ -3029,8 +2490,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_greedier",
@@ -3047,8 +2507,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_hush",
@@ -3065,8 +2524,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_delirium",
@@ -3083,15 +2541,14 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_mother",
       "name": "Mother",
       "type": "final_boss",
       "icon": "assets/final_Mother.png",
-      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Unlock requirements (save file)\n- Unlock the alt path (“A Secret Exit”) by defeating **Hush** 3 times. \n\n## Route requirements (in-run)\n- Access [[Downpour/Dross]] (locked door after boss, costs 1 key). \n- Obtain [[Knife Piece 1]] (white flame → mirror world → Treasure Room). \n- Access [[Mines/Ashpit]] (alt-path entrance on the relevant boss room). \n- Obtain [[Knife Piece 2]] (triggers chase with Mother’s Shadow). \n- Access [[Mausoleum/Gehenna]] (costs 2 full heart containers). \n- Enter [[Corpse]] and beat **Mother**.\n\n## Step-by-step from a fresh run\n- Start a run and clear Chapter 1.\n- Take the alt-path door into [[Downpour/Dross]].\n- Reach Downpour II / Dross II and complete [[Knife Piece 1]].\n- Continue the alt path into [[Mines/Ashpit]].\n- Reach Mines II / Ashpit II and complete [[Knife Piece 2]].\n- After Mines II, pay the health cost to enter [[Mausoleum/Gehenna]]. \n- Continue until you can enter [[Corpse]].\n- Beat **Mother**.\n\n## Common gotchas\n- If you skip a Knife Piece, the route collapses and you can’t access Corpse.\n- This route is longer and harsher than the normal path. That’s intended. 🙃",
+      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Requirements\n- Access the alt path floors: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]] → [[Corpse]].\n- Assemble the Knife: [[Knife Piece 1]] + [[Knife Piece 2]].\n\n## Step-by-step from a fresh run\n- After Chapter 1, take the door to [[Downpour/Dross]].\n- Get [[Knife Piece 1]].\n- Continue alt path into [[Mines/Ashpit]].\n- Get [[Knife Piece 2]].\n- Use the completed Knife to enter [[Mausoleum/Gehenna]].\n- Finish Mausoleum and use the Knife door to enter [[Corpse]].\n- Beat **Mother** at the end.\n\n## Common gotchas\n- This route is time-consuming. Don’t panic if it feels “different”, it is.",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -3101,8 +2558,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_dogma",
@@ -3119,8 +2575,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_the_ultra_harbingers",
@@ -3137,8 +2592,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_the_beast",
@@ -3155,8 +2609,7 @@
           "label": "Wiki (Final Bosses)",
           "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Final_Bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_famine_the_beast",
@@ -3169,8 +2622,7 @@
           "label": "StrategyWiki (Final bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_pestilence_the_beast",
@@ -3183,8 +2635,7 @@
           "label": "StrategyWiki (Final bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_war_the_beast",
@@ -3197,8 +2648,7 @@
           "label": "StrategyWiki (Final bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "final_ultra_death_the_beast",
@@ -3211,62 +2661,55 @@
           "label": "StrategyWiki (Final bosses)",
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
         }
-      ],
-      "spawn": []
+      ]
     },
     {
       "id": "route_downpour",
       "name": "Downpour/Dross",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 1.5 floors on the Repentance “alt path”.\n\n## Unlock requirement (once per save file)\n- Defeat **Hush** 3 times to unlock **A Secret Exit**. \n\n## How to enter (from a fresh run)\n- Finish **Basement I/II** (or Cellar/Burning Basement).\n- After the boss, a **locked door** appears.\n- Spend **1 key** to open it.\n- Enter **Downpour I/II** (or Dross I/II). \n\n## Why you care\n- Needed for [[Knife Piece 1]] on Downpour II / Dross II.\n- Required route toward [[Mother]].",
-      "links": [],
-      "spawn": []
+      "instructions": "## What it is\n- Alternate Chapter 1.5 path.\n\n## How to enter\n- Beat the Chapter 1 boss.\n- A door appears that leads to [[Downpour/Dross]] instead of the normal next floor.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 1).",
+      "links": []
     },
     {
       "id": "route_mines",
       "name": "Mines/Ashpit",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 2.5 floors on the Repentance alt path.\n\n## Unlock requirement\n- Same as alt path in general: defeat **Hush** 3 times (A Secret Exit). \n\n## How to enter (from a fresh run)\n- After **Basement II** / the early chapters, later boss rooms can spawn the alt-path entrance.\n- The entrance to **Mines/Ashpit** is a **blocked door** that typically requires **2 bombs** to open (it appears on the appropriate chapter boss rooms once the alt path is unlocked). \n\n## Why you care\n- [[Knife Piece 2]] is obtained on Mines II / Ashpit II.\n- Required route toward [[Mother]].",
-      "links": [],
-      "spawn": []
+      "instructions": "## What it is\n- Alternate Chapter 2.5 path.\n\n## How to enter\n- After [[Downpour/Dross]], take the alt-path door at the end of the chapter.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 2).",
+      "links": []
     },
     {
       "id": "route_mausoleum",
       "name": "Mausoleum/Gehenna",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 3.5 floors on the alt path.\n\n## How to enter (from a fresh run)\n- Beat **Mines II / Ashpit II**.\n- A door to **Mausoleum / Gehenna** appears.\n- It costs **2 full heart containers** to open (it “pays” with health). \n\n## Why you care\n- This is the gateway chapter to reach [[Corpse]] and fight [[Mother]].",
-      "links": [],
-      "spawn": []
+      "instructions": "## What it is\n- Alternate Chapter 3.5 path.\n\n## How to enter\n- After [[Mines/Ashpit]], use the knife to pass the special door into Mausoleum.\n\n## Why you care\n- Required to reach [[Corpse]].",
+      "links": []
     },
     {
       "id": "route_knife1",
       "name": "Knife Piece 1",
       "type": "route_step",
       "icon": "",
-      "instructions": "## Goal\n- Obtain **Knife Piece 1** on **Downpour II / Dross II**.\n\n## Requirements\n- Alt path unlocked (Defeat **Hush** 3 times). \n- Reach **Downpour II / Dross II**.\n\n## Step-by-step (assume you know nothing)\n- Enter [[Downpour/Dross]] and reach **Downpour II / Dross II**.\n- Find a room with a **white flame**.\n- Touch the flame to become a “Lost-like” form (fragile: no normal heart health). \n- Find the **mirror** room and enter it while in that form to access the **Mirrored World**. \n- In the Mirrored World, go to the **Treasure Room** and pick up **Knife Piece 1**. \n- Leave the Mirrored World and continue the run.\n\n## Gotchas\n- On XL floors, only one mirrored Treasure Room contains the piece. \n- If the mirror breaks (some bombs/items), you can lose access.",
-      "links": [],
-      "spawn": []
+      "instructions": "## How to get it\n- Go to [[Downpour/Dross]].\n- Find a white flame room and touch the flame.\n- While in the special form, enter the mirror and complete the objective to grab **Knife Piece 1**.\n\n## Why you care\n- Combines with [[Knife Piece 2]] to form the Knife for the [[Mother]] route.",
+      "links": []
     },
     {
       "id": "route_knife2",
       "name": "Knife Piece 2",
       "type": "route_step",
       "icon": "",
-      "instructions": "## Goal\n- Obtain **Knife Piece 2** on **Mines II / Ashpit II**.\n\n## Requirements\n- Alt path unlocked (Defeat **Hush** 3 times). \n- Reach [[Mines/Ashpit]] and get to **Mines II / Ashpit II**.\n\n## Step-by-step (assume you know nothing)\n- Progress through [[Mines/Ashpit]] until you are on **Mines II / Ashpit II**.\n- Find the sequence that leads to the **Knife Piece 2** pickup.\n- When you pick it up, it triggers a **chase sequence** with **Mother’s Shadow**.\n- Survive the chase and reach the end of the corridor to secure **Knife Piece 2**. \n\n## Gotchas\n- The chase is dangerous. Treat it like a “don’t stop moving, don’t corner yourself” segment.\n- Once you have both pieces, the Knife is complete and is used for the [[Mother]] route.",
-      "links": [],
-      "spawn": []
+      "instructions": "## How to get it\n- Go to [[Mines/Ashpit]].\n- Hit the button to start the chase sequence.\n- Survive and reach the end to pick up **Knife Piece 2**.\n\n## Why you care\n- Combines with [[Knife Piece 1]] to form the Knife.",
+      "links": []
     },
     {
       "id": "route_corpse",
       "name": "Corpse",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- The final area of the alt path leading to **Mother**.\n\n## How to reach (from a fresh run)\n- Unlock and take the alt path: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]].\n- Obtain both: [[Knife Piece 1]] + [[Knife Piece 2]] (Knife completed). \n- Use the Knife on the special door at the end of the alt path to enter **Corpse**.\n- Beat [[Mother]] at the end of Corpse.\n\n## Why you care\n- This is the only normal route to the **Mother** final boss.",
-      "links": [],
-      "spawn": []
+      "instructions": "## What it is\n- Final area of the alt path.\n\n## How to reach\n- Complete [[Mausoleum/Gehenna]].\n- Use the Knife on the special door to enter [[Corpse]].\n\n## End goal\n- Beat [[Mother]].",
+      "links": []
     },
     {
       "id": "route_ascent",
@@ -3274,8 +2717,7 @@
       "type": "route_step",
       "icon": "",
       "instructions": "## How to start\n- Reach Depths II.\n- Defeat Mom.\n- Pick up **Dad's Note**.\n\n## What happens\n- The run reverses and you ascend back up through earlier floors.\n\n## End goal\n- Reach [[Home]] for [[Dogma]] and [[The Beast]].",
-      "links": [],
-      "spawn": []
+      "links": []
     },
     {
       "id": "route_home",
@@ -3283,26 +2725,7 @@
       "type": "route_step",
       "icon": "",
       "instructions": "## How to reach\n- Start [[Ascent & Dad's Note]].\n- Keep climbing until you reach **Home**.\n\n## What to do at Home\n- Open Mom’s bedroom.\n- (Optional) Open the closet as a character to unlock its tainted version.\n\n## End goal\n- Trigger [[Dogma]] and the Beast route.",
-      "links": [],
-      "spawn": []
-    },
-    {
-      "id": "guide_bossrooms",
-      "name": "Boss Rooms & Chapters",
-      "type": "guide",
-      "icon": "",
-      "instructions": "## What is a “chapter” / floor?\n- A run is a chain of floors (Basement → … → end).\n- Each floor has rooms, loot, and ends with a boss.\n\n## What is a boss room?\n- It’s the big room you enter after exploring a floor.\n- When you beat the boss, you unlock the exit to the next floor.\n\n## What is a boss pool?\n- Isaac randomly chooses bosses from a “pool” for that chapter.\n- That’s why you don’t always fight the same boss.",
-      "links": [],
-      "spawn": []
-    },
-    {
-      "id": "guide_progress",
-      "name": "How Progress Works",
-      "type": "guide",
-      "icon": "",
-      "instructions": "## Beating bosses\n- Most bosses just guard the exit to the next floor.\n- Beat them and you move on.\n\n## Unlocks\n- Some specific bosses or routes unlock new things (characters, floors, endings).\n- When an entry here says “Unlock relevance: none”, it means beating it doesn’t unlock anything by itself.",
-      "links": [],
-      "spawn": []
+      "links": []
     }
   ]
 }

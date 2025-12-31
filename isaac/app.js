@@ -1,165 +1,160 @@
-const VERSION = 6;
-const STORE_KEY = "isaacChecklist.v2";
+const STORE_KEY = "isaacChecklist.v1";
+
 const $ = (s) => document.querySelector(s);
+const el = (tag, cls) => { const n=document.createElement(tag); if(cls) n.className=cls; return n; };
 
 let DATA = [];
-let state = {};
-let filter = "";
-let nameToId = {};
+let STATE = {};
+let NAME_TO_ID = {}; // id -> boolean
+let FILTER = "";
 
 function loadState(){
-  try { state = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); }
-  catch { state = {}; }
+  try{ STATE = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); }
+  catch{ STATE = {}; }
 }
 function saveState(){
-  localStorage.setItem(STORE_KEY, JSON.stringify(state));
+  localStorage.setItem(STORE_KEY, JSON.stringify(STATE));
 }
 function setTick(id, val){
-  state[id] = !!val;
+  STATE[id] = !!val;
   saveState();
-  document.querySelectorAll(`input[type="checkbox"][data-id="${id}"]`).forEach(cb => cb.checked = !!val);
-  if($("#picker").value === id) $("#pickTick").checked = !!val;
+  // Sync all checkboxes with same data-id
+  document.querySelectorAll(`input[type="checkbox"][data-id="${cssEscape(id)}"]`).forEach(cb => cb.checked = !!val);
+  // Sync picker tick
+  const pickId = $("#picker").value;
+  if(pickId === id) $("#pickTick").checked = !!val;
   renderStats();
 }
-function getTick(id){ return !!state[id]; }
+function getTick(id){ return !!STATE[id]; }
 
-function create(tag, cls){
-  const el = document.createElement(tag);
-  if(cls) el.className = cls;
-  return el;
-}
-function safeText(s){ return (s ?? "").toString(); }
-
-function renderError(msg, err, extra){
-  const box = $("#errorBox");
-  box.style.display = "block";
-  box.innerHTML = "";
-  const h = create("div","errorTitle");
-  h.textContent = msg;
-  const pre = create("pre","errorPre");
-  pre.textContent = [
-    err ? (err.stack || err.message || String(err)) : "",
-    extra ? "\n" + extra : ""
-  ].join("");
-  box.appendChild(h);
-  box.appendChild(pre);
+function cssEscape(str){
+  // tiny escape for querySelector
+  return str.replace(/"/g, '\\"');
 }
 
-function matches(it){
-  if(!filter) return true;
-  const q = filter.toLowerCase().trim();
-  return (it.name + " " + it.type).toLowerCase().includes(q);
-}
-function filtered(list){ return list.filter(matches); }
-
-function renderPicker(){
-  const pick = $("#picker");
-  pick.innerHTML = "";
-  const opt0 = create("option");
-  opt0.value = "";
-  opt0.textContent = "Select…";
-  pick.appendChild(opt0);
-
-  filtered(DATA).forEach(it => {
-    const o = create("option");
-    o.value = it.id;
-    o.textContent = `${it.name} (${it.type.replaceAll("_"," ")})`;
-    pick.appendChild(o);
-  });
+function filtered(items){
+  if(!FILTER) return items;
+  const q = FILTER.toLowerCase().trim();
+  return items.filter(it => (it.name + " " + it.type).toLowerCase().includes(q));
 }
 
-function renderItemRow(it){
-  const row = create("div","item");
-
-  const icon = create("img","item__icon");
+function buildItemRow(it){
+  const row = el("div","item");
+  const icon = el("img","item__icon");
   icon.alt = "";
   icon.src = it.icon || "";
   row.appendChild(icon);
 
-  const body = create("div","item__body");
-
-  const name = create("div","item__name");
+  const body = el("div");
+  const name = el("div","item__name");
   name.textContent = it.name;
-  name.onclick = () => { $("#picker").value = it.id; onPickChange(); };
+  const type = el("div","item__type");
+  type.textContent = it.type.replaceAll("_"," ");
   body.appendChild(name);
+  body.appendChild(type);
 
-  const meta = create("div","item__type");
-  const spawn = (it.spawn && it.spawn.length) ? ` · Appears in: ${it.spawn.join(" • ")}` : "";
-  meta.textContent = it.type.replaceAll("_"," ") + spawn;
-  body.appendChild(meta);
-
-  const tickLine = create("label","tickline");
-  const cb = create("input");
-  cb.type = "checkbox";
-  cb.dataset.id = it.id;
+  const tickLine = el("label","tickline");
+  const cb = el("input");
+  cb.type="checkbox";
   cb.checked = getTick(it.id);
-  cb.onchange = () => setTick(it.id, cb.checked);
-  const span = create("span");
+  cb.dataset.id = it.id;
+  cb.addEventListener("change", () => setTick(it.id, cb.checked));
+  const span = el("span");
   span.textContent = "Done";
   tickLine.appendChild(cb);
   tickLine.appendChild(span);
+
   body.appendChild(tickLine);
+
+  // Clicking name selects in dropdown
+  name.style.cursor="pointer";
+  name.addEventListener("click", () => {
+    $("#picker").value = it.id;
+    onPickChange();
+  });
 
   row.appendChild(body);
   return row;
 }
 
 function renderLists(){
-  const chars = filtered(DATA.filter(x => x.type === "character" || x.type === "tainted_character"));
-  const bosses = filtered(DATA.filter(x => x.type === "boss"));
-  const finals = filtered(DATA.filter(x => x.type.startsWith("final_boss")));
+  const chars = filtered(DATA.filter(d => d.type==="character" || d.type==="tainted_character"));
+  const bosses = filtered(DATA.filter(d => d.type==="boss"));
+  const finals = filtered(DATA.filter(d => d.type.startsWith("final_boss")));
 
-  const lc = $("#listCharacters"); lc.innerHTML = "";
-  chars.forEach(it => lc.appendChild(renderItemRow(it)));
-  const lb = $("#listBosses"); lb.innerHTML = "";
-  bosses.forEach(it => lb.appendChild(renderItemRow(it)));
-  const lf = $("#listFinals"); lf.innerHTML = "";
-  finals.forEach(it => lf.appendChild(renderItemRow(it)));
+  $("#listCharacters").innerHTML = "";
+  chars.forEach(it => $("#listCharacters").appendChild(buildItemRow(it)));
+  $("#listBosses").innerHTML = "";
+  bosses.forEach(it => $("#listBosses").appendChild(buildItemRow(it)));
+  $("#listFinals").innerHTML = "";
+  finals.forEach(it => $("#listFinals").appendChild(buildItemRow(it)));
 
   $("#metaChars").textContent = `${chars.length} shown`;
   $("#metaBosses").textContent = `${bosses.length} shown`;
   $("#metaFinals").textContent = `${finals.length} shown`;
 }
 
-function renderInstructions(container, text){
-  container.innerHTML = "";
-  const raw = safeText(text).trim();
-  if(!raw){
-    container.textContent = "No instructions yet for this entry.";
-    return;
-  }
-  const lines = raw.split(/\r?\n/);
-  let ul = null;
+function renderPicker(){
+  const pick = $("#picker");
+  pick.innerHTML = "";
+  const opt0 = el("option");
+  opt0.value="";
+  opt0.textContent="Select…";
+  pick.appendChild(opt0);
 
+  const items = filtered(DATA);
+  items.forEach(it => {
+    const o = el("option");
+    o.value = it.id;
+    o.textContent = `${it.name}  (${it.type.replaceAll("_"," ")})`;
+    pick.appendChild(o);
+  });
+}
+
+
+function renderInstructions(elm, text){
+  elm.innerHTML = "";
+  const raw = (text || "").trim();
+  if(!raw){ return; }
+
+  const lines = raw.split(/?
+/);
+
+  let ul = null;
   const flushUL = () => { ul = null; };
 
-  const makeLink = (label) => {
-    const id = nameToId[label.toLowerCase()];
+  const makeInternalLink = (label) => {
+    const id = NAME_TO_ID[label.toLowerCase()];
     if(!id) return null;
-    const a = create("a");
+    const a = document.createElement("a");
     a.href = "#";
     a.textContent = label;
+    a.style.color = "var(--accent)";
+    a.style.textDecoration = "none";
+    a.style.fontWeight = "800";
     a.onclick = (e) => {
       e.preventDefault();
-      $("#search").value = "";
-      filter = "";
-      renderPicker();
-      renderLists();
-      $("#picker").value = id;
+      const picker = document.querySelector("#picker");
+      picker.value = id;
       onPickChange();
+      // Scroll the matching checkbox into view if present
+      const cb = document.querySelector(`input[type="checkbox"][data-id="${id}"]`);
+      if(cb) cb.scrollIntoView({behavior:"smooth", block:"center"});
     };
     return a;
   };
 
-  const enrich = (s) => {
+  const enrichText = (s) => {
+    // Replace [[Name]] with internal links if possible
     const frag = document.createDocumentFragment();
+    let last = 0;
     const rx = /\[\[([^\]]+)\]\]/g;
-    let last = 0, m;
+    let m;
     while((m = rx.exec(s))){
       const before = s.slice(last, m.index);
       if(before) frag.appendChild(document.createTextNode(before));
       const label = m[1].trim();
-      const link = makeLink(label);
+      const link = makeInternalLink(label);
       if(link) frag.appendChild(link);
       else frag.appendChild(document.createTextNode(label));
       last = m.index + m[0].length;
@@ -169,67 +164,92 @@ function renderInstructions(container, text){
     return frag;
   };
 
-  for(const line of lines){
+  lines.forEach(line => {
     const t = line.trim();
-    if(!t){ flushUL(); continue; }
+    if(!t){
+      flushUL();
+      elm.appendChild(document.createElement("div")).style.height = "6px";
+      return;
+    }
+    // Headings
+    if(t.startsWith("### ")){
+      flushUL();
+      const h = document.createElement("h4");
+      h.textContent = t.slice(4);
+      h.style.margin = "10px 0 6px";
+      h.style.fontSize = "13.5px";
+      h.style.color = "#dfe5f3";
+      elm.appendChild(h);
+      return;
+    }
     if(t.startsWith("## ")){
       flushUL();
-      const h = create("h3");
+      const h = document.createElement("h3");
       h.textContent = t.slice(3);
-      container.appendChild(h);
-      continue;
+      h.style.margin = "10px 0 6px";
+      h.style.fontSize = "14px";
+      h.style.color = "#e9ecf2";
+      elm.appendChild(h);
+      return;
     }
+    // Bullets
     if(t.startsWith("- ")){
       if(!ul){
-        ul = create("ul");
-        container.appendChild(ul);
+        ul = document.createElement("ul");
+        ul.style.margin = "0";
+        ul.style.paddingLeft = "18px";
+        ul.style.display = "grid";
+        ul.style.gap = "6px";
+        elm.appendChild(ul);
       }
-      const li = create("li");
-      li.appendChild(enrich(t.slice(2)));
+      const li = document.createElement("li");
+      li.appendChild(enrichText(t.slice(2)));
       ul.appendChild(li);
-      continue;
+      return;
     }
+
+    // Paragraph
     flushUL();
-    const p = create("p");
-    p.appendChild(enrich(t));
-    container.appendChild(p);
-  }
+    const p = document.createElement("p");
+    p.style.margin = "0";
+    p.style.lineHeight = "1.35";
+    p.appendChild(enrichText(t));
+    elm.appendChild(p);
+  });
 }
 
 function onPickChange(){
   const id = $("#picker").value;
-  const it = DATA.find(x => x.id === id);
+  const it = DATA.find(x => x.id===id);
   if(!it){
-    $("#pickIcon").src = "";
-    $("#pickName").textContent = "";
-    $("#pickType").textContent = "";
-    $("#pickTick").checked = false;
-    $("#pickTick").disabled = true;
-    $("#pickInstr").textContent = "Pick an item to see instructions.";
-    $("#pickLinks").innerHTML = "";
+    $("#pickIcon").src="";
+    $("#pickName").textContent="";
+    $("#pickType").textContent="";
+    $("#pickInstr").textContent="Pick an item to see instructions.";
+    $("#pickLinks").innerHTML="";
+    $("#pickTick").checked=false;
+    $("#pickTick").disabled=true;
     return;
   }
-
   $("#pickIcon").src = it.icon || "";
   $("#pickName").textContent = it.name;
-  const spawn = (it.spawn && it.spawn.length) ? ` · Appears in: ${it.spawn.join(" • ")}` : "";
-  $("#pickType").textContent = it.type.replaceAll("_"," ") + spawn;
+  $("#pickType").textContent = it.type.replaceAll("_"," ");
+  const spawn = (it.spawn && it.spawn.length) ? ("Appears in: " + it.spawn.join(" • ")) : "";
+  if(spawn){ $("#pickType").textContent += "  ·  " + spawn; }
 
-  $("#pickTick").disabled = false;
+  renderInstructions($("#pickInstr"), it.instructions || "");
+  $("#pickTick").disabled=false;
   $("#pickTick").checked = getTick(it.id);
   $("#pickTick").onchange = () => setTick(it.id, $("#pickTick").checked);
 
-  renderInstructions($("#pickInstr"), it.instructions || "");
-
-  const links = $("#pickLinks");
-  links.innerHTML = "";
+  $("#pickLinks").innerHTML="";
   (it.links || []).forEach(l => {
-    const a = create("a");
+    const a = el("a");
     a.href = l.url;
-    a.target = "_blank";
-    a.rel = "noreferrer";
+    a.target="_blank";
+    a.rel="noreferrer";
     a.textContent = l.label;
-    links.appendChild(a);
+    $("#pickLinks").appendChild(a);
   });
 }
 
@@ -237,11 +257,25 @@ function renderStats(){
   const total = DATA.length;
   const done = DATA.filter(it => getTick(it.id)).length;
   const pct = total ? Math.round(done/total*100) : 0;
-  $("#stats").textContent = `Total: ${done}/${total} (${pct}%)`;
+
+  const byType = {};
+  DATA.forEach(it => {
+    byType[it.type] = byType[it.type] || {total:0, done:0};
+    byType[it.type].total++;
+    if(getTick(it.id)) byType[it.type].done++;
+  });
+
+  const lines = [];
+  lines.push(`Total: ${done}/${total} (${pct}%)`);
+  Object.entries(byType).sort().forEach(([k,v]) => {
+    lines.push(`${k.replaceAll("_"," ")}: ${v.done}/${v.total}`);
+  });
+
+  $("#stats").textContent = lines.join("\n");
 }
 
 function exportProgress(){
-  const payload = { version: 2, state };
+  const payload = { version: 1, state: STATE };
   const blob = new Blob([JSON.stringify(payload, null, 2)], {type:"application/json"});
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
@@ -250,17 +284,20 @@ function exportProgress(){
   a.click();
   URL.revokeObjectURL(url);
 }
+
 function importProgress(file){
   const reader = new FileReader();
   reader.onload = () => {
     try{
       const payload = JSON.parse(reader.result);
       if(payload && payload.state){
-        state = payload.state;
+        STATE = payload.state;
         saveState();
         renderLists();
         renderStats();
         onPickChange();
+        // Sync all checkbox DOM states
+        DATA.forEach(it => setTick(it.id, getTick(it.id)));
       } else {
         alert("That JSON doesn't look right.");
       }
@@ -271,85 +308,44 @@ function importProgress(file){
   reader.readAsText(file);
 }
 
-async function loadData(){
-  // Make failures loud, not silent.
-  const url = "./data.json";
-  const res = await fetch(url, { cache: "no-store" });
-  if(!res.ok){
-    throw new Error(`Failed to fetch ${url} (${res.status} ${res.statusText})`);
-  }
-  const txt = await res.text();
-  try{
-    const j = JSON.parse(txt);
-    return j.items || [];
-  }catch(e){
-    throw new Error("data.json is not valid JSON: " + e.message + "\n\nFirst 200 chars:\n" + txt.slice(0,200));
-  }
-}
-
 async function init(){
-  const bs = document.querySelector("#bootStatus");
-  if(bs) bs.textContent = `✅ JS loaded (v${VERSION}). Loading data…`;
+  loadState();
+  const res = await fetch("./data.json");
+  const j = await res.json();
+  DATA = j.items || [];
+  NAME_TO_ID = {};
+  DATA.forEach(it => { NAME_TO_ID[it.name.toLowerCase()] = it.id; });
 
-  $("#stats").textContent = "Loading data…";
-
-  try{
-    DATA = await loadData();
-    const bs2 = document.querySelector("#bootStatus");
-    if(bs2) bs2.textContent = `✅ Data loaded (v${VERSION}): ${DATA.length} entries.`;
-
-    if(!Array.isArray(DATA) || DATA.length === 0){
-      renderError("Loaded data.json but DATA is empty.", null, "Check that data.json has { \"items\": [...] } and items have id + name.");
-    }
-
-    nameToId = {};
-    DATA.forEach(it => { nameToId[(it.name||"").toLowerCase()] = it.id; });
-
-    loadState();
-
-    $("#search").addEventListener("input", (e) => {
-      filter = e.target.value || "";
-      renderPicker();
-      renderLists();
-    });
-    $("#picker").addEventListener("change", onPickChange);
-
-    $("#exportBtn").addEventListener("click", exportProgress);
-    $("#importBtn").addEventListener("click", () => $("#fileInput").click());
-    $("#fileInput").addEventListener("change", (e) => {
-      const file = e.target.files && e.target.files[0];
-      if(file) importProgress(file);
-      e.target.value="";
-    });
-    $("#resetBtn").addEventListener("click", () => {
-      if(confirm("Reset ALL ticks?")){
-        state = {};
-        saveState();
-        renderLists();
-        renderStats();
-        onPickChange();
-      }
-    });
-
+  // Search
+  $("#search").addEventListener("input", (e) => {
+    FILTER = e.target.value || "";
     renderPicker();
     renderLists();
-    renderStats();
-    onPickChange();
+  });
 
-    // If everything is empty, surface a hint (usually cache or missing files)
-    const emptyAll = ($("#listCharacters").children.length===0
-                   && $("#listBosses").children.length===0
-                   && $("#listFinals").children.length===0);
-    if(emptyAll){
-      renderError(
-        "Nothing rendered. This usually means GitHub is still serving cached files or data.json isn't alongside index.html.",
-        null,
-        "Check your repo folder:\n- isaac/index.html\n- isaac/app.js\n- isaac/styles.css\n- isaac/data.json\nThen hard-refresh / clear cache."
-      );
-}
-  }catch(err){
-    renderError("App failed to start. Open dev tools for details.", err);
-    console.error(err);
-  }
+  $("#picker").addEventListener("change", onPickChange);
+
+  $("#exportBtn").addEventListener("click", exportProgress);
+  $("#importBtn").addEventListener("click", () => $("#fileInput").click());
+  $("#fileInput").addEventListener("change", (e) => {
+    const file = e.target.files && e.target.files[0];
+    if(file) importProgress(file);
+    e.target.value="";
+  });
+
+  $("#resetBtn").addEventListener("click", () => {
+    if(confirm("Reset ALL ticks? This is irreversible. Like opening a cursed chest on 1 HP.")){
+      STATE = {};
+      saveState();
+      renderLists();
+      renderStats();
+      onPickChange();
+    }
+  });
+
+  renderPicker();
+  renderLists();
+  renderStats();
+  onPickChange();
 }
 init();
