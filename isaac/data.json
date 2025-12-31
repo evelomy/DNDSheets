@@ -2463,7 +2463,7 @@
       "name": "Mega Satan",
       "type": "final_boss",
       "icon": "assets/final_Mega_Satan.png",
-      "instructions": "From a fresh run: obtain both Key Pieces from Uriel & Gabriel (Angel Rooms) then open the Mega Satan door in The Chest/Dark Room.",
+      "instructions": "## Goal\n- Beat **Mega Satan** (door in **The Chest** or **The Dark Room**).\n\n## Requirements\n- You need **Key Piece 1** and **Key Piece 2**.\n- You get them by defeating **Uriel** and **Gabriel** in **Angel Rooms**.\n\n## Step-by-step (fresh run)\n### 1) Get onto the Angel route\n- Play normally and aim for Angel Rooms (see [[Angel vs Devil Deals]]).\n- You can still go to Chest/Dark Room later.\n\n### 2) Get the Key Pieces\n- When you enter Angel Rooms, you may fight:\n  - **Uriel** (drops Key Piece 1)\n  - **Gabriel** (drops Key Piece 2)\n- Collect both.\n\n### 3) Reach Chest or Dark Room\n- Beat [[Isaac (Boss)]] to reach **The Chest** or beat [[The Lamb]] route into **The Dark Room** (details depend on your unlocks).\n- In those floors, find the huge golden door with a keyhole.\n\n### 4) Open and fight\n- Use the two Key Pieces to open the door.\n- Fight Mega Satan.\n\n## Notes\n- If you never see Angel Rooms: you’re probably taking Devil Deals too often. See [[Angel vs Devil Deals]].",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2514,7 +2514,7 @@
       "name": "Hush",
       "type": "final_boss",
       "icon": "assets/final_Hush.png",
-      "instructions": "From a fresh run: beat Mom’s Heart/It Lives! within the time limit to open the Blue Womb portal; beat Hush at the end.",
+      "instructions": "## Goal\n- Beat **Hush** at the end of **Blue Womb**.\n\n## Requirements (what the game wants from you)\n- Reach **Mom’s Heart / It Lives!** fast enough to open the **Blue Womb** entrance.\n\n## Step-by-step (fresh run)\n- Play a normal run down to **Womb II**.\n- Beat **Mom’s Heart** (or **It Lives!** if you’ve progressed far enough for it to replace Mom’s Heart).\n- If you met the time requirement, a big blue trapdoor/portal opens to **Blue Womb**.\n- Go down.\n- Clear Blue Womb and fight **Hush** at the end.\n\n## What if you miss the time?\n- No Blue Womb for that run.\n- Build speed:\n  - Stop full-clearing every floor.\n  - Don’t spend 40 years deciding in shops.\n  - Take free teleports and skip dead ends.\n\n## Why you care (beyond checklist)\n- Hush is one of the main gateways to [[Delirium]] (Void portal chances).",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2531,7 +2531,7 @@
       "name": "Delirium",
       "type": "final_boss",
       "icon": "assets/final_Delirium.png",
-      "instructions": "From a fresh run: reach The Void via a portal after certain bosses (commonly after Hush / Mega Satan / Chest / Dark Room) and beat Delirium.",
+      "instructions": "## Goal\n- Beat **Delirium** in **The Void**.\n\n## What The Void is\n- A special endgame floor that can appear via a **portal** after certain big fights.\n- Delirium is the final boss of that area.\n\n## How to reach The Void (fresh run options)\n### Most common: after [[Hush]]\n- Beat [[Hush]] in Blue Womb.\n- After the fight, a portal may open to **The Void**.\n- Enter it to reach Delirium.\n\n### Other portals (also valid)\n- A portal can also appear after other late bosses (examples: [[Mega Satan]], end-of-run floors like Chest/Dark Room, etc.).\n- It’s not guaranteed. RNG loves being a jerk.\n\n## Step-by-step if you get the portal\n- Take the portal to **The Void**.\n- Clear floors until you find the Delirium boss room.\n- Beat **Delirium**.\n\n## New-player advice\n- If you want Delirium consistently, aim to reach [[Hush]] first because it’s the most repeatable route.",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2548,7 +2548,7 @@
       "name": "Mother",
       "type": "final_boss",
       "icon": "assets/final_Mother.png",
-      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Requirements\n- Access the alt path floors: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]] → [[Corpse]].\n- Assemble the Knife: [[Knife Piece 1]] + [[Knife Piece 2]].\n\n## Step-by-step from a fresh run\n- After Chapter 1, take the door to [[Downpour/Dross]].\n- Get [[Knife Piece 1]].\n- Continue alt path into [[Mines/Ashpit]].\n- Get [[Knife Piece 2]].\n- Use the completed Knife to enter [[Mausoleum/Gehenna]].\n- Finish Mausoleum and use the Knife door to enter [[Corpse]].\n- Beat **Mother** at the end.\n\n## Common gotchas\n- This route is time-consuming. Don’t panic if it feels “different”, it is.",
+      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## This is the “big picture”\n- You are taking the Repentance **Alt Path**.\n- You will collect **two Knife Pieces**.\n- You will use the completed Knife to open special doors that lead deeper into the route.\n\n## Requirements checklist\n- Access alt floors: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]] → [[Corpse]]\n- Collect:\n  - [[Knife Piece 1]]\n  - [[Knife Piece 2]]\n- Survive long enough to actually arrive at Corpse (the hardest requirement, emotionally).\n\n## Full step-by-step (fresh run)\n### 1) Get onto the alt path\n- Clear Chapter 1.\n- After the boss, take the door to [[Downpour/Dross]] (if you don’t see it, check [[Unlocking the Alt Path Floors]]).\n\n### 2) Build the Knife\n- On [[Downpour/Dross]], complete [[Knife Piece 1]].\n- Continue to [[Mines/Ashpit]] and complete [[Knife Piece 2]].\n- The Knife completes automatically.\n\n### 3) Use the Knife doors\n- Use the Knife to enter [[Mausoleum/Gehenna]].\n- Finish Mausoleum/Gehenna and use the Knife door to enter [[Corpse]].\n\n### 4) Reach and beat Mother\n- Progress through Corpse and defeat **Mother**.\n\n## Common gotchas\n- The Knife doors cost health. Plan for it (extra hearts, soul hearts, defensive items).\n- The route is longer and harder. Speed is less important than survival.\n- If you get confused mid-run, use the dropdown to jump to the relevant step: [[Downpour/Dross]], [[Knife Piece 1]], [[Knife Piece 2]], [[Mausoleum/Gehenna]], [[Corpse]].",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2599,7 +2599,7 @@
       "name": "The Beast",
       "type": "final_boss",
       "icon": "assets/final_The_Beast.png",
-      "instructions": "## Goal\n- Beat **The Beast**.\n\n## Requirements\n- Beat [[Dogma]].\n- Defeat the Ultra Harbingers (post-Dogma sequence).\n\n## Step-by-step from a fresh run\n- Start [[Ascent & Dad's Note]].\n- Reach [[Home]].\n- Beat [[Dogma]].\n- Defeat the Ultra Harbingers sequence.\n- Beat **The Beast**.",
+      "instructions": "## Goal\n- Beat **The Beast** (Repentance end route).\n\n## Requirements\n- Start [[Ascent & Dad's Note]].\n- Reach [[Home]].\n- Beat [[Dogma]].\n- Defeat the Ultra Harbingers sequence.\n\n## Step-by-step (fresh run, no assumptions)\n### 1) Reach Depths II\n- Play normally until **Depths II** (the Mom floor).\n\n### 2) Trigger the Ascent\n- Defeat **Mom**.\n- A special item appears: **Dad’s Note**.\n- Pick it up to start [[Ascent & Dad's Note]].\n\n### 3) Reach Home\n- Keep ascending floor-by-floor (you’re basically going backwards).\n- Eventually you arrive at [[Home]].\n\n### 4) Dogma → Beast\n- Proceed in Home until you trigger and defeat [[Dogma]].\n- Then you fight the Ultra Harbingers sequence.\n- Finally you fight **The Beast**.\n\n## If you’re lost mid-run\n- Use the dropdown links to jump to: [[Ascent & Dad's Note]] and [[Home]].",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2668,7 +2668,7 @@
       "name": "Downpour/Dross",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 1.5 path.\n\n## How to enter\n- Beat the Chapter 1 boss.\n- A door appears that leads to [[Downpour/Dross]] instead of the normal next floor.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 1).",
+      "instructions": "## What it is\n- An alternate version of **Basement** (Chapter 1.5). In Repentance, after you beat the Chapter 1 boss you can sometimes choose an alt-floor instead of going straight to Chapter 2.\n\n## How to enter (from a fresh run)\n- Clear Chapter 1 (Basement/Cellar/Burning Basement).\n- Beat the boss.\n- Look for the **alternate floor door** that appears after the boss fight.\n- Go through to **Downpour** (or its variant **Dross**).\n\n## What to look for here (Mother route)\n- You need this floor to get [[Knife Piece 1]].\n- You are specifically hunting for:\n  - A **white flame** room.\n  - A **mirror** in a special room that lets you enter a “mirror world”.\n\n## Tips so you don’t get baited\n- If you never see the alt door after the boss: you didn’t meet the unlock requirements yet (see [[Unlocking the Alt Path Floors]]).\n- Downpour/Dross is harder than normal Basement: more bullets, more traps, more “why do I still play this”.",
       "links": []
     },
     {
@@ -2676,7 +2676,7 @@
       "name": "Mines/Ashpit",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 2.5 path.\n\n## How to enter\n- After [[Downpour/Dross]], take the alt-path door at the end of the chapter.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 2).",
+      "instructions": "## What it is\n- An alternate version of **Caves** (Chapter 2.5). The alt floor is **Mines** (variant **Ashpit**).\n\n## How to enter\n- You generally reach this after doing [[Downpour/Dross]].\n- At the end of Downpour II/Dross II, take the alt-path door to **Mines/Ashpit** instead of going to Depths.\n\n## Why you care\n- This is where you get [[Knife Piece 2]] for [[Mother]].\n\n## What you’re hunting\n- A **yellow minecart track** room with a button (the “chase” trigger).\n- It starts a sequence where you’re being pursued. You need to survive and reach the end to grab the piece.",
       "links": []
     },
     {
@@ -2684,7 +2684,7 @@
       "name": "Mausoleum/Gehenna",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 3.5 path.\n\n## How to enter\n- After [[Mines/Ashpit]], use the knife to pass the special door into Mausoleum.\n\n## Why you care\n- Required to reach [[Corpse]].",
+      "instructions": "## What it is\n- An alternate version of **Depths** (Chapter 3.5). The alt floor is **Mausoleum** (variant **Gehenna**).\n\n## How to enter (Mother route)\n- You must have the completed Knife (assembled from [[Knife Piece 1]] + [[Knife Piece 2]]).\n- At the end of Mines II/Ashpit II you’ll see a special door. Use the Knife on it to open it.\n- You will take damage to pass. Plan HP accordingly.\n\n## Why you care\n- Mausoleum/Gehenna is the gateway to [[Corpse]] and the [[Mother]] fight.\n\n## New-player warnings\n- The “knife door” costs health. If you arrive with 1 heart and vibes, you’re going to have a bad time.\n- Enemy density and damage ramps up hard here.",
       "links": []
     },
     {
@@ -2692,7 +2692,7 @@
       "name": "Knife Piece 1",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to get it\n- Go to [[Downpour/Dross]].\n- Find a white flame room and touch the flame.\n- While in the special form, enter the mirror and complete the objective to grab **Knife Piece 1**.\n\n## Why you care\n- Combines with [[Knife Piece 2]] to form the Knife for the [[Mother]] route.",
+      "instructions": "## Goal\n- Obtain **Knife Piece 1** on [[Downpour/Dross]] for the [[Mother]] route.\n\n## Requirements\n- You must be on [[Downpour/Dross]].\n- You need to find:\n  - A **white flame** room\n  - A **mirror** room\n\n## Step-by-step (new player, no assumptions)\n- Explore the floor until you find the **white flame** (it’s a bright white fire in a room).\n- Walk into/touch the white flame.\n  - This changes you into a special “Lost-like” form (fragile, no normal hearts).\n- Now find the room with the **mirror**.\n- Walk through the mirror.\n  - You enter a mirrored version of the floor (layout is similar but flipped).\n- In the mirror world, you must reach the special objective room and pick up **Knife Piece 1**.\n- After you pick it up, you can leave (mirror back) and continue the run.\n\n## Common gotchas\n- If you touch the white flame then take a hit in the mirror-world form: you can die fast. Play it safe.\n- Don’t forget: you must touch the white flame BEFORE using the mirror.\n- If you can’t find the white flame or mirror on a given Downpour/Dross: RNG can troll you. Try again next run.",
       "links": []
     },
     {
@@ -2700,7 +2700,7 @@
       "name": "Knife Piece 2",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to get it\n- Go to [[Mines/Ashpit]].\n- Hit the button to start the chase sequence.\n- Survive and reach the end to pick up **Knife Piece 2**.\n\n## Why you care\n- Combines with [[Knife Piece 1]] to form the Knife.",
+      "instructions": "## Goal\n- Obtain **Knife Piece 2** on [[Mines/Ashpit]] for the [[Mother]] route.\n\n## Requirements\n- You must be on [[Mines/Ashpit]].\n- You need to find the **button/trigger room** (it starts a chase).\n\n## Step-by-step\n- Explore Mines/Ashpit until you find the room with the **big yellow button** (and often minecart track visuals).\n- Press the button to begin the chase sequence.\n- Survive the chase:\n  - Keep moving.\n  - Prioritize dodging over damage.\n  - Use bombs/active items defensively if needed.\n- Reach the end of the sequence and pick up **Knife Piece 2**.\n- Once you have it, it combines automatically with [[Knife Piece 1]] to form the Knife.\n\n## Common gotchas\n- Pressing the button basically commits you. Don’t start it on 1HP unless you enjoy suffering.\n- Mines/Ashpit rooms can be cramped. Clear a path, then start the chase.",
       "links": []
     },
     {
@@ -2708,7 +2708,7 @@
       "name": "Corpse",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Final area of the alt path.\n\n## How to reach\n- Complete [[Mausoleum/Gehenna]].\n- Use the Knife on the special door to enter [[Corpse]].\n\n## End goal\n- Beat [[Mother]].",
+      "instructions": "## What it is\n- The final set of alt floors on the [[Mother]] route (Chapter 4.5).\n\n## How to enter\n- Clear Mausoleum II/Gehenna II.\n- Use the Knife door at the end to enter **Corpse**.\n\n## What happens here\n- You’ll go through Corpse floors and eventually reach the **Mother** boss fight.\n- This is not “Mom”. This is Mother. She hates you personally.",
       "links": []
     },
     {
@@ -2716,7 +2716,7 @@
       "name": "Ascent & Dad's Note",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to start\n- Reach Depths II.\n- Defeat Mom.\n- Pick up **Dad's Note**.\n\n## What happens\n- The run reverses and you ascend back up through earlier floors.\n\n## End goal\n- Reach [[Home]] for [[Dogma]] and [[The Beast]].",
+      "instructions": "## What it is\n- The **Ascent** is a special “reverse run” that leads to [[Home]] and eventually [[Dogma]] / [[The Beast]].\n\n## How to start it\n- Reach **Depths II**.\n- Defeat Mom.\n- Pick up **Dad’s Note** (this is the trigger).\n\n## What happens next\n- You start going *upward* through earlier chapters in reverse.\n- Rooms are remixed and danger spikes.\n- Your goal is to keep climbing until you reach [[Home]].\n\n## Why you care\n- This is the only way to get to the Beast route endgame.",
       "links": []
     },
     {
@@ -2724,8 +2724,42 @@
       "name": "Home",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to reach\n- Start [[Ascent & Dad's Note]].\n- Keep climbing until you reach **Home**.\n\n## What to do at Home\n- Open Mom’s bedroom.\n- (Optional) Open the closet as a character to unlock its tainted version.\n\n## End goal\n- Trigger [[Dogma]] and the Beast route.",
+      "instructions": "## What it is\n- A special end-game area reached via [[Ascent & Dad's Note]].\n\n## What you do here\n- Explore.\n- Trigger the sequence that leads into the [[Dogma]] fight.\n\n## Why you care\n- Home is the gateway to [[Dogma]] and then [[The Beast]].",
       "links": []
+    },
+    {
+      "id": "guide_alt_path_unlocks",
+      "name": "Unlocking the Alt Path Floors",
+      "type": "guide",
+      "icon": "",
+      "instructions": "## What this means\n- “Alt Path” floors are the Repentance alternates:\n  - Basement → **Downpour/Dross**\n  - Caves → **Mines/Ashpit**\n  - Depths → **Mausoleum/Gehenna**\n  - Then **Corpse** (via the Knife door)\n\n## Unlock conditions (why you might not see doors)\n- If you never see the alt-door after a boss, you may not have progressed far enough in the game yet.\n- The exact unlock chain is tied to your overall progression (beating Mom’s Heart, unlocking later chapters, etc.).\n\n## Practical rule for a newer player\n- If you can reach Depths and Womb reliably, you’re basically “far enough” for most of this.\n- If you’re brand new and only reaching Mom: focus on unlocking Womb/It Lives! first.\n\n## What to do if it won’t show up\n- Keep beating Mom’s Heart / It Lives! and pushing runs deeper.\n- Once the game “opens up”, the alt doors become part of the normal toolbox.\n\n(If you want the exact unlock gates, use the links in the dropdown item list, because patch/mod combos can tweak details.)",
+      "links": [
+        {
+          "label": "Wiki (Repentance floors)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Chapters"
+        },
+        {
+          "label": "StrategyWiki (Repentance)",
+          "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance"
+        }
+      ]
+    },
+    {
+      "id": "guide_deals",
+      "name": "Angel vs Devil Deals",
+      "type": "guide",
+      "icon": "",
+      "instructions": "## The basics\n- After boss fights, you sometimes get a special room:\n  - **Devil Room** (red)\n  - **Angel Room** (white)\n\n## Why it matters\n- Some unlock routes (like [[Mega Satan]]) rely on Angel Rooms.\n\n## How to increase Angel Room chances (simple version)\n- Don’t take Devil Deals early.\n- If you enter a Devil Room and *take* an item, you usually lock yourself into Devil rooms for a while.\n- If you skip Devil deals (or use certain items), Angel rooms become more likely.\n\n## How you actually get Key Pieces (for Mega Satan)\n- In Angel Rooms you can fight angels:\n  - **Uriel** → Key Piece 1\n  - **Gabriel** → Key Piece 2\n- Collect both then open the Mega Satan door in Chest/Dark Room.",
+      "links": [
+        {
+          "label": "Wiki (Angel Room)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Angel_Room"
+        },
+        {
+          "label": "Wiki (Devil Room)",
+          "url": "https://bindingofisaacrebirth.wiki.gg/wiki/Devil_Room"
+        }
+      ]
     }
   ]
 }
