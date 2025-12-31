@@ -1,8 +1,7 @@
-import { DATA } from "./data.js";
-
 const STORE_KEY = "isaacChecklist.v2";
 const $ = (s) => document.querySelector(s);
 
+let DATA = [];
 let state = {};
 let filter = "";
 let nameToId = {};
@@ -23,39 +22,34 @@ function setTick(id, val){
 }
 function getTick(id){ return !!state[id]; }
 
-function byType(t){
-  return DATA.filter(x => x.type === t);
-}
-function matches(it){
-  if(!filter) return true;
-  const q = filter.toLowerCase().trim();
-  return (it.name + " " + it.type).toLowerCase().includes(q);
-}
-function filtered(list){
-  return list.filter(matches);
-}
-
 function create(tag, cls){
   const el = document.createElement(tag);
   if(cls) el.className = cls;
   return el;
 }
+function safeText(s){ return (s ?? "").toString(); }
 
-function safeText(s){
-  return (s ?? "").toString();
-}
-
-function renderError(msg, err){
+function renderError(msg, err, extra){
   const box = $("#errorBox");
   box.style.display = "block";
   box.innerHTML = "";
   const h = create("div","errorTitle");
   h.textContent = msg;
   const pre = create("pre","errorPre");
-  pre.textContent = err ? (err.stack || err.message || String(err)) : "";
+  pre.textContent = [
+    err ? (err.stack || err.message || String(err)) : "",
+    extra ? "\n" + extra : ""
+  ].join("");
   box.appendChild(h);
   box.appendChild(pre);
 }
+
+function matches(it){
+  if(!filter) return true;
+  const q = filter.toLowerCase().trim();
+  return (it.name + " " + it.type).toLowerCase().includes(q);
+}
+function filtered(list){ return list.filter(matches); }
 
 function renderPicker(){
   const pick = $("#picker");
@@ -133,8 +127,6 @@ function renderInstructions(container, text){
     container.textContent = "No instructions yet for this entry.";
     return;
   }
-
-  // Super simple: headings + bullets, nothing fancy.
   const lines = raw.split(/\r?\n/);
   let ul = null;
 
@@ -278,13 +270,31 @@ function importProgress(file){
   reader.readAsText(file);
 }
 
-function init(){
+async function loadData(){
+  // Make failures loud, not silent.
+  const url = "./data.json";
+  const res = await fetch(url, { cache: "no-store" });
+  if(!res.ok){
+    throw new Error(`Failed to fetch ${url} (${res.status} ${res.statusText})`);
+  }
+  const txt = await res.text();
   try{
+    const j = JSON.parse(txt);
+    return j.items || [];
+  }catch(e){
+    throw new Error("data.json is not valid JSON: " + e.message + "\n\nFirst 200 chars:\n" + txt.slice(0,200));
+  }
+}
+
+async function init(){
+  try{
+    DATA = await loadData();
     if(!Array.isArray(DATA) || DATA.length === 0){
-      renderError("DATA is empty. data.js did not load or contains no items.", null);
+      renderError("Loaded data.json but DATA is empty.", null, "Check that data.json has { \"items\": [...] } and items have id + name.");
     }
+
     nameToId = {};
-    DATA.forEach(it => { nameToId[it.name.toLowerCase()] = it.id; });
+    DATA.forEach(it => { nameToId[(it.name||"").toLowerCase()] = it.id; });
 
     loadState();
 
@@ -317,7 +327,7 @@ function init(){
     renderStats();
     onPickChange();
   }catch(err){
-    renderError("App crashed during init()", err);
+    renderError("App failed to start. Open dev tools for details.", err);
     console.error(err);
   }
 }
