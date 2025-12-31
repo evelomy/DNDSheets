@@ -128,3 +128,10 @@ select, input[type="search"]{
 .stats{margin-top:12px; padding:10px; border:1px solid var(--line); border-radius:12px; background:rgba(21,24,38,.55); color:var(--muted); font-size:12.5px; line-height:1.4}
 .note{margin:10px 0 0; font-size:12px}
 .muted{color:var(--muted)}
+
+
+/* Make certain sections span full width in the grid */
+.card.wide{ grid-column: 1 / -1; }
+
+.instructions h3,.instructions h4{margin:10px 0 6px;}
+.instructions ul{margin:0; padding-left:18px;}

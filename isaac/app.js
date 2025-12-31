@@ -4,7 +4,8 @@ const $ = (s) => document.querySelector(s);
 const el = (tag, cls) => { const n=document.createElement(tag); if(cls) n.className=cls; return n; };
 
 let DATA = [];
-let STATE = {}; // id -> boolean
+let STATE = {};
+let NAME_TO_ID = {}; // id -> boolean
 let FILTER = "";
 
 function loadState(){
@@ -110,6 +111,113 @@ function renderPicker(){
   });
 }
 
+
+function renderInstructions(elm, text){
+  elm.innerHTML = "";
+  const raw = (text || "").trim();
+  if(!raw){ return; }
+
+  const lines = raw.split(/?
+/);
+
+  let ul = null;
+  const flushUL = () => { ul = null; };
+
+  const makeInternalLink = (label) => {
+    const id = NAME_TO_ID[label.toLowerCase()];
+    if(!id) return null;
+    const a = document.createElement("a");
+    a.href = "#";
+    a.textContent = label;
+    a.style.color = "var(--accent)";
+    a.style.textDecoration = "none";
+    a.style.fontWeight = "800";
+    a.onclick = (e) => {
+      e.preventDefault();
+      const picker = document.querySelector("#picker");
+      picker.value = id;
+      onPickChange();
+      // Scroll the matching checkbox into view if present
+      const cb = document.querySelector(`input[type="checkbox"][data-id="${id}"]`);
+      if(cb) cb.scrollIntoView({behavior:"smooth", block:"center"});
+    };
+    return a;
+  };
+
+  const enrichText = (s) => {
+    // Replace [[Name]] with internal links if possible
+    const frag = document.createDocumentFragment();
+    let last = 0;
+    const rx = /\[\[([^\]]+)\]\]/g;
+    let m;
+    while((m = rx.exec(s))){
+      const before = s.slice(last, m.index);
+      if(before) frag.appendChild(document.createTextNode(before));
+      const label = m[1].trim();
+      const link = makeInternalLink(label);
+      if(link) frag.appendChild(link);
+      else frag.appendChild(document.createTextNode(label));
+      last = m.index + m[0].length;
+    }
+    const tail = s.slice(last);
+    if(tail) frag.appendChild(document.createTextNode(tail));
+    return frag;
+  };
+
+  lines.forEach(line => {
+    const t = line.trim();
+    if(!t){
+      flushUL();
+      elm.appendChild(document.createElement("div")).style.height = "6px";
+      return;
+    }
+    // Headings
+    if(t.startsWith("### ")){
+      flushUL();
+      const h = document.createElement("h4");
+      h.textContent = t.slice(4);
+      h.style.margin = "10px 0 6px";
+      h.style.fontSize = "13.5px";
+      h.style.color = "#dfe5f3";
+      elm.appendChild(h);
+      return;
+    }
+    if(t.startsWith("## ")){
+      flushUL();
+      const h = document.createElement("h3");
+      h.textContent = t.slice(3);
+      h.style.margin = "10px 0 6px";
+      h.style.fontSize = "14px";
+      h.style.color = "#e9ecf2";
+      elm.appendChild(h);
+      return;
+    }
+    // Bullets
+    if(t.startsWith("- ")){
+      if(!ul){
+        ul = document.createElement("ul");
+        ul.style.margin = "0";
+        ul.style.paddingLeft = "18px";
+        ul.style.display = "grid";
+        ul.style.gap = "6px";
+        elm.appendChild(ul);
+      }
+      const li = document.createElement("li");
+      li.appendChild(enrichText(t.slice(2)));
+      ul.appendChild(li);
+      return;
+    }
+
+    // Paragraph
+    flushUL();
+    const p = document.createElement("p");
+    p.style.margin = "0";
+    p.style.lineHeight = "1.35";
+    p.appendChild(enrichText(t));
+    elm.appendChild(p);
+  });
+}
+
 function onPickChange(){
   const id = $("#picker").value;
   const it = DATA.find(x => x.id===id);
@@ -129,7 +237,7 @@ function onPickChange(){
   const spawn = (it.spawn && it.spawn.length) ? ("Appears in: " + it.spawn.join(" • ")) : "";
   if(spawn){ $("#pickType").textContent += "  ·  " + spawn; }
 
-  $("#pickInstr").textContent = it.instructions || "";
+  renderInstructions($("#pickInstr"), it.instructions || "");
   $("#pickTick").disabled=false;
   $("#pickTick").checked = getTick(it.id);
   $("#pickTick").onchange = () => setTick(it.id, $("#pickTick").checked);
@@ -205,6 +313,8 @@ async function init(){
   const res = await fetch("./data.json");
   const j = await res.json();
   DATA = j.items || [];
+  NAME_TO_ID = {};
+  DATA.forEach(it => { NAME_TO_ID[it.name.toLowerCase()] = it.id; });
 
   // Search
   $("#search").addEventListener("input", (e) => {

@@ -617,7 +617,7 @@
       "name": "The Forgotten",
       "type": "character",
       "icon": "assets/char_The_Forgotten.png",
-      "instructions": "Beat Boss <1 min on F1 → bomb start room → get shovel piece → carry Broken Shovel to Boss Rush → finish shovel in Dark Room.",
+      "instructions": "## Goal\n- Unlock **The Forgotten**.\n\n## Requirements\n- Access to Boss Rush (needs Mom killed fast enough).\n- Survive while being chased by stomps after starting the quest.\n\n## Step-by-step from a fresh run\n- On Floor 1, beat the boss in under 1 minute.\n- Return to the starting room and bomb the centre to reveal the shovel piece.\n- Pick up the quest item (you’ll be chased by stomps).\n- Reach and complete Boss Rush while carrying it.\n- Finish the sequence in the Dark Room to unlock **The Forgotten**.\n\n## Tips\n- Bring mobility and defensive items. The stomps do not negotiate.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -634,7 +634,7 @@
       "name": "The Lost",
       "type": "character",
       "icon": "assets/char_The_Lost.png",
-      "instructions": "Die in a Sacrifice Room while holding Missing Poster.",
+      "instructions": "## Goal\n- Unlock **The Lost**.\n\n## Requirement\n- You need **Missing Poster**.\n\n## Step-by-step from a fresh run\n- Get **Missing Poster**.\n- Find a Sacrifice Room.\n- Die on the spikes while holding Missing Poster.\n- You unlock **The Lost**.",
       "links": [
         {
           "label": "Wiki (Characters)",
@@ -2548,7 +2548,7 @@
       "name": "Mother",
       "type": "final_boss",
       "icon": "assets/final_Mother.png",
-      "instructions": "From a fresh run: complete the alternate path (Downpour → Mines → Mausoleum) and assemble the Knife to access Corpse; beat Mother.",
+      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Requirements\n- Access the alt path floors: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]] → [[Corpse]].\n- Assemble the Knife: [[Knife Piece 1]] + [[Knife Piece 2]].\n\n## Step-by-step from a fresh run\n- After Chapter 1, take the door to [[Downpour/Dross]].\n- Get [[Knife Piece 1]].\n- Continue alt path into [[Mines/Ashpit]].\n- Get [[Knife Piece 2]].\n- Use the completed Knife to enter [[Mausoleum/Gehenna]].\n- Finish Mausoleum and use the Knife door to enter [[Corpse]].\n- Beat **Mother** at the end.\n\n## Common gotchas\n- This route is time-consuming. Don’t panic if it feels “different”, it is.",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2565,7 +2565,7 @@
       "name": "Dogma",
       "type": "final_boss",
       "icon": "assets/final_Dogma.png",
-      "instructions": "From a fresh run: follow the Ascent route to Home; obtain Dad’s Note, ascend, reach Home, and beat Dogma.",
+      "instructions": "## Goal\n- Beat **Dogma** on the Beast route.\n\n## Requirements\n- Start [[Ascent & Dad's Note]].\n- Reach [[Home]].\n\n## Step-by-step from a fresh run\n- Get to Depths II and defeat Mom.\n- Pick up **Dad’s Note** to begin [[Ascent & Dad's Note]].\n- Keep ascending until you arrive at [[Home]].\n- Proceed to trigger the **Dogma** fight.\n\n## After Dogma\n- You are locked into the Beast route leading to [[The Beast]].",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2599,7 +2599,7 @@
       "name": "The Beast",
       "type": "final_boss",
       "icon": "assets/final_The_Beast.png",
-      "instructions": "From a fresh run: after completing the Ascent and beating Dogma + Ultra Harbingers, beat The Beast.",
+      "instructions": "## Goal\n- Beat **The Beast**.\n\n## Requirements\n- Beat [[Dogma]].\n- Defeat the Ultra Harbingers (post-Dogma sequence).\n\n## Step-by-step from a fresh run\n- Start [[Ascent & Dad's Note]].\n- Reach [[Home]].\n- Beat [[Dogma]].\n- Defeat the Ultra Harbingers sequence.\n- Beat **The Beast**.",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2662,6 +2662,70 @@
           "url": "https://strategywiki.org/wiki/The_Binding_of_Isaac:_Repentance/Final_bosses"
         }
       ]
+    },
+    {
+      "id": "route_downpour",
+      "name": "Downpour/Dross",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## What it is\n- Alternate Chapter 1.5 path.\n\n## How to enter\n- Beat the Chapter 1 boss.\n- A door appears that leads to [[Downpour/Dross]] instead of the normal next floor.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 1).",
+      "links": []
+    },
+    {
+      "id": "route_mines",
+      "name": "Mines/Ashpit",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## What it is\n- Alternate Chapter 2.5 path.\n\n## How to enter\n- After [[Downpour/Dross]], take the alt-path door at the end of the chapter.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 2).",
+      "links": []
+    },
+    {
+      "id": "route_mausoleum",
+      "name": "Mausoleum/Gehenna",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## What it is\n- Alternate Chapter 3.5 path.\n\n## How to enter\n- After [[Mines/Ashpit]], use the knife to pass the special door into Mausoleum.\n\n## Why you care\n- Required to reach [[Corpse]].",
+      "links": []
+    },
+    {
+      "id": "route_knife1",
+      "name": "Knife Piece 1",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## How to get it\n- Go to [[Downpour/Dross]].\n- Find a white flame room and touch the flame.\n- While in the special form, enter the mirror and complete the objective to grab **Knife Piece 1**.\n\n## Why you care\n- Combines with [[Knife Piece 2]] to form the Knife for the [[Mother]] route.",
+      "links": []
+    },
+    {
+      "id": "route_knife2",
+      "name": "Knife Piece 2",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## How to get it\n- Go to [[Mines/Ashpit]].\n- Hit the button to start the chase sequence.\n- Survive and reach the end to pick up **Knife Piece 2**.\n\n## Why you care\n- Combines with [[Knife Piece 1]] to form the Knife.",
+      "links": []
+    },
+    {
+      "id": "route_corpse",
+      "name": "Corpse",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## What it is\n- Final area of the alt path.\n\n## How to reach\n- Complete [[Mausoleum/Gehenna]].\n- Use the Knife on the special door to enter [[Corpse]].\n\n## End goal\n- Beat [[Mother]].",
+      "links": []
+    },
+    {
+      "id": "route_ascent",
+      "name": "Ascent & Dad's Note",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## How to start\n- Reach Depths II.\n- Defeat Mom.\n- Pick up **Dad's Note**.\n\n## What happens\n- The run reverses and you ascend back up through earlier floors.\n\n## End goal\n- Reach [[Home]] for [[Dogma]] and [[The Beast]].",
+      "links": []
+    },
+    {
+      "id": "route_home",
+      "name": "Home",
+      "type": "route_step",
+      "icon": "",
+      "instructions": "## How to reach\n- Start [[Ascent & Dad's Note]].\n- Keep climbing until you reach **Home**.\n\n## What to do at Home\n- Open Mom’s bedroom.\n- (Optional) Open the closet as a character to unlock its tainted version.\n\n## End goal\n- Trigger [[Dogma]] and the Beast route.",
+      "links": []
     }
   ]
 }
