@@ -100,7 +100,7 @@
 
   <div class="charbar">
     <div class="charbar-left">
-      <span class="chip">🧛‍♂️ Sheet</span>
+      <span class="chip">🧛‍♂️ Sheet</span><span class="chip" id="storageChip">💾 saving: ?</span>
       <select id="charSelect" aria-label="Character"></select>
     </div>
     <div class="charbar-right">
@@ -306,12 +306,20 @@
   const HUB_KEY = "tapSheetHub:v1:characters";
   const ACTIVE_KEY = "tapSheetHub:v1:active";
   let activeCharId = null;
+  let lastSaveOK = null;
+  function setSaveChip(ok){
+    const el = document.getElementById("storageChip");
+    if(!el) return;
+    if(ok === null){ el.textContent = "💾 saving: ?"; return; }
+    el.textContent = ok ? "💾 saving: OK" : "💀 saving: blocked";
+  }
+
 
   function safeGet(key){
     try { return window.localStorage.getItem(key); } catch(e){ return null; }
   }
   function safeSet(key, val){
-    try { window.localStorage.setItem(key, val); } catch(e){}
+    try { window.localStorage.setItem(key, val); return true; } catch(e){ return false; }
   }
   function safeRemove(key){
     try { window.localStorage.removeItem(key); } catch(e){}
@@ -360,8 +368,19 @@ function clamp(n, min, max) {
 }
 
 function saveState() {
-  if(!activeCharId) return;
-  safeSet(sheetKey(activeCharId), JSON.stringify(state));
+  // Always try to save to the currently selected character.
+  if(!activeCharId){
+    const sel = document.getElementById("charSelect");
+    if(sel && sel.value) activeCharId = sel.value;
+  }
+  if(!activeCharId){
+    const list = loadCharList();
+    if(list[0]) activeCharId = list[0].id;
+  }
+  if(!activeCharId){ setSaveChip(false); return; }
+  const ok = safeSet(sheetKey(activeCharId), JSON.stringify(state));
+  lastSaveOK = ok;
+  setSaveChip(ok);
 }
 
 function loadState() {
