@@ -2548,7 +2548,7 @@
       "name": "Mother",
       "type": "final_boss",
       "icon": "assets/final_Mother.png",
-      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Requirements\n- Access the alt path floors: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]] → [[Corpse]].\n- Assemble the Knife: [[Knife Piece 1]] + [[Knife Piece 2]].\n\n## Step-by-step from a fresh run\n- After Chapter 1, take the door to [[Downpour/Dross]].\n- Get [[Knife Piece 1]].\n- Continue alt path into [[Mines/Ashpit]].\n- Get [[Knife Piece 2]].\n- Use the completed Knife to enter [[Mausoleum/Gehenna]].\n- Finish Mausoleum and use the Knife door to enter [[Corpse]].\n- Beat **Mother** at the end.\n\n## Common gotchas\n- This route is time-consuming. Don’t panic if it feels “different”, it is.",
+      "instructions": "## Goal\n- Beat **Mother** at the end of [[Corpse]].\n\n## Unlock requirements (save file)\n- Unlock the alt path (“A Secret Exit”) by defeating **Hush** 3 times. citeturn0search2turn0search15\n\n## Route requirements (in-run)\n- Access [[Downpour/Dross]] (locked door after boss, costs 1 key). citeturn0search2\n- Obtain [[Knife Piece 1]] (white flame → mirror world → Treasure Room). citeturn0search16turn0search20\n- Access [[Mines/Ashpit]] (alt-path entrance on the relevant boss room). citeturn0search19\n- Obtain [[Knife Piece 2]] (triggers chase with Mother’s Shadow). citeturn0search6\n- Access [[Mausoleum/Gehenna]] (costs 2 full heart containers). citeturn0search14\n- Enter [[Corpse]] and beat **Mother**.\n\n## Step-by-step from a fresh run\n- Start a run and clear Chapter 1.\n- Take the alt-path door into [[Downpour/Dross]].\n- Reach Downpour II / Dross II and complete [[Knife Piece 1]].\n- Continue the alt path into [[Mines/Ashpit]].\n- Reach Mines II / Ashpit II and complete [[Knife Piece 2]].\n- After Mines II, pay the health cost to enter [[Mausoleum/Gehenna]]. citeturn0search14\n- Continue until you can enter [[Corpse]].\n- Beat **Mother**.\n\n## Common gotchas\n- If you skip a Knife Piece, the route collapses and you can’t access Corpse.\n- This route is longer and harsher than the normal path. That’s intended. 🙃",
       "links": [
         {
           "label": "StrategyWiki (Final bosses)",
@@ -2668,7 +2668,7 @@
       "name": "Downpour/Dross",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 1.5 path.\n\n## How to enter\n- Beat the Chapter 1 boss.\n- A door appears that leads to [[Downpour/Dross]] instead of the normal next floor.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 1).",
+      "instructions": "## What it is\n- Alternate Chapter 1.5 floors on the Repentance “alt path”.\n\n## Unlock requirement (once per save file)\n- Defeat **Hush** 3 times to unlock **A Secret Exit**. citeturn0search2turn0search15\n\n## How to enter (from a fresh run)\n- Finish **Basement I/II** (or Cellar/Burning Basement).\n- After the boss, a **locked door** appears.\n- Spend **1 key** to open it.\n- Enter **Downpour I/II** (or Dross I/II). citeturn0search2\n\n## Why you care\n- Needed for [[Knife Piece 1]] on Downpour II / Dross II.\n- Required route toward [[Mother]].",
       "links": []
     },
     {
@@ -2676,7 +2676,7 @@
       "name": "Mines/Ashpit",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 2.5 path.\n\n## How to enter\n- After [[Downpour/Dross]], take the alt-path door at the end of the chapter.\n\n## Why you care\n- Needed for the [[Mother]] route (Knife Piece 2).",
+      "instructions": "## What it is\n- Alternate Chapter 2.5 floors on the Repentance alt path.\n\n## Unlock requirement\n- Same as alt path in general: defeat **Hush** 3 times (A Secret Exit). citeturn0search2turn0search15\n\n## How to enter (from a fresh run)\n- After **Basement II** / the early chapters, later boss rooms can spawn the alt-path entrance.\n- The entrance to **Mines/Ashpit** is a **blocked door** that typically requires **2 bombs** to open (it appears on the appropriate chapter boss rooms once the alt path is unlocked). citeturn0search19\n\n## Why you care\n- [[Knife Piece 2]] is obtained on Mines II / Ashpit II.\n- Required route toward [[Mother]].",
       "links": []
     },
     {
@@ -2684,7 +2684,7 @@
       "name": "Mausoleum/Gehenna",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Alternate Chapter 3.5 path.\n\n## How to enter\n- After [[Mines/Ashpit]], use the knife to pass the special door into Mausoleum.\n\n## Why you care\n- Required to reach [[Corpse]].",
+      "instructions": "## What it is\n- Alternate Chapter 3.5 floors on the alt path.\n\n## How to enter (from a fresh run)\n- Beat **Mines II / Ashpit II**.\n- A door to **Mausoleum / Gehenna** appears.\n- It costs **2 full heart containers** to open (it “pays” with health). citeturn0search14\n\n## Why you care\n- This is the gateway chapter to reach [[Corpse]] and fight [[Mother]].",
       "links": []
     },
     {
@@ -2692,7 +2692,7 @@
       "name": "Knife Piece 1",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to get it\n- Go to [[Downpour/Dross]].\n- Find a white flame room and touch the flame.\n- While in the special form, enter the mirror and complete the objective to grab **Knife Piece 1**.\n\n## Why you care\n- Combines with [[Knife Piece 2]] to form the Knife for the [[Mother]] route.",
+      "instructions": "## Goal\n- Obtain **Knife Piece 1** on **Downpour II / Dross II**.\n\n## Requirements\n- Alt path unlocked (Defeat **Hush** 3 times). citeturn0search2turn0search15\n- Reach **Downpour II / Dross II**.\n\n## Step-by-step (assume you know nothing)\n- Enter [[Downpour/Dross]] and reach **Downpour II / Dross II**.\n- Find a room with a **white flame**.\n- Touch the flame to become a “Lost-like” form (fragile: no normal heart health). citeturn0search20turn0search10\n- Find the **mirror** room and enter it while in that form to access the **Mirrored World**. citeturn0search10turn0search16\n- In the Mirrored World, go to the **Treasure Room** and pick up **Knife Piece 1**. citeturn0search16turn0search5\n- Leave the Mirrored World and continue the run.\n\n## Gotchas\n- On XL floors, only one mirrored Treasure Room contains the piece. citeturn0search10\n- If the mirror breaks (some bombs/items), you can lose access. citeturn0search10",
       "links": []
     },
     {
@@ -2700,7 +2700,7 @@
       "name": "Knife Piece 2",
       "type": "route_step",
       "icon": "",
-      "instructions": "## How to get it\n- Go to [[Mines/Ashpit]].\n- Hit the button to start the chase sequence.\n- Survive and reach the end to pick up **Knife Piece 2**.\n\n## Why you care\n- Combines with [[Knife Piece 1]] to form the Knife.",
+      "instructions": "## Goal\n- Obtain **Knife Piece 2** on **Mines II / Ashpit II**.\n\n## Requirements\n- Alt path unlocked (Defeat **Hush** 3 times). citeturn0search2turn0search15\n- Reach [[Mines/Ashpit]] and get to **Mines II / Ashpit II**.\n\n## Step-by-step (assume you know nothing)\n- Progress through [[Mines/Ashpit]] until you are on **Mines II / Ashpit II**.\n- Find the sequence that leads to the **Knife Piece 2** pickup.\n- When you pick it up, it triggers a **chase sequence** with **Mother’s Shadow**.\n- Survive the chase and reach the end of the corridor to secure **Knife Piece 2**. citeturn0search6\n\n## Gotchas\n- The chase is dangerous. Treat it like a “don’t stop moving, don’t corner yourself” segment.\n- Once you have both pieces, the Knife is complete and is used for the [[Mother]] route.",
       "links": []
     },
     {
@@ -2708,7 +2708,7 @@
       "name": "Corpse",
       "type": "route_step",
       "icon": "",
-      "instructions": "## What it is\n- Final area of the alt path.\n\n## How to reach\n- Complete [[Mausoleum/Gehenna]].\n- Use the Knife on the special door to enter [[Corpse]].\n\n## End goal\n- Beat [[Mother]].",
+      "instructions": "## What it is\n- The final area of the alt path leading to **Mother**.\n\n## How to reach (from a fresh run)\n- Unlock and take the alt path: [[Downpour/Dross]] → [[Mines/Ashpit]] → [[Mausoleum/Gehenna]].\n- Obtain both: [[Knife Piece 1]] + [[Knife Piece 2]] (Knife completed). citeturn0search1\n- Use the Knife on the special door at the end of the alt path to enter **Corpse**.\n- Beat [[Mother]] at the end of Corpse.\n\n## Why you care\n- This is the only normal route to the **Mother** final boss.",
       "links": []
     },
     {

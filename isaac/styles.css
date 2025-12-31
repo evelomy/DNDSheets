@@ -135,3 +135,6 @@ select, input[type="search"]{
 
 .instructions h3,.instructions h4{margin:10px 0 6px;}
 .instructions ul{margin:0; padding-left:18px;}
+
+/* Wide cards get more room */
+.card.wide .list{ max-height: 85vh; }
