@@ -117,9 +117,9 @@ function renderInstructions(elm, text){
   const raw = (text || "").trim();
   if(!raw){ return; }
 
-  const lines = raw.split(/
-?
+  const lines = raw.split(/?
 /);
+
 
   let ul = null;
   const flushUL = () => { ul = null; };
@@ -136,6 +136,10 @@ function renderInstructions(elm, text){
     a.onclick = (e) => {
       e.preventDefault();
       const picker = document.querySelector("#picker");
+      picker.value = id;
+      // Clear search filter so the target definitely exists in the picker/list
+      const search = document.querySelector("#search");
+      if(search){ search.value = ""; FILTER = ""; renderPicker(); renderLists(); }
       picker.value = id;
       onPickChange();
       // Scroll the matching checkbox into view if present
