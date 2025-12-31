@@ -1,356 +1,452 @@
+// Isaac Checklist - stable app.js
+// Build: 1  (increment this integer whenever you update this file)
+const BUILD = 1;
 const STORE_KEY = "isaacChecklist.v1";
 
-const $ = (s) => document.querySelector(s);
-const el = (tag, cls) => { const n=document.createElement(tag); if(cls) n.className=cls; return n; };
+const $ = (sel) => document.querySelector(sel);
 
 let DATA = [];
 let STATE = {};
-let NAME_TO_ID = {}; // id -> boolean
+let NAME_TO_ID = {};
 let FILTER = "";
 
-function loadState(){
-  try{ STATE = JSON.parse(localStorage.getItem(STORE_KEY) || "{}"); }
-  catch{ STATE = {}; }
+function safeGet(key) {
+  try { return localStorage.getItem(key); } catch(e) { return null; }
 }
-function saveState(){
-  localStorage.setItem(STORE_KEY, JSON.stringify(STATE));
+function safeSet(key, val) {
+  try { localStorage.setItem(key, val); return true; } catch(e) { return false; }
 }
-function setTick(id, val){
+
+function loadState() {
+  const raw = safeGet(STORE_KEY);
+  if(!raw) { STATE = {}; return; }
+  try { STATE = JSON.parse(raw) || {}; }
+  catch(e) { STATE = {}; }
+}
+function saveState() {
+  safeSet(STORE_KEY, JSON.stringify(STATE));
+}
+function getTick(id) {
+  return !!STATE[id];
+}
+function setTick(id, val) {
   STATE[id] = !!val;
   saveState();
-  // Sync all checkboxes with same data-id
-  document.querySelectorAll(`input[type="checkbox"][data-id="${cssEscape(id)}"]`).forEach(cb => cb.checked = !!val);
-  // Sync picker tick
-  const pickId = $("#picker").value;
-  if(pickId === id) $("#pickTick").checked = !!val;
+
+  // Sync all checkboxes for the same id (lists + inspector)
+  const boxes = document.querySelectorAll('input[type="checkbox"][data-id="' + id + '"]');
+  boxes.forEach(cb => cb.checked = !!val);
+
+  const pick = $("#picker");
+  if(pick && pick.value === id) {
+    const pt = $("#pickTick");
+    if(pt) pt.checked = !!val;
+  }
+
   renderStats();
 }
-function getTick(id){ return !!STATE[id]; }
 
-function cssEscape(str){
-  // tiny escape for querySelector
-  return str.replace(/"/g, '\\"');
+function setBoot(text) {
+  const bs = $("#bootStatus");
+  if(bs) bs.textContent = text;
 }
 
-function filtered(items){
-  if(!FILTER) return items;
-  const q = FILTER.toLowerCase().trim();
-  return items.filter(it => (it.name + " " + it.type).toLowerCase().includes(q));
+function showError(title, details) {
+  console.error(title, details || "");
+  const box = $("#errorBox");
+  if(!box) return;
+  box.style.display = "block";
+  box.innerHTML = "";
+  const t = document.createElement("div");
+  t.className = "errorTitle";
+  t.textContent = title;
+
+  const pre = document.createElement("pre");
+  pre.className = "errorPre";
+  pre.textContent = (details || "").toString();
+
+  box.appendChild(t);
+  box.appendChild(pre);
 }
 
-function buildItemRow(it){
-  const row = el("div","item");
-  const icon = el("img","item__icon");
+function textIncludes(hay, needle) {
+  // case-insensitive includes without regex
+  if(!needle) return true;
+  const h = (hay || "").toLowerCase();
+  const n = (needle || "").toLowerCase().trim();
+  if(!n) return true;
+  return h.indexOf(n) !== -1;
+}
+
+function matches(it) {
+  if(!FILTER) return true;
+  const hay = (it.name || "") + " " + (it.type || "");
+  return textIncludes(hay, FILTER);
+}
+
+function filtered(list) {
+  return (list || []).filter(matches);
+}
+
+function buildItemRow(it) {
+  const row = document.createElement("div");
+  row.className = "item";
+
+  const icon = document.createElement("img");
+  icon.className = "item__icon";
   icon.alt = "";
   icon.src = it.icon || "";
   row.appendChild(icon);
 
-  const body = el("div");
-  const name = el("div","item__name");
-  name.textContent = it.name;
-  const type = el("div","item__type");
-  type.textContent = it.type.replaceAll("_"," ");
-  body.appendChild(name);
-  body.appendChild(type);
+  const body = document.createElement("div");
+  body.className = "item__body";
 
-  const tickLine = el("label","tickline");
-  const cb = el("input");
-  cb.type="checkbox";
-  cb.checked = getTick(it.id);
+  const nm = document.createElement("div");
+  nm.className = "item__name";
+  nm.textContent = it.name || "";
+  nm.onclick = () => {
+    const pick = $("#picker");
+    if(pick) {
+      pick.value = it.id;
+      onPickChange();
+    }
+  };
+  body.appendChild(nm);
+
+  const meta = document.createElement("div");
+  meta.className = "item__type";
+  const spawn = Array.isArray(it.spawn) && it.spawn.length ? (" · Appears in: " + it.spawn.join(" • ")) : "";
+  meta.textContent = (it.type || "").toString().replaceAll("_"," ") + spawn;
+  body.appendChild(meta);
+
+  const tickLine = document.createElement("label");
+  tickLine.className = "tickline";
+  const cb = document.createElement("input");
+  cb.type = "checkbox";
   cb.dataset.id = it.id;
-  cb.addEventListener("change", () => setTick(it.id, cb.checked));
-  const span = el("span");
-  span.textContent = "Done";
+  cb.checked = getTick(it.id);
+  cb.onchange = () => setTick(it.id, cb.checked);
+  const sp = document.createElement("span");
+  sp.textContent = "Done";
   tickLine.appendChild(cb);
-  tickLine.appendChild(span);
-
+  tickLine.appendChild(sp);
   body.appendChild(tickLine);
-
-  // Clicking name selects in dropdown
-  name.style.cursor="pointer";
-  name.addEventListener("click", () => {
-    $("#picker").value = it.id;
-    onPickChange();
-  });
 
   row.appendChild(body);
   return row;
 }
 
-function renderLists(){
-  const chars = filtered(DATA.filter(d => d.type==="character" || d.type==="tainted_character"));
-  const bosses = filtered(DATA.filter(d => d.type==="boss"));
-  const finals = filtered(DATA.filter(d => d.type.startsWith("final_boss")));
-
-  $("#listCharacters").innerHTML = "";
-  chars.forEach(it => $("#listCharacters").appendChild(buildItemRow(it)));
-  $("#listBosses").innerHTML = "";
-  bosses.forEach(it => $("#listBosses").appendChild(buildItemRow(it)));
-  $("#listFinals").innerHTML = "";
-  finals.forEach(it => $("#listFinals").appendChild(buildItemRow(it)));
-
-  $("#metaChars").textContent = `${chars.length} shown`;
-  $("#metaBosses").textContent = `${bosses.length} shown`;
-  $("#metaFinals").textContent = `${finals.length} shown`;
-}
-
-function renderPicker(){
+function renderPicker() {
   const pick = $("#picker");
+  if(!pick) return;
   pick.innerHTML = "";
-  const opt0 = el("option");
-  opt0.value="";
-  opt0.textContent="Select…";
+  const opt0 = document.createElement("option");
+  opt0.value = "";
+  opt0.textContent = "Select...";
   pick.appendChild(opt0);
 
-  const items = filtered(DATA);
-  items.forEach(it => {
-    const o = el("option");
+  filtered(DATA).forEach(it => {
+    const o = document.createElement("option");
     o.value = it.id;
-    o.textContent = `${it.name}  (${it.type.replaceAll("_"," ")})`;
+    o.textContent = (it.name || "") + " (" + (it.type || "").toString().replaceAll("_"," ") + ")";
     pick.appendChild(o);
   });
 }
 
+function renderLists() {
+  const chars = filtered(DATA.filter(x => x.type === "character" || x.type === "tainted_character"));
+  const bosses = filtered(DATA.filter(x => x.type === "boss"));
+  const finals = filtered(DATA.filter(x => (x.type || "").toString().indexOf("final_boss") === 0));
 
-function renderInstructions(elm, text){
-  elm.innerHTML = "";
-  const raw = (text || "").trim();
-  if(!raw){ return; }
+  const lc = $("#listCharacters");
+  const lb = $("#listBosses");
+  const lf = $("#listFinals");
 
-  const lines = raw.split(/?
-/);
+  if(lc) {
+    lc.innerHTML = "";
+    chars.forEach(it => lc.appendChild(buildItemRow(it)));
+  }
+  if(lb) {
+    lb.innerHTML = "";
+    bosses.forEach(it => lb.appendChild(buildItemRow(it)));
+  }
+  if(lf) {
+    lf.innerHTML = "";
+    finals.forEach(it => lf.appendChild(buildItemRow(it)));
+  }
 
-
-  let ul = null;
-  const flushUL = () => { ul = null; };
-
-  const makeInternalLink = (label) => {
-    const id = NAME_TO_ID[label.toLowerCase()];
-    if(!id) return null;
-    const a = document.createElement("a");
-    a.href = "#";
-    a.textContent = label;
-    a.style.color = "var(--accent)";
-    a.style.textDecoration = "none";
-    a.style.fontWeight = "800";
-    a.onclick = (e) => {
-      e.preventDefault();
-      const picker = document.querySelector("#picker");
-      picker.value = id;
-      // Clear search filter so the target definitely exists in the picker/list
-      const search = document.querySelector("#search");
-      if(search){ search.value = ""; FILTER = ""; renderPicker(); renderLists(); }
-      picker.value = id;
-      onPickChange();
-      // Scroll the matching checkbox into view if present
-      const cb = document.querySelector(`input[type="checkbox"][data-id="${id}"]`);
-      if(cb) cb.scrollIntoView({behavior:"smooth", block:"center"});
-    };
-    return a;
-  };
-
-  const enrichText = (s) => {
-    // Replace [[Name]] with internal links if possible
-    const frag = document.createDocumentFragment();
-    let last = 0;
-    const rx = /\[\[([^\]]+)\]\]/g;
-    let m;
-    while((m = rx.exec(s))){
-      const before = s.slice(last, m.index);
-      if(before) frag.appendChild(document.createTextNode(before));
-      const label = m[1].trim();
-      const link = makeInternalLink(label);
-      if(link) frag.appendChild(link);
-      else frag.appendChild(document.createTextNode(label));
-      last = m.index + m[0].length;
-    }
-    const tail = s.slice(last);
-    if(tail) frag.appendChild(document.createTextNode(tail));
-    return frag;
-  };
-
-  lines.forEach(line => {
-    const t = line.trim();
-    if(!t){
-      flushUL();
-      elm.appendChild(document.createElement("div")).style.height = "6px";
-      return;
-    }
-    // Headings
-    if(t.startsWith("### ")){
-      flushUL();
-      const h = document.createElement("h4");
-      h.textContent = t.slice(4);
-      h.style.margin = "10px 0 6px";
-      h.style.fontSize = "13.5px";
-      h.style.color = "#dfe5f3";
-      elm.appendChild(h);
-      return;
-    }
-    if(t.startsWith("## ")){
-      flushUL();
-      const h = document.createElement("h3");
-      h.textContent = t.slice(3);
-      h.style.margin = "10px 0 6px";
-      h.style.fontSize = "14px";
-      h.style.color = "#e9ecf2";
-      elm.appendChild(h);
-      return;
-    }
-    // Bullets
-    if(t.startsWith("- ")){
-      if(!ul){
-        ul = document.createElement("ul");
-        ul.style.margin = "0";
-        ul.style.paddingLeft = "18px";
-        ul.style.display = "grid";
-        ul.style.gap = "6px";
-        elm.appendChild(ul);
-      }
-      const li = document.createElement("li");
-      li.appendChild(enrichText(t.slice(2)));
-      ul.appendChild(li);
-      return;
-    }
-
-    // Paragraph
-    flushUL();
-    const p = document.createElement("p");
-    p.style.margin = "0";
-    p.style.lineHeight = "1.35";
-    p.appendChild(enrichText(t));
-    elm.appendChild(p);
-  });
+  const mc = $("#metaChars"); if(mc) mc.textContent = chars.length + " shown";
+  const mb = $("#metaBosses"); if(mb) mb.textContent = bosses.length + " shown";
+  const mf = $("#metaFinals"); if(mf) mf.textContent = finals.length + " shown";
 }
 
-function onPickChange(){
-  const id = $("#picker").value;
-  const it = DATA.find(x => x.id===id);
-  if(!it){
-    $("#pickIcon").src="";
-    $("#pickName").textContent="";
-    $("#pickType").textContent="";
-    $("#pickInstr").textContent="Pick an item to see instructions.";
-    $("#pickLinks").innerHTML="";
-    $("#pickTick").checked=false;
-    $("#pickTick").disabled=true;
+function enrichTextToNode(s) {
+  // Turns text with [[Links]] into a DocumentFragment without regex.
+  const frag = document.createDocumentFragment();
+  const text = (s || "").toString();
+  let i = 0;
+
+  while(i < text.length) {
+    const open = text.indexOf("[[", i);
+    if(open === -1) {
+      frag.appendChild(document.createTextNode(text.slice(i)));
+      break;
+    }
+    // add text before link
+    if(open > i) frag.appendChild(document.createTextNode(text.slice(i, open)));
+
+    const close = text.indexOf("]]", open + 2);
+    if(close === -1) {
+      // no closing, treat rest as plain text
+      frag.appendChild(document.createTextNode(text.slice(open)));
+      break;
+    }
+
+    const label = text.slice(open + 2, close).trim();
+    const id = NAME_TO_ID[label.toLowerCase()];
+    if(id) {
+      const a = document.createElement("a");
+      a.href = "#";
+      a.textContent = label;
+      a.onclick = (e) => {
+        e.preventDefault();
+        const sEl = $("#search");
+        if(sEl) sEl.value = "";
+        FILTER = "";
+        renderPicker();
+        renderLists();
+        const pick = $("#picker");
+        if(pick) {
+          pick.value = id;
+          onPickChange();
+        }
+      };
+      frag.appendChild(a);
+    } else {
+      frag.appendChild(document.createTextNode(label));
+    }
+
+    i = close + 2;
+  }
+
+  return frag;
+}
+
+function renderInstructions(container, text) {
+  if(!container) return;
+  container.className = "instructions";
+  container.innerHTML = "";
+
+  const raw = (text || "").toString().replaceAll("\r\n","\n").replaceAll("\r","\n").trim();
+  if(!raw) {
+    container.textContent = "Pick an item to see instructions.";
     return;
   }
-  $("#pickIcon").src = it.icon || "";
-  $("#pickName").textContent = it.name;
-  $("#pickType").textContent = it.type.replaceAll("_"," ");
-  const spawn = (it.spawn && it.spawn.length) ? ("Appears in: " + it.spawn.join(" • ")) : "";
-  if(spawn){ $("#pickType").textContent += "  ·  " + spawn; }
 
-  renderInstructions($("#pickInstr"), it.instructions || "");
-  $("#pickTick").disabled=false;
-  $("#pickTick").checked = getTick(it.id);
-  $("#pickTick").onchange = () => setTick(it.id, $("#pickTick").checked);
+  const lines = raw.split("\n");
+  let ul = null;
 
-  $("#pickLinks").innerHTML="";
-  (it.links || []).forEach(l => {
-    const a = el("a");
-    a.href = l.url;
-    a.target="_blank";
-    a.rel="noreferrer";
-    a.textContent = l.label;
-    $("#pickLinks").appendChild(a);
-  });
+  function flushUL() { ul = null; }
+
+  for(let idx=0; idx<lines.length; idx++) {
+    const t = (lines[idx] || "").trim();
+    if(!t) { flushUL(); continue; }
+
+    if(t.startsWith("## ")) {
+      flushUL();
+      const h = document.createElement("h3");
+      h.textContent = t.slice(3).trim();
+      container.appendChild(h);
+      continue;
+    }
+
+    if(t.startsWith("- ")) {
+      if(!ul) {
+        ul = document.createElement("ul");
+        container.appendChild(ul);
+      }
+      const li = document.createElement("li");
+      li.appendChild(enrichTextToNode(t.slice(2)));
+      ul.appendChild(li);
+      continue;
+    }
+
+    flushUL();
+    const p = document.createElement("p");
+    p.appendChild(enrichTextToNode(t));
+    container.appendChild(p);
+  }
 }
 
-function renderStats(){
+function onPickChange() {
+  const pick = $("#picker");
+  const id = pick ? pick.value : "";
+  const it = DATA.find(x => x.id === id);
+
+  const icon = $("#pickIcon");
+  const name = $("#pickName");
+  const type = $("#pickType");
+  const tick = $("#pickTick");
+  const instr = $("#pickInstr");
+  const links = $("#pickLinks");
+
+  if(!it) {
+    if(icon) icon.src = "";
+    if(name) name.textContent = "";
+    if(type) type.textContent = "";
+    if(tick) { tick.checked = false; tick.disabled = true; tick.onchange = null; }
+    if(instr) instr.textContent = "Pick an item to see instructions.";
+    if(links) links.innerHTML = "";
+    return;
+  }
+
+  if(icon) icon.src = it.icon || "";
+  if(name) name.textContent = it.name || "";
+  const spawn = Array.isArray(it.spawn) && it.spawn.length ? (" · Appears in: " + it.spawn.join(" • ")) : "";
+  if(type) type.textContent = (it.type || "").toString().replaceAll("_"," ") + spawn;
+
+  if(tick) {
+    tick.disabled = false;
+    tick.checked = getTick(it.id);
+    tick.onchange = () => setTick(it.id, tick.checked);
+    tick.dataset.id = it.id;
+  }
+
+  renderInstructions(instr, it.instructions || "");
+
+  if(links) {
+    links.innerHTML = "";
+    const arr = Array.isArray(it.links) ? it.links : [];
+    for(let i=0;i<arr.length;i++) {
+      const l = arr[i];
+      if(!l || !l.url) continue;
+      const a = document.createElement("a");
+      a.href = l.url;
+      a.target = "_blank";
+      a.rel = "noreferrer";
+      a.textContent = l.label || "Link";
+      links.appendChild(a);
+    }
+  }
+}
+
+function renderStats() {
+  const el = $("#stats");
+  if(!el) return;
   const total = DATA.length;
-  const done = DATA.filter(it => getTick(it.id)).length;
-  const pct = total ? Math.round(done/total*100) : 0;
-
-  const byType = {};
-  DATA.forEach(it => {
-    byType[it.type] = byType[it.type] || {total:0, done:0};
-    byType[it.type].total++;
-    if(getTick(it.id)) byType[it.type].done++;
-  });
-
-  const lines = [];
-  lines.push(`Total: ${done}/${total} (${pct}%)`);
-  Object.entries(byType).sort().forEach(([k,v]) => {
-    lines.push(`${k.replaceAll("_"," ")}: ${v.done}/${v.total}`);
-  });
-
-  $("#stats").textContent = lines.join("\n");
+  let done = 0;
+  for(let i=0;i<DATA.length;i++) {
+    if(getTick(DATA[i].id)) done++;
+  }
+  const pct = total ? Math.round((done/total)*100) : 0;
+  el.textContent = "Total: " + done + "/" + total + " (" + pct + "%)";
 }
 
-function exportProgress(){
-  const payload = { version: 1, state: STATE };
-  const blob = new Blob([JSON.stringify(payload, null, 2)], {type:"application/json"});
+function exportProgress() {
+  const payload = { build: BUILD, savedAt: new Date().toISOString(), state: STATE };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
   a.download = "isaac-progress.json";
+  document.body.appendChild(a);
   a.click();
+  a.remove();
   URL.revokeObjectURL(url);
 }
 
-function importProgress(file){
-  const reader = new FileReader();
-  reader.onload = () => {
-    try{
-      const payload = JSON.parse(reader.result);
-      if(payload && payload.state){
-        STATE = payload.state;
-        saveState();
-        renderLists();
-        renderStats();
-        onPickChange();
-        // Sync all checkbox DOM states
-        DATA.forEach(it => setTick(it.id, getTick(it.id)));
-      } else {
-        alert("That JSON doesn't look right.");
-      }
-    }catch(e){
-      alert("Could not read JSON: " + e.message);
-    }
-  };
-  reader.readAsText(file);
-}
-
-async function init(){
-  loadState();
-  const res = await fetch("./data.json");
-  const j = await res.json();
-  DATA = j.items || [];
-  NAME_TO_ID = {};
-  DATA.forEach(it => { NAME_TO_ID[it.name.toLowerCase()] = it.id; });
-
-  // Search
-  $("#search").addEventListener("input", (e) => {
-    FILTER = e.target.value || "";
-    renderPicker();
-    renderLists();
-  });
-
-  $("#picker").addEventListener("change", onPickChange);
-
-  $("#exportBtn").addEventListener("click", exportProgress);
-  $("#importBtn").addEventListener("click", () => $("#fileInput").click());
-  $("#fileInput").addEventListener("change", (e) => {
-    const file = e.target.files && e.target.files[0];
-    if(file) importProgress(file);
-    e.target.value="";
-  });
-
-  $("#resetBtn").addEventListener("click", () => {
-    if(confirm("Reset ALL ticks? This is irreversible. Like opening a cursed chest on 1 HP.")){
-      STATE = {};
+function importProgressFile(file) {
+  const r = new FileReader();
+  r.onload = () => {
+    try {
+      const payload = JSON.parse(r.result);
+      const st = payload && payload.state ? payload.state : payload;
+      if(!st || typeof st !== "object") throw new Error("No state object found");
+      STATE = st;
       saveState();
       renderLists();
       renderStats();
       onPickChange();
+    } catch(e) {
+      alert("Import failed: " + e.message);
     }
-  });
-
-  renderPicker();
-  renderLists();
-  renderStats();
-  onPickChange();
+  };
+  r.readAsText(file);
 }
-init();
+
+async function loadData() {
+  const res = await fetch("./data.json", { cache: "no-store" });
+  if(!res.ok) throw new Error("Failed to fetch data.json (" + res.status + ")");
+  const text = await res.text();
+  let json;
+  try { json = JSON.parse(text); }
+  catch(e) { throw new Error("data.json invalid JSON: " + e.message); }
+  const items = json && Array.isArray(json.items) ? json.items : [];
+  return items;
+}
+
+async function init() {
+  setBoot("JS loaded (build " + BUILD + "). Loading data.json...");
+
+  try {
+    DATA = await loadData();
+    if(!Array.isArray(DATA)) DATA = [];
+
+    NAME_TO_ID = {};
+    for(let i=0;i<DATA.length;i++) {
+      const it = DATA[i];
+      if(it && it.name && it.id) {
+        NAME_TO_ID[it.name.toLowerCase()] = it.id;
+      }
+    }
+
+    loadState();
+
+    const search = $("#search");
+    if(search) {
+      search.addEventListener("input", (e) => {
+        FILTER = e.target.value || "";
+        renderPicker();
+        renderLists();
+      });
+    }
+
+    const picker = $("#picker");
+    if(picker) picker.addEventListener("change", onPickChange);
+
+    const ex = $("#exportBtn"); if(ex) ex.addEventListener("click", exportProgress);
+    const im = $("#importBtn"); if(im) im.addEventListener("click", () => { const fi=$("#fileInput"); if(fi) fi.click(); });
+    const fi = $("#fileInput");
+    if(fi) {
+      fi.addEventListener("change", (e) => {
+        const f = e.target.files && e.target.files[0];
+        if(f) importProgressFile(f);
+        e.target.value = "";
+      });
+    }
+    const rs = $("#resetBtn");
+    if(rs) {
+      rs.addEventListener("click", () => {
+        if(confirm("Reset ALL ticks on this device?")) {
+          STATE = {};
+          saveState();
+          renderLists();
+          renderStats();
+          onPickChange();
+        }
+      });
+    }
+
+    renderPicker();
+    renderLists();
+    renderStats();
+    onPickChange();
+
+    setBoot("OK (build " + BUILD + "): loaded " + DATA.length + " entries.");
+  } catch(e) {
+    showError("App failed to start.", (e && e.stack) ? e.stack : String(e));
+    setBoot("ERROR (build " + BUILD + "): " + (e && e.message ? e.message : "unknown"));
+  }
+}
+
+document.addEventListener("DOMContentLoaded", init);
