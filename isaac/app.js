@@ -1,4 +1,4 @@
-const VERSION = 3;
+const VERSION = 4;
 const STORE_KEY = "isaacChecklist.v2";
 const $ = (s) => document.querySelector(s);
 
