@@ -1,3 +1,4 @@
+const VERSION = 1;
 const STORE_KEY = "isaacChecklist.v2";
 const $ = (s) => document.querySelector(s);
 
@@ -272,7 +273,7 @@ function importProgress(file){
 
 async function loadData(){
   // Make failures loud, not silent.
-  const url = "./data.json?v=20251231a";
+  const url = "./data.json";
   const res = await fetch(url, { cache: "no-store" });
   if(!res.ok){
     throw new Error(`Failed to fetch ${url} (${res.status} ${res.statusText})`);
@@ -287,10 +288,16 @@ async function loadData(){
 }
 
 async function init(){
+  const bs = document.querySelector("#bootStatus");
+  if(bs) bs.textContent = `✅ JS loaded (v${VERSION}). Loading data…`;
+
   $("#stats").textContent = "Loading data…";
 
   try{
     DATA = await loadData();
+    const bs2 = document.querySelector("#bootStatus");
+    if(bs2) bs2.textContent = `✅ Data loaded (v${VERSION}): ${DATA.length} entries.`;
+
     if(!Array.isArray(DATA) || DATA.length === 0){
       renderError("Loaded data.json but DATA is empty.", null, "Check that data.json has { \"items\": [...] } and items have id + name.");
     }
@@ -334,11 +341,12 @@ async function init(){
                    && $("#listBosses").children.length===0
                    && $("#listFinals").children.length===0);
     if(emptyAll){
-      renderError("Nothing rendered. This usually means GitHub is still serving old cached files or data.json isn't alongside index.html.",
+      renderError(
+        "Nothing rendered. This usually means GitHub is still serving cached files or data.json isn't alongside index.html.",
         null,
         "Check your repo folder:
 - isaac/index.html
-- isaac/app.js
+- isaac/app_20251231b.js
 - isaac/styles.css
 - isaac/data.json
 Then hard-refresh / clear cache."

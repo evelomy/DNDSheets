@@ -10,7 +10,7 @@
   <header class="topbar">
     <div class="topbar__inner">
       <div>
-        <h1>Binding of Isaac Checklist</h1>
+        <h1>Binding of Isaac Checklist <span class="ver">v1</span></h1>
         <p class="sub">Unbreakable build: no JSON fetch, no silent blank pages.</p>
       </div>
       <div class="topbar__right">
@@ -25,6 +25,7 @@
   <main class="wrap">
     <aside class="panel">
       <h2>Inspector</h2>
+      <div id="bootStatus" class="bootStatus">Booting… (if this never changes, your JS file isn't loading)</div>
 
       <div id="errorBox" class="errorBox" style="display:none"></div>
 
@@ -84,6 +85,24 @@
   </main>
 
   <input id="fileInput" type="file" accept="application/json" style="display:none" />
-  <script src="./app.js?v=20251231a"></script>
+  
+  <script>
+    (function(){
+      const bs = () => document.getElementById('bootStatus');
+      window.addEventListener('error', function(e){
+        const el = bs();
+        if(!el) return;
+        const msg = e && e.message ? e.message : (e && e.type ? e.type : 'error');
+        el.textContent = "❌ JS error: " + msg;
+      });
+      window.addEventListener('unhandledrejection', function(e){
+        const el = bs();
+        if(!el) return;
+        el.textContent = "❌ Promise rejected: " + (e && e.reason ? (e.reason.message||String(e.reason)) : "unknown");
+      });
+    })();
+  </script>
+
+  <script src="./app.js"></script>
 </body>
 </html>
