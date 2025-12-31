@@ -1,562 +1,254 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<title>Count Fuckoula-la-la • Tap Sheet</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🦇 Tap Sheet Hub</title>
 <style>
-  :root {
-    --bg: #0c0c10;
-    --panel: rgba(255,255,255,0.06);
-    --text: rgba(255,255,255,0.92);
-    --muted: rgba(255,255,255,0.66);
-    --hair: rgba(255,255,255,0.12);
-    --good: #39d98a;
-    --warn: #ffcc66;
-    --bad: #ff4d6d;
-    --accent: #c8a2ff;
-    --gold: #ffd56a;
-    --shadow: 0 10px 30px rgba(0,0,0,.45);
-    --radius: 18px;
-  }
-  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-  body {
-    margin: 0;
-    font-family: ui-serif, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
-    background: radial-gradient(900px 900px at 10% -10%, rgba(200,162,255,.25), transparent 50%),
-                radial-gradient(900px 900px at 110% 10%, rgba(255,213,106,.16), transparent 55%),
-                radial-gradient(900px 900px at 50% 120%, rgba(57,217,138,.10), transparent 60%),
-                var(--bg);
-    color: var(--text);
-    padding: env(safe-area-inset-top) 14px env(safe-area-inset-bottom) 14px;
-  }
-  header {
-    position: sticky; top: 0;
-    backdrop-filter: blur(12px);
-    background: linear-gradient(to bottom, rgba(12,12,16,.85), rgba(12,12,16,.55));
-    padding: 14px 8px 10px 8px;
-    border-bottom: 1px solid var(--hair);
-    z-index: 20;
-  }
-  h1 { margin: 0 0 4px 0; font-size: 22px; letter-spacing: .3px; }
-  .sub { display:flex; gap:10px; align-items:center; flex-wrap:wrap; color: var(--muted); font-size: 13px; }
-  .pill { padding: 6px 10px; border: 1px solid var(--hair); background: rgba(0,0,0,.22); border-radius: 999px; display:inline-flex; gap:8px; align-items:center; }
-  main { max-width: 1000px; margin: 12px auto 24px auto; display: grid; grid-template-columns: 1fr; gap: 12px; }
-  @media (min-width: 880px) { main { grid-template-columns: 1.1fr .9fr; } }
-  .card { background: linear-gradient(180deg, var(--panel), rgba(255,255,255,0.03)); border: 1px solid var(--hair); border-radius: var(--radius); box-shadow: var(--shadow); padding: 14px; }
-  .card h2 { margin: 0 0 10px 0; font-size: 16px; color: rgba(255,255,255,.9); display:flex; align-items:center; gap:10px; }
-  .grid { display:grid; gap: 10px; }
-  .stat { background: rgba(0,0,0,.18); border: 1px solid rgba(255,255,255,.10); border-radius: 16px; padding: 12px; }
-  .stat-top { display:flex; justify-content:space-between; gap:10px; align-items:flex-end; }
-  .stat-name { font-weight: 650; }
-  .stat-value { font-variant-numeric: tabular-nums; color: rgba(255,255,255,.92); }
-  .hint { color: var(--muted); font-size: 12px; margin-top: 6px; }
-  .bar { margin-top: 10px; height: 12px; background: rgba(255,255,255,.08); border-radius: 999px; overflow: hidden; border: 1px solid rgba(255,255,255,.08); }
-  .bar > div { height: 100%; width: 0%; background: var(--good); transition: width .18s ease; }
-  .controls { display:flex; gap: 8px; flex-wrap:wrap; margin-top: 10px; }
-  button { appearance: none; border: 1px solid rgba(255,255,255,.14); background: rgba(0,0,0,.25); color: var(--text); padding: 10px 12px; border-radius: 14px; font-size: 14px; font-weight: 650; box-shadow: 0 6px 18px rgba(0,0,0,.25); }
-  button:active { transform: scale(.98); }
-  button.primary { border-color: rgba(200,162,255,.35); background: rgba(200,162,255,.15); }
-  button.good { border-color: rgba(57,217,138,.35); background: rgba(57,217,138,.13); }
-  button.bad { border-color: rgba(255,77,109,.35); background: rgba(255,77,109,.13); }
-  button.gold { border-color: rgba(255,213,106,.35); background: rgba(255,213,106,.12); }
-  button.ghost { background: transparent; border-color: rgba(255,255,255,.10); box-shadow:none; }
-  .chips { display:flex; flex-wrap:wrap; gap: 8px; }
-  .chip { padding: 10px 12px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(0,0,0,.18); color: rgba(255,255,255,.86); font-size: 13px; font-weight: 650; user-select: none; }
-  .chip.on { background: rgba(200,162,255,.18); border-color: rgba(200,162,255,.42); color: rgba(255,255,255,.95); }
-  .two { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .footer-actions { display:flex; gap: 8px; flex-wrap:wrap; margin-top: 10px; }
-  textarea { width: 100%; min-height: 120px; background: rgba(0,0,0,.22); border: 1px solid rgba(255,255,255,.12); border-radius: 14px; color: rgba(255,255,255,.9); padding: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 12px; }
-  .small { font-size: 12px; color: var(--muted); }
-.secondary{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:var(--txt);}
-.secondary:active{transform:translateY(1px);}
-
-.charbar{
-  position:sticky; top:0; z-index:10000;
-  display:flex; align-items:center; justify-content:space-between;
-  gap:10px; padding:10px 12px; margin:0 0 10px 0;
-  background:rgba(0,0,0,0.35);
-  border:1px solid rgba(255,255,255,0.12);
-  border-radius:16px;
-  backdrop-filter: blur(10px);
+:root{
+  --bg:#0f1115; --card:#151922; --txt:#e8e9ed; --muted:#9aa0aa;
+  --good:#3ad29f; --bad:#ff6b6b; --pri:#6ea8fe;
 }
-.charbar-left{display:flex; align-items:center; gap:10px; min-width:0;}
-.charbar-right{display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end;}
-#charSelect{
-  max-width: 55vw;
-  padding:8px 10px; border-radius:12px;
-  background:rgba(255,255,255,0.08);
-  border:1px solid rgba(255,255,255,0.16);
+*{box-sizing:border-box}
+body{
+  margin:0; padding:14px;
+  background:linear-gradient(180deg,#0b0e13,#0f1115);
   color:var(--txt);
-  outline:none;
+  font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-#charSelect option{color:#000;}
-
+h1{font-size:20px;margin:6px 0 12px}
+.card{
+  background:var(--card);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  padding:14px;
+  margin-bottom:12px;
+}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+button{
+  padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.08); color:var(--txt); font-weight:600;
+}
+button.good{background:rgba(58,210,159,.18)}
+button.bad{background:rgba(255,107,107,.18)}
+button.primary{background:rgba(110,168,254,.18)}
+button.secondary{background:rgba(255,255,255,.06)}
+button:active{transform:translateY(1px)}
+.stat{font-size:28px;font-weight:800}
+.muted{color:var(--muted);font-size:12px}
+.bar{height:10px;border-radius:999px;background:#222;margin-top:8px;overflow:hidden}
+.bar > div{height:100%;background:linear-gradient(90deg,#3ad29f,#6ea8fe)}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:6px 10px;border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:12px;
+}
+.charbar{
+  position:sticky;top:0;z-index:999;
+  display:flex;justify-content:space-between;gap:10px;
+  padding:10px;border-radius:16px;margin-bottom:12px;
+  background:rgba(0,0,0,.35);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.12);
+}
+select{
+  padding:8px 10px;border-radius:12px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  color:var(--txt);
+}
 </style>
 </head>
 <body>
 
-  <div class="charbar">
-    <div class="charbar-left">
-      <span class="chip">🧛‍♂️ Sheet</span><span class="chip" id="storageChip">💾 saving: ?</span>
-      <select id="charSelect" aria-label="Character"></select>
-    </div>
-    <div class="charbar-right">
-      <button class="secondary" id="btnNewChar">New</button>
-      <button class="secondary" id="btnRenameChar">Rename</button>
-      <button class="secondary" id="btnDupChar">Duplicate</button>
-      <button class="bad" id="btnDeleteChar">Delete</button>
+<div class="charbar">
+  <div class="row">
+    <span class="chip">🧛‍♂️ Sheet</span>
+    <select id="charSelect"></select>
+    <span class="chip" id="saveChip">💾 saving: ?</span>
+  </div>
+  <div class="row">
+    <button class="secondary" onclick="newChar()">New</button>
+    <button class="secondary" onclick="renameChar()">Rename</button>
+    <button class="secondary" onclick="dupChar()">Duplicate</button>
+    <button class="bad" onclick="delChar()">Delete</button>
+  </div>
+</div>
+
+<h1>🦇 Tap Sheet Hub</h1>
+
+<div class="card">
+  <div class="row">
+    <div>
+      <div class="muted">Health</div>
+      <div class="stat"><span id="currentHP">0</span> / <span id="totalHP">0</span></div>
     </div>
   </div>
-
-<header>
-  <h1>🦇 Count Fuckoula-la-la <span style="opacity:.55;">·</span> Tap Sheet</h1>
-  <div class="sub">
-    <span class="pill">📱 iOS friendly · offline · saves automatically</span>
-    <span class="pill" id="savePill">💾 saved</span>
+  <div class="bar"><div id="hpBar"></div></div>
+  <div class="controls">
+    <button class="bad" onclick="inc('currentHP',-1)">-1</button>
+    <button class="bad" onclick="inc('currentHP',-5)">-5</button>
+    <button class="good" onclick="inc('currentHP',1)">+1</button>
+    <button class="good" onclick="inc('currentHP',5)">+5</button>
+    <button class="primary" onclick="setToMax('currentHP','totalHP')">Max</button>
+    <button class="secondary" onclick="setValue('totalHP')">Set Max</button>
   </div>
-</header>
+</div>
 
-<main>
-  <section class="card">
-    <h2>🧾 Trackers
-<span class="muted">Tip: use <b>Set Max</b> when you level up.</span></h2>
-    <div class="grid">
-      <div class="stat">
-        <div class="stat-top">
-          <div>
-            <div class="stat-name">Health</div>
-            <div class="hint" id="hpStatus">…</div>
-          </div>
-          <div class="stat-value"><span id="currentHP">0</span> / <span id="totalHP">0</span></div>
-        </div>
-        <div class="bar"><div id="hpBar"></div></div>
-        <div class="controls">
-          <button class="bad" onclick="inc('currentHP', -1)">-1</button>
-          <button class="bad" onclick="inc('currentHP', -5)">-5</button>
-          <button class="good" onclick="inc('currentHP', 1)">+1</button>
-          <button class="good" onclick="inc('currentHP', 5)">+5</button>
-          <button class="primary" onclick="setToMax('currentHP','totalHP')">Max</button>
-          <button class="secondary" onclick="setValue('totalHP')">Set Max</button>
-        </div>
-      </div>
+<div class="card">
+  <div class="muted">Inspiration</div>
+  <div class="stat" id="inspirationLabel">No</div>
+  <div class="controls">
+    <button onclick="toggleInspiration()">Toggle</button>
+  </div>
+</div>
 
-      <div class="two">
-        <div class="stat">
-          <div class="stat-top">
-            <div>
-              <div class="stat-name">Temp HP</div>
-              <div class="hint">Soak damage before real HP.</div>
-            </div>
-            <div class="stat-value"><span id="temp_hp">0</span></div>
-          </div>
-          <div class="controls">
-            <button class="bad" onclick="inc('temp_hp', -1)">-1</button>
-            <button class="bad" onclick="inc('temp_hp', -5)">-5</button>
-            <button class="good" onclick="inc('temp_hp', 1)">+1</button>
-            <button class="good" onclick="inc('temp_hp', 5)">+5</button>
-            <button class="ghost" onclick="setValue('temp_hp',0)">Clear</button>
-          </div>
-        </div>
-
-        <div class="stat">
-          <div class="stat-top">
-            <div>
-              <div class="stat-name">Inspiration</div>
-              <div class="hint">Toggle like a smug hero.</div>
-            </div>
-            <div class="stat-value" id="inspirationLabel">No</div>
-          </div>
-          <div class="controls">
-            <button class="primary" onclick="toggleBool('inspiration')">Toggle</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div>
-            <div class="stat-name">Blood Points</div>
-            <div class="hint" id="bpStatus">…</div>
-          </div>
-          <div class="stat-value"><span id="current_bp">0</span> / <span id="max_bp">0</span></div>
-        </div>
-        <div class="bar"><div id="bpBar"></div></div>
-        <div class="controls">
-          <button class="bad" onclick="inc('current_bp', -1)">-1</button>
-          <button class="good" onclick="inc('current_bp', 1)">+1</button>
-          <button class="primary" onclick="setToMax('current_bp','max_bp')">Max</button>
-          <button class="secondary" onclick="setValue('max_bp')">Set Max</button>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div>
-            <div class="stat-name">Exhaustion</div>
-            <div class="hint" id="exhStatus">…</div>
-          </div>
-          <div class="stat-value"><span id="cur_exh">0</span> / <span id="max_exh">0</span></div>
-        </div>
-        <div class="bar"><div id="exhBar"></div></div>
-        <div class="controls">
-          <button class="bad" onclick="inc('cur_exh', -1)">-1</button>
-          <button class="good" onclick="inc('cur_exh', 1)">+1</button>
-          <button class="ghost" onclick="setValue('cur_exh',0)">Clear</button>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div>
-            <div class="stat-name">Fed</div>
-            <div class="hint" id="fedStatus">…</div>
-          </div>
-          <div class="stat-value"><span id="fed">0</span> / <span id="maxfed">0</span></div>
-        </div>
-        <div class="bar"><div id="fedBar"></div></div>
-        <div class="controls">
-          <button class="bad" onclick="inc('fed', -1)">-1</button>
-          <button class="good" onclick="inc('fed', 1)">+1</button>
-          <button class="primary" onclick="setToMax('fed','maxfed')">Max</button>
-          <button class="secondary" onclick="setValue('maxfed')">Set Max</button>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <aside class="card">
-    <h2>🩹 Conditions</h2>
-    <div class="chips" id="conditions"></div>
-    <div class="hint" style="margin-top:10px;">Tap to toggle. Your DM can argue later.</div>
-
-    <hr style="border:0; border-top:1px solid var(--hair); margin: 14px 0;">
-
-    <h2>💰 Coin Pouch</h2>
-    <div class="grid">
-      <div class="stat">
-        <div class="stat-top">
-          <div class="stat-name">Copper</div>
-          <div class="stat-value"><span id="copper">0</span></div>
-        </div>
-        <div class="controls">
-          <button class="bad" onclick="inc('copper', -1)">-1</button>
-          <button class="good" onclick="inc('copper', 1)">+1</button>
-          <button class="ghost" onclick="promptSet('copper')">Set</button>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div class="stat-name">Silver</div>
-          <div class="stat-value"><span id="silver">0</span></div>
-        </div>
-        <div class="controls">
-          <button class="bad" onclick="inc('silver', -1)">-1</button>
-          <button class="good" onclick="inc('silver', 1)">+1</button>
-          <button class="ghost" onclick="promptSet('silver')">Set</button>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div class="stat-name">Gold</div>
-          <div class="stat-value"><span id="gold">0</span></div>
-        </div>
-        <div class="controls">
-          <button class="bad" onclick="inc('gold', -1)">-1</button>
-          <button class="good" onclick="inc('gold', 1)">+1</button>
-          <button class="gold" onclick="inc('gold', 10)">+10</button>
-          <button class="ghost" onclick="promptSet('gold')">Set</button>
-        </div>
-      </div>
-
-      <div class="stat">
-        <div class="stat-top">
-          <div class="stat-name">Platinum</div>
-          <div class="stat-value"><span id="platinum">0</span></div>
-        </div>
-        <div class="controls">
-          <button class="bad" onclick="inc('platinum', -1)">-1</button>
-          <button class="good" onclick="inc('platinum', 1)">+1</button>
-          <button class="ghost" onclick="promptSet('platinum')">Set</button>
-        </div>
-      </div>
-    </div>
-
-    <hr style="border:0; border-top:1px solid var(--hair); margin: 14px 0;">
-
-    <h2>🧪 Backup / Move to another iPad</h2>
-    <div class="small">Export JSON, Airdrop it, import on the other device. Like a vampire, but for data.</div>
-    <div class="footer-actions">
-      <button class="primary" onclick="exportState()">Export</button>
-      <button class="ghost" onclick="importState()">Import</button>
-      <button class="bad" onclick="resetAll()">Reset</button>
-    </div>
-    <textarea id="io" placeholder="Export/import JSON will appear here…"></textarea>
-  </aside>
-</main>
+<div class="card">
+  <div class="muted">💰 Coins</div>
+  <div class="row">
+    <div>Copper: <span id="cp">0</span></div>
+    <div>Silver: <span id="sp">0</span></div>
+    <div>Gold: <span id="gp">0</span></div>
+  </div>
+  <div class="controls">
+    <button onclick="inc('cp',1)">+1 CP</button>
+    <button onclick="inc('sp',1)">+1 SP</button>
+    <button onclick="inc('gp',1)">+1 GP</button>
+  </div>
+</div>
 
 <script>
+const DEFAULT_STATE = {
+  currentHP:0,totalHP:0,
+  inspiration:false,
+  cp:0,sp:0,gp:0
+};
 
-  // ---- Multi-character storage (GitHub Pages friendly) ----
-  const HUB_KEY = "tapSheetHub:v1:characters";
-  const ACTIVE_KEY = "tapSheetHub:v1:active";
-  let activeCharId = null;
-  let lastSaveOK = null;
-  function setSaveChip(ok){
-    const el = document.getElementById("storageChip");
-    if(!el) return;
-    if(ok === null){ el.textContent = "💾 saving: ?"; return; }
-    el.textContent = ok ? "💾 saving: OK" : "💀 saving: blocked";
+const HUB_KEY="tapHub:chars";
+const ACTIVE_KEY="tapHub:active";
+let activeId=null;
+let state={};
+
+function saveChip(ok){
+  const el=document.getElementById("saveChip");
+  el.textContent = ok ? "💾 saving: OK" : "💀 saving: blocked";
+}
+
+function loadChars(){
+  try{return JSON.parse(localStorage.getItem(HUB_KEY))||[]}catch{return[]}
+}
+function saveChars(c){localStorage.setItem(HUB_KEY,JSON.stringify(c))}
+function key(id){return "tapHub:sheet:"+id}
+
+function loadState(){
+  try{
+    return {...DEFAULT_STATE,...JSON.parse(localStorage.getItem(key(activeId))||"{}")}
+  }catch{return {...DEFAULT_STATE}}
+}
+function saveState(){
+  try{
+    localStorage.setItem(key(activeId),JSON.stringify(state));
+    saveChip(true);
+  }catch(e){saveChip(false)}
+}
+
+function render(){
+  for(const k in DEFAULT_STATE){
+    if(document.getElementById(k)) document.getElementById(k).textContent=state[k];
   }
+  document.getElementById("inspirationLabel").textContent=state.inspiration?"Yes":"No";
+  const p = state.totalHP? (state.currentHP/state.totalHP)*100:0;
+  document.getElementById("hpBar").style.width=p+"%";
+}
 
+function inc(k,d){
+  state[k]=Math.max(0,(state[k]||0)+d);
+  saveState();render();
+}
+function setValue(k){
+  const v=parseInt(prompt("Set value:",state[k]||0),10);
+  if(!isNaN(v)){state[k]=v;saveState();render()}
+}
+function setToMax(k,m){
+  state[k]=state[m]||0;saveState();render();
+}
+function toggleInspiration(){
+  state.inspiration=!state.inspiration;saveState();render();
+}
 
-  function safeGet(key){
-    try { return window.localStorage.getItem(key); } catch(e){ return null; }
+function ensure(){
+  let chars=loadChars();
+  if(!chars.length){
+    const id=Math.random().toString(36).slice(2);
+    chars=[{id,name:"Count Fuckoula"}];
+    saveChars(chars);
+    localStorage.setItem(ACTIVE_KEY,id);
+    localStorage.setItem(key(id),JSON.stringify(DEFAULT_STATE));
   }
-  function safeSet(key, val){
-    try { window.localStorage.setItem(key, val); return true; } catch(e){ return false; }
+  activeId=localStorage.getItem(ACTIVE_KEY)||chars[0].id;
+  const sel=document.getElementById("charSelect");
+  sel.innerHTML="";
+  chars.forEach(c=>{
+    const o=document.createElement("option");
+    o.value=c.id;o.textContent=c.name;sel.appendChild(o);
+  });
+  sel.value=activeId;
+  state=loadState();render();
+}
+
+function newChar(){
+  const n=prompt("New character name?");
+  if(!n) return;
+  const chars=loadChars();
+  const id=Math.random().toString(36).slice(2);
+  chars.push({id,name:n});
+  saveChars(chars);
+  localStorage.setItem(key(id),JSON.stringify(DEFAULT_STATE));
+  localStorage.setItem(ACTIVE_KEY,id);
+  ensure();
+}
+function renameChar(){
+  const chars=loadChars();
+  const c=chars.find(x=>x.id===activeId);
+  const n=prompt("Rename:",c.name);
+  if(n){c.name=n;saveChars(chars);ensure()}
+}
+function dupChar(){
+  const chars=loadChars();
+  const c=chars.find(x=>x.id===activeId);
+  const n=prompt("Duplicate as:",c.name+" copy");
+  if(!n) return;
+  const id=Math.random().toString(36).slice(2);
+  chars.push({id,name:n});
+  saveChars(chars);
+  localStorage.setItem(key(id),JSON.stringify(state));
+  localStorage.setItem(ACTIVE_KEY,id);
+  ensure();
+}
+function delChar(){
+  if(!confirm("Delete character?")) return;
+  let chars=loadChars().filter(c=>c.id!==activeId);
+  saveChars(chars);
+  if(chars[0]){
+    localStorage.setItem(ACTIVE_KEY,chars[0].id);
   }
-  function safeRemove(key){
-    try { window.localStorage.removeItem(key); } catch(e){}
-  }
-
-  function sheetKey(charId){
-    return "tapSheetHub:v1:sheet:" + charId;
-  }
-
-  function loadCharList(){
-    const raw = safeGet(HUB_KEY);
-    if(!raw) return [];
-    try { return JSON.parse(raw) || []; } catch(e){ return []; }
-  }
-  function saveCharList(list){
-    safeSet(HUB_KEY, JSON.stringify(list));
-  }
-  function newId(){
-    // short-ish id for sanity
-    return Math.random().toString(36).slice(2, 10) + Math.random().toString(36).slice(2, 6);
-  }
-
-let _storageOK = true;
-function storageGet(key){
-  try{ return window.storageGet(key); } catch(e){ _storageOK=false; return null; }
-}
-function storageSet(key, val){
-  try{ window.storageSet(key, val); } catch(e){ _storageOK=false; }
-}
-function storageRemove(key){
-  try{ window.storageRemove(key); } catch(e){ _storageOK=false; }
-}
-const DEFAULT_STATE = {"currentHP": 49, "totalHP": 49, "temp_hp": 0, "current_bp": 1, "max_bp": 3, "cur_exh": 1, "max_exh": 5, "fed": 3, "maxfed": 3, "copper": 0, "silver": 0, "gold": 254, "platinum": 0, "inspiration": true, "conditions": []};
-
-const CONDITIONS = [
-  "Blinded","Charmed","Deafened","Frightened","Grappled",
-  "Incapacitated","Invisible","Paralyzed","Petrified",
-  "Poisoned","Prone","Restrained","Stunned","Unconscious","Claustrophobic"
-];
-
-let state = loadState();
-
-function clamp(n, min, max) {
-  n = Number.isFinite(n) ? n : 0;
-  return Math.max(min, Math.min(max, n));
+  ensure();
 }
 
-function saveState() {
-  // Always try to save to the currently selected character.
-  if(!activeCharId){
-    const sel = document.getElementById("charSelect");
-    if(sel && sel.value) activeCharId = sel.value;
-  }
-  if(!activeCharId){
-    const list = loadCharList();
-    if(list[0]) activeCharId = list[0].id;
-  }
-  if(!activeCharId){ setSaveChip(false); return; }
-  const ok = safeSet(sheetKey(activeCharId), JSON.stringify(state));
-  lastSaveOK = ok;
-  setSaveChip(ok);
-}
+document.getElementById("charSelect").addEventListener("change",e=>{
+  localStorage.setItem(ACTIVE_KEY,e.target.value);
+  ensure();
+});
 
-function loadState() {
-  if(!activeCharId) return structuredClone(DEFAULT_STATE);
-  const raw = safeGet(sheetKey(activeCharId));
-  if (!raw) return structuredClone(DEFAULT_STATE);
-  try {
-    const parsed = JSON.parse(raw);
-    return { ...structuredClone(DEFAULT_STATE), ...parsed };
-  } catch (e) {
-    return structuredClone(DEFAULT_STATE);
-  }
-}
+window.addEventListener("pagehide",saveState);
+document.addEventListener("visibilitychange",()=>{
+  if(document.visibilityState==="hidden") saveState();
+});
 
-function setValue(key, val) {
-  if (typeof DEFAULT_STATE[key] === "boolean") {
-    state[key] = Boolean(val);
-  } else {
-    state[key] = clamp(parseInt(val, 10), 0, 999999);
-  }
-  saveState();
-  render();
-}
-
-function toggleBool(key) {
-  state[key] = !Boolean(state[key]);
-  saveState();
-  render();
-}
-
-function inc(key, delta) {
-  const cur = parseInt(state[key] ?? 0, 10) || 0;
-  let next = cur + delta;
-
-  if (key === "currentHP") {
-    next = clamp(next, 0, parseInt(state.totalHP ?? 0, 10) || 0);
-  } else if (key === "current_bp") {
-    next = clamp(next, 0, parseInt(state.max_bp ?? 0, 10) || 0);
-  } else if (key === "cur_exh") {
-    next = clamp(next, 0, parseInt(state.max_exh ?? 0, 10) || 6);
-  } else if (key === "fed") {
-    next = clamp(next, 0, parseInt(state.maxfed ?? 0, 10) || 0);
-  } else {
-    next = clamp(next, 0, 999999);
-  }
-
-  state[key] = next;
-  saveState();
-  render();
-}
-
-function setToMax(curKey, maxKey) {
-  const max = parseInt(state[maxKey] ?? 0, 10) || 0;
-  state[curKey] = clamp(max, 0, 999999);
-  saveState();
-  render();
-}
-
-function promptSet(key) {
-  const cur = state[key] ?? 0;
-  const v = prompt(`Set ${key} to:`, String(cur));
-  if (v === null) return;
-  setValue(key, v);
-}
-
-function pct(cur, max) {
-  if (!max) return 0;
-  return clamp((cur / max) * 100, 0, 100);
-}
-
-function statusHP(p) {
-  if (p > 66) return "Vital and unyielding.";
-  if (p > 34) return "Wounded, but surviving.";
-  if (p > 0) return "Barely clinging to life.";
-  return "Down. Try not to die, yeah?";
-}
-
-function statusGeneric(p, good, mid, low) {
-  if (p > 66) return good;
-  if (p > 34) return mid;
-  return low;
-}
-
-function barColor(p) {
-  if (p > 66) return "var(--good)";
-  if (p > 34) return "var(--warn)";
-  return "var(--bad)";
-}
-
-function renderConditions() {
-  const el = document.getElementById("conditions");
-  el.innerHTML = "";
-  for (const name of CONDITIONS) {
-    const chip = document.createElement("div");
-    chip.className = "chip" + (state.conditions.includes(name) ? " on" : "");
-    chip.textContent = name;
-    chip.addEventListener("click", () => {
-      if (state.conditions.includes(name)) {
-        state.conditions = state.conditions.filter(x => x !== name);
-      } else {
-        state.conditions = [...state.conditions, name];
-      }
-      saveState();
-      renderConditions();
-    });
-    el.appendChild(chip);
-  }
-}
-
-function render() {
-  for (const k of Object.keys(DEFAULT_STATE)) {
-    const el = document.getElementById(k);
-    if (!el) continue;
-    el.textContent = String(state[k] ?? DEFAULT_STATE[k] ?? 0);
-  }
-
-  document.getElementById("inspirationLabel").textContent = state.inspiration ? "Yes" : "No";
-
-  const hpP = pct(state.currentHP, state.totalHP);
-  document.getElementById("hpBar").style.width = hpP + "%";
-  document.getElementById("hpBar").style.background = barColor(hpP);
-  document.getElementById("hpStatus").textContent = statusHP(hpP);
-
-  const bpP = pct(state.current_bp, state.max_bp);
-  document.getElementById("bpBar").style.width = bpP + "%";
-  document.getElementById("bpBar").style.background = barColor(bpP);
-  document.getElementById("bpStatus").textContent = statusGeneric(bpP, "Sated enough… for now.", "Hungry. Annoyingly.", "Starving. Don't be weird about it.");
-
-  const exhMax = parseInt(state.max_exh ?? 6, 10) || 6;
-  const exhCur = clamp(parseInt(state.cur_exh ?? 0, 10) || 0, 0, exhMax);
-  const exhP = exhMax ? (exhCur / exhMax) * 100 : 0;
-  document.getElementById("exhBar").style.width = exhP + "%";
-  document.getElementById("exhBar").style.background = exhP < 34 ? "var(--good)" : (exhP < 66 ? "var(--warn)" : "var(--bad)");
-  document.getElementById("exhStatus").textContent = exhP < 34 ? "Fresh-ish." : (exhP < 66 ? "Flagging." : "Absolutely cooked.");
-
-  const fedP = pct(state.fed, state.maxfed);
-  document.getElementById("fedBar").style.width = fedP + "%";
-  document.getElementById("fedBar").style.background = barColor(fedP);
-  document.getElementById("fedStatus").textContent = statusGeneric(fedP, "Comfortably fed.", "Peckish. Dangerous.", "Hunger is driving.");
-
-  renderConditions();
-}
-
-function exportState() {
-  const out = document.getElementById("io");
-  out.value = JSON.stringify(state, null, 2);
-  out.focus();
-  out.select();
-}
-
-function importState() {
-  const input = document.createElement("input");
-  input.type = "file";
-  input.accept = "application/json";
-  input.onchange = async () => {
-    const file = input.files && input.files[0];
-    if (!file) return;
-    const text = await file.text();
-    let parsed;
-    try { parsed = JSON.parse(text); } catch(e){ alert("Invalid JSON"); return; }
-    const incoming = parsed && parsed.state ? parsed.state : parsed;
-    state = { ...structuredClone(DEFAULT_STATE), ...incoming };
-    saveState();
-    render();
-  };
-  input.click();
-}
-
-function resetAll() {
-  if (!confirm("Reset everything to defaults?")) return;
-  state = { ...DEFAULT_STATE, conditions: [] };
-  saveState();
-  render();
-}
-
-render();
+ensure();
 </script>
+
 </body>
 </html>
