@@ -1,6 +1,6 @@
 // Isaac Checklist - stable app.js
 // Build: 1  (increment this integer whenever you update this file)
-const BUILD = 1;
+const BUILD = 10;
 const STORE_KEY = "isaacChecklist.v1";
 
 const $ = (sel) => document.querySelector(sel);
