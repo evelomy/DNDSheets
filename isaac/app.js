@@ -333,13 +333,33 @@ function onPickChange() {
 function renderStats() {
   const el = $("#stats");
   if(!el) return;
-  const total = DATA.length;
-  let done = 0;
-  for(let i=0;i<DATA.length;i++) {
-    if(getTick(DATA[i].id)) done++;
+
+  const groups = {
+    characters: DATA.filter(x =>
+      x.type === "character" || x.type === "tainted_character"
+    ),
+    bosses: DATA.filter(x => x.type === "boss"),
+    finals: DATA.filter(x =>
+      typeof x.type === "string" && x.type.startsWith("final_boss")
+    )
+  };
+
+  function count(group) {
+    let done = 0;
+    for(let i=0;i<group.length;i++) {
+      if(getTick(group[i].id)) done++;
+    }
+    return { done, total: group.length };
   }
-  const pct = total ? Math.round((done/total)*100) : 0;
-  el.textContent = "Total: " + done + "/" + total + " (" + pct + "%)";
+
+  const c = count(groups.characters);
+  const b = count(groups.bosses);
+  const f = count(groups.finals);
+
+  el.innerHTML =
+    "Characters: " + c.done + " / " + c.total + "<br>" +
+    "Bosses: " + b.done + " / " + b.total + "<br>" +
+    "Final Bosses: " + f.done + " / " + f.total;
 }
 
 function exportProgress() {
