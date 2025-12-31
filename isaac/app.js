@@ -117,7 +117,8 @@ function renderInstructions(elm, text){
   const raw = (text || "").trim();
   if(!raw){ return; }
 
-  const lines = raw.split(/?
+  const lines = raw.split(/
+?
 /);
 
   let ul = null;
