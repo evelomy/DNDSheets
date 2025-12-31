@@ -1,4 +1,4 @@
-const VERSION = 2;
+const VERSION = 3;
 const STORE_KEY = "isaacChecklist.v2";
 const $ = (s) => document.querySelector(s);
 
@@ -346,12 +346,12 @@ async function init(){
         null,
         "Check your repo folder:
 - isaac/index.html
-- isaac/app_20251231b.js
+- isaac/app.js
 - isaac/styles.css
 - isaac/data.json
 Then hard-refresh / clear cache."
       );
-    }
+}
   }catch(err){
     renderError("App failed to start. Open dev tools for details.", err);
     console.error(err);
