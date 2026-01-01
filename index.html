@@ -73,10 +73,19 @@
 .secondary{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);color:var(--txt);}
 .secondary:active{transform:translateY(1px);}
 
-.statgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;text-align:center;margin:10px 0;}
-.skills{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:10px;}
-.skill{display:flex;justify-content:space-between;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.05);}
-@media(max-width:600px){.statgrid{grid-template-columns:repeat(3,1fr);} .skills{grid-template-columns:1fr;}}
+/* --- Stat Block card --- */
+.statgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin-top:10px;}
+.ability{border:1px solid rgba(255,255,255,0.14);background:rgba(255,255,255,0.06);border-radius:16px;padding:10px 12px;text-align:center;}
+.ability .k{font-size:12px;letter-spacing:0.5px;opacity:0.8;}
+.ability .v{font-size:22px;font-weight:900;margin-top:2px;}
+.ability .m{font-size:12px;opacity:0.8;margin-top:2px;}
+.skills{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px;}
+.skill{display:flex;justify-content:space-between;align-items:center;padding:8px 10px;border-radius:12px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.10);}
+.skill .name{font-weight:700;font-size:13px;}
+.skill .val{font-weight:900;font-variant-numeric:tabular-nums;}
+.skill .star{opacity:0.75;margin-left:4px;font-weight:900;}
+@media (max-width:600px){.statgrid{grid-template-columns:repeat(3,1fr);} .skills{grid-template-columns:1fr;}}
+
 </style>
 </head>
 <body>
@@ -91,43 +100,20 @@
 <main>
   <section class="card">
     <h2>
-<div class="card">
-  <div class="title">📜 Stat Block</div><div class="controls"><button class="secondary" onclick="editBaseStats()">Edit Base Stats</button></div>
+  <div class="card" id="statBlockCard">
+    <div class="title">📜 Stat Block</div>
+    <div class="sub">Auto-calculates modifiers + skills. Use <b>Edit</b> when you level up.</div>
+    <div class="controls" style="margin-top:10px;">
+      <button class="secondary" onclick="TS_editBaseStats()">Edit</button>
+      <button class="secondary" onclick="TS_resetBaseStats()">Reset</button>
+    </div>
 
-  <div class="statgrid">
-    <div><b>STR</b><br>6 (-2)</div>
-    <div><b>DEX</b><br>16 (+3)</div>
-    <div><b>CON</b><br>13 (+1)</div>
-    <div><b>INT</b><br>12 (+1)</div>
-    <div><b>WIS</b><br>14 (+2)</div>
-    <div><b>CHA</b><br>14 (+2)</div>
+    <div class="statgrid" id="TS_abilityGrid"></div>
+    <div class="skills" id="TS_skillsGrid"></div>
+    <div class="muted" id="TS_profLine"></div>
   </div>
 
-  <div class="skills">
-    <div class='skill'><span>Athletics</span><span>-2</span></div>
-<div class='skill'><span>Acrobatics</span><span>+3</span></div>
-<div class='skill'><span>Sleight of Hand</span><span>+3</span></div>
-<div class='skill'><span>Stealth</span><span>+3</span></div>
-<div class='skill'><span>Arcana</span><span>+1</span></div>
-<div class='skill'><span>History</span><span>+1</span></div>
-<div class='skill'><span>Investigation</span><span>+1</span></div>
-<div class='skill'><span>Nature</span><span>+1</span></div>
-<div class='skill'><span>Religion</span><span>+1</span></div>
-<div class='skill'><span>Animal Handling</span><span>+2</span></div>
-<div class='skill'><span>Insight</span><span>+2</span></div>
-<div class='skill'><span>Medicine</span><span>+2</span></div>
-<div class='skill'><span>Perception</span><span>+2</span></div>
-<div class='skill'><span>Survival</span><span>+2</span></div>
-<div class='skill'><span>Deception</span><span>+2</span></div>
-<div class='skill'><span>Intimidation</span><span>+2</span></div>
-<div class='skill'><span>Performance</span><span>+2</span></div>
-<div class='skill'><span>Persuasion</span><span>+2</span></div>
-  </div>
-
-  <div class="muted">★ proficient · proficiency bonus +2</div>
-</div>
-
-🧾 Trackers
+    🧾 Trackers
 <span class="muted">Tip: use <b>Set Max</b> when you level up.</span></h2>
     <div class="grid">
       <div class="stat">
@@ -307,11 +293,6 @@
 </main>
 
 <script>
-
-const BASE_STATS = {str:STR, dex:DEX, con:CON, int:INT, wis:WIS, cha:CHA, proficiency:PROF};
-const MODS = {};
-const SKILL_VALS = {};
-
 const STORAGE_KEY = "tapSheet:Count Fuckoula-la-la";
 let _storageOK = true;
 function storageGet(key){
@@ -518,58 +499,127 @@ function resetAll() {
 
 render();
 
-function editBaseStats(){
-  const fields = ['str','dex','con','int','wis','cha','proficiency'];
-  const labels = {str:'STR',dex:'DEX',con:'CON',int:'INT',wis:'WIS',cha:'CHA',proficiency:'Proficiency'};
-  let changed=false;
-  fields.forEach(k=>{
-    const cur = BASE_STATS[k];
-    const v = prompt(`Set ${labels[k]}:`, cur);
-    if(v===null) return;
-    const n = parseInt(v,10);
-    if(!isNaN(n)){
-      BASE_STATS[k]=n;
-      changed=true;
+// ---- Stat Block module (namespaced: TS_) ----
+const TS_STAT_DEFAULTS = {'str': 6, 'dex': 16, 'con': 13, 'int': 12, 'wis': 14, 'cha': 14, 'prof': 2, 'profs': ['acrobatics', 'deception', 'stealth', 'charisma', 'dexterity']};
+const TS_SKILLS = {'Athletics': 'str', 'Acrobatics': 'dex', 'Sleight of Hand': 'dex', 'Stealth': 'dex', 'Arcana': 'int', 'History': 'int', 'Investigation': 'int', 'Nature': 'int', 'Religion': 'int', 'Animal Handling': 'wis', 'Insight': 'wis', 'Medicine': 'wis', 'Perception': 'wis', 'Survival': 'wis', 'Deception': 'cha', 'Intimidation': 'cha', 'Performance': 'cha', 'Persuasion': 'cha'};
+const TS_STAT_KEY = "tapSheet:baseStats:v2";
+
+function TS_abilityMod(score){
+  return Math.floor((Number(score) - 10) / 2);
+}
+
+function TS_loadBaseStats(){
+  try {
+    const raw = localStorage.getItem(TS_STAT_KEY);
+    if(raw) {
+      const obj = JSON.parse(raw);
+      return {
+        str: Number(obj.str ?? TS_STAT_DEFAULTS.str),
+        dex: Number(obj.dex ?? TS_STAT_DEFAULTS.dex),
+        con: Number(obj.con ?? TS_STAT_DEFAULTS.con),
+        int: Number(obj.int ?? TS_STAT_DEFAULTS.int),
+        wis: Number(obj.wis ?? TS_STAT_DEFAULTS.wis),
+        cha: Number(obj.cha ?? TS_STAT_DEFAULTS.cha),
+        prof: Number(obj.prof ?? TS_STAT_DEFAULTS.prof),
+        profs: Array.isArray(obj.profs) ? obj.profs : TS_STAT_DEFAULTS.profs
+      };
     }
-  });
-  if(changed){
-    saveBaseStats();
-    recalcStats();
-    renderStats();
+  } catch(e) {}
+  // structuredClone might not exist on older Safari, so be safe
+  return {
+    str: TS_STAT_DEFAULTS.str, dex: TS_STAT_DEFAULTS.dex, con: TS_STAT_DEFAULTS.con,
+    int: TS_STAT_DEFAULTS.int, wis: TS_STAT_DEFAULTS.wis, cha: TS_STAT_DEFAULTS.cha,
+    prof: TS_STAT_DEFAULTS.prof, profs: TS_STAT_DEFAULTS.profs
+  };
+}
+
+function TS_saveBaseStats(bs){
+  try { localStorage.setItem(TS_STAT_KEY, JSON.stringify(bs)); } catch(e) {}
+}
+
+function TS_resetBaseStats(){
+  TS_saveBaseStats(TS_STAT_DEFAULTS);
+  TS_renderStatBlock();
+}
+
+function TS_editBaseStats(){
+  const bs = TS_loadBaseStats();
+  const ask = (label, cur) => {
+    const v = prompt(`Set ${label}:`, String(cur));
+    if(v === null) return cur;
+    const n = parseInt(v, 10);
+    return Number.isFinite(n) ? n : cur;
+  };
+  bs.str = ask("STR", bs.str);
+  bs.dex = ask("DEX", bs.dex);
+  bs.con = ask("CON", bs.con);
+  bs.int = ask("INT", bs.int);
+  bs.wis = ask("WIS", bs.wis);
+  bs.cha = ask("CHA", bs.cha);
+  bs.prof = ask("Proficiency Bonus", bs.prof);
+
+  const curList = (bs.profs || []).join(", ");
+  const listIn = prompt("Proficient skills (comma-separated):", curList);
+  if(listIn !== null) {
+    bs.profs = listIn.split(",").map(s => s.trim()).filter(Boolean);
   }
+
+  TS_saveBaseStats(bs);
+  TS_renderStatBlock();
 }
 
-function abilityMod(score){
-  return Math.floor((score-10)/2);
-}
+function TS_renderStatBlock(){
+  const bs = TS_loadBaseStats();
+  const mods = {
+    str: TS_abilityMod(bs.str),
+    dex: TS_abilityMod(bs.dex),
+    con: TS_abilityMod(bs.con),
+    int: TS_abilityMod(bs.int),
+    wis: TS_abilityMod(bs.wis),
+    cha: TS_abilityMod(bs.cha)
+  };
+  const profSet = new Set(bs.profs || []);
 
-function recalcStats(){
-  for(const k of ['str','dex','con','int','wis','cha']){
-    MODS[k]=abilityMod(BASE_STATS[k]);
-  }
-  PROF = BASE_STATS.proficiency||0;
-  // recompute skills
-  for(const sk in SKILLS){
-    const ab = SKILLS[sk];
-    SKILL_VALS[sk] = MODS[ab] + (PROF_SKILLS.has(sk)?PROF:0);
-  }
-}
-
-function saveBaseStats(){
-  try{
-    localStorage.setItem('baseStats', JSON.stringify(BASE_STATS));
-  }catch(e){}
-}
-
-function loadBaseStats(){
-  try{
-    const r = localStorage.getItem('baseStats');
-    if(r){
-      const o = JSON.parse(r);
-      Object.assign(BASE_STATS,o);
+  const grid = document.getElementById("TS_abilityGrid");
+  if(grid){
+    grid.innerHTML = "";
+    const order = ["str","dex","con","int","wis","cha"];
+    const labels = {str:"STR",dex:"DEX",con:"CON",int:"INT",wis:"WIS",cha:"CHA"};
+    for(const k of order){
+      const div = document.createElement("div");
+      div.className = "ability";
+      const m = mods[k];
+      div.innerHTML = `<div class="k">${labels[k]}</div>
+                       <div class="v">${bs[k]}</div>
+                       <div class="m">${m >= 0 ? "+" : ""}${m}</div>`;
+      grid.appendChild(div);
     }
-  }catch(e){}
+  }
+
+  const skillsEl = document.getElementById("TS_skillsGrid");
+  if(skillsEl){
+    skillsEl.innerHTML = "";
+    const names = Object.keys(TS_SKILLS);
+    for(const sk of names){
+      const ab = TS_SKILLS[sk];
+      const val = mods[ab] + (profSet.has(sk) ? bs.prof : 0);
+      const row = document.createElement("div");
+      row.className = "skill";
+      row.innerHTML = `<div class="name">${sk}${profSet.has(sk) ? '<span class="star">★</span>' : ''}</div>
+                       <div class="val">${val >= 0 ? "+" : ""}${val}</div>`;
+      skillsEl.appendChild(row);
+    }
+  }
+
+  const line = document.getElementById("TS_profLine");
+  if(line){
+    line.textContent = `★ proficient · proficiency bonus +${bs.prof}`;
+  }
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  try { TS_renderStatBlock(); } catch(e) {}
+});
 
 </script>
 </body>
