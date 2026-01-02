@@ -1,0 +1,888 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Count Fuckoula-la-la · Tap Sheet</title>
+<style>
+:root{
+  --bg:#0b0d12;
+  --card:#141823;
+  --card2:#111520;
+  --stroke:rgba(255,255,255,.10);
+  --stroke2:rgba(255,255,255,.14);
+  --text:rgba(255,255,255,.92);
+  --muted:rgba(255,255,255,.70);
+  --muted2:rgba(255,255,255,.55);
+  --good:rgba(122,255,168,.95);
+  --bad:rgba(255,120,120,.95);
+  --gold:#ffdf6c;
+  --shadow:0 14px 50px rgba(0,0,0,.55);
+  --r:18px;
+  --r2:14px;
+  --pad:14px;
+  --pad2:12px;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--sans);
+  color:var(--text);
+  /* Red + black only (no other theme changes) */
+  background:
+    radial-gradient(1200px 900px at 25% 10%, rgba(255,0,40,.22), transparent 55%),
+    radial-gradient(1000px 800px at 75% 25%, rgba(120,0,0,.20), transparent 60%),
+    radial-gradient(900px 700px at 50% 95%, rgba(255,80,80,.10), transparent 55%),
+    #050006;
+}
+a{color:inherit}
+main{max-width:1060px;margin:0 auto;padding:18px 14px 32px}
+.header{
+  display:flex;gap:12px;align-items:flex-start;justify-content:space-between;margin:6px 0 14px
+}
+.h-left{display:flex;gap:12px;align-items:center;min-width:0}
+.badge{
+  width:46px;height:46px;border-radius:14px;
+  background:linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  border:1px solid var(--stroke);
+  display:grid;place-items:center;box-shadow:var(--shadow)
+}
+.h-title{min-width:0}
+.h-title h1{margin:0;font-size:18px;font-weight:950;letter-spacing:.2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.h-title .sub{margin-top:2px;font-size:12px;color:var(--muted2)}
+.pillrow{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.pill{
+  font-size:12px;color:var(--muted);border:1px solid var(--stroke);
+  background:rgba(255,255,255,.04);padding:8px 10px;border-radius:999px
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+@media (max-width:860px){ .grid{grid-template-columns:1fr} }
+
+.card{
+  background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+  border:1px solid var(--stroke);
+  border-radius:var(--r);
+  padding:var(--pad);
+  box-shadow:var(--shadow);
+  min-width:0;
+}
+.title{font-weight:950;font-size:13px;letter-spacing:.2px;display:flex;gap:8px;align-items:center}
+.subtxt{margin-top:4px;font-size:12px;color:var(--muted2)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.spacer{flex:1}
+.kpi{
+  font-family:var(--mono);
+  font-weight:900;
+  letter-spacing:.2px;
+  font-size:14px;
+  padding:10px 12px;
+  border-radius:14px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.03);
+  min-width:92px;
+  text-align:center;
+}
+.kpi small{display:block;color:var(--muted2);font-weight:700;font-family:var(--sans);letter-spacing:.2px}
+button{
+  -webkit-tap-highlight-color:transparent;
+  appearance:none;border:none;cursor:pointer;
+  color:var(--text);
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--stroke);
+  padding:10px 12px;border-radius:14px;
+  font-weight:850;font-size:13px;
+}
+button:active{transform:scale(.98)}
+button.secondary{background:rgba(255,255,255,.04)}
+button.ghost{background:transparent}
+button.good{border-color:rgba(122,255,168,.35)}
+button.bad{border-color:rgba(255,120,120,.35)}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap}
+
+.barwrap{margin-top:10px}
+.bar{
+  height:12px;border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid var(--stroke);
+  overflow:hidden;
+}
+.fill{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg, rgba(120,200,255,.95), rgba(255,190,120,.95));
+}
+.fill.temp{background:linear-gradient(90deg, rgba(255,220,120,.95), rgba(255,120,120,.95))}
+.fill.blood{background:linear-gradient(90deg, rgba(255,80,120,.95), rgba(255,190,120,.55))}
+.fill.fed{background:linear-gradient(90deg, rgba(255,120,120,.95), rgba(255,80,120,.75))}
+
+.checkbox{
+  display:flex;align-items:center;gap:10px;margin-top:10px
+}
+.toggle{
+  width:56px;height:32px;border-radius:999px;border:1px solid var(--stroke);
+  background:rgba(255,255,255,.05);position:relative;flex:0 0 auto
+}
+.toggle::after{
+  content:"";position:absolute;top:4px;left:4px;width:24px;height:24px;border-radius:999px;
+  background:rgba(255,255,255,.85);
+  transition:transform .18s ease;
+}
+.toggle.on{border-color:rgba(255,223,108,.35);background:rgba(255,223,108,.08)}
+.toggle.on::after{transform:translateX(24px)}
+.sparkle{
+  display:inline-block;
+  opacity:0;
+  transform:scale(.9);
+  filter:drop-shadow(0 0 10px rgba(255,223,108,.45));
+  transition:opacity .16s ease, transform .16s ease;
+}
+.sparkle.on{opacity:1;transform:scale(1)}
+.sparkle.on::after{
+  content:" ✨";
+}
+
+/* Jazzy Inspiration (only affects Inspiration card/button) */
+#inspCard.insp-on{
+  border-color: rgba(255,223,108,.35);
+  box-shadow: 0 0 0 1px rgba(255,223,108,.10), 0 18px 60px rgba(0,0,0,.55);
+}
+#inspCard.insp-on .title{
+  text-shadow: 0 0 10px rgba(255,223,108,.35);
+}
+#inspBtn.insp-on{
+  background: linear-gradient(180deg, rgba(80,80,80,.15), rgba(40,40,40,.15));
+  border-color: rgba(255,223,108,.35);
+  box-shadow: 0 0 10px rgba(255,223,108,.25);
+}
+
+#inspCard.insp-on{
+  position: relative;
+  overflow: hidden;
+}
+
+#inspCard.insp-on::before{
+  content:"";
+  position:absolute;
+  inset:-4px;
+  background: conic-gradient(
+    from 0deg,
+    rgba(255,223,108,0),
+    rgba(255,223,108,.35),
+    rgba(255,120,180,.25),
+    rgba(120,200,255,.25),
+    rgba(255,223,108,0)
+  );
+  filter: blur(14px);
+  animation: inspSpin 2.2s linear infinite;
+  opacity:.85;
+  pointer-events:none;
+}
+
+#inspCard.insp-on::after{
+  content:"";
+  position:absolute;
+  inset:2px;
+  background: inherit;
+  border-radius: inherit;
+  z-index:1;
+}
+
+#inspCard.insp-on > *{
+  position: relative;
+  z-index:2;
+}
+
+@keyframes inspSpin{
+  to{ transform: rotate(360deg); }
+}
+/* extra sparkles next to title */
+#inspSpark.on{
+  opacity:1;
+}
+#inspSpark.on::before{
+  content:"✨";
+  display:inline-block;
+  margin-left:6px;
+  animation: inspTwinkle .9s ease-in-out infinite alternate;
+}
+#inspSpark.on::after{
+  content:"✨";
+  display:inline-block;
+  margin-left:2px;
+  animation: inspTwinkle 1.1s ease-in-out infinite alternate;
+  filter: drop-shadow(0 0 12px rgba(255,223,108,.45));
+}
+@keyframes inspTwinkle{
+  from{ transform: translateY(0) rotate(-8deg); opacity:.75; }
+  to{ transform: translateY(-2px) rotate(8deg); opacity:1; }
+}
+
+
+/* coin pouch full width */
+#coinCard{grid-column:1 / -1;}
+.coinGrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:10px}
+.coinTile{border:1px solid var(--stroke);background:rgba(255,255,255,.03);border-radius:16px;padding:10px;min-width:0}
+.coinHead{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.coinName{font-weight:950;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+.coinValue{font-weight:1000;font-size:16px;font-family:var(--mono)}
+.coinBtns{display:flex;gap:8px;flex-wrap:nowrap}
+.coinBtns button{flex:1;padding:9px 0;border-radius:14px}
+.coinBtns button.wide{flex:1.25}
+@media (max-width:980px){.coinGrid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media (max-width:560px){.coinGrid{grid-template-columns:1fr;}}
+
+/* stat block full width bottom */
+#statCard{grid-column:1 / -1;}
+.statTop{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.pbPill{font-family:var(--mono);font-weight:950;border:1px solid var(--stroke);background:rgba(255,255,255,.03);padding:10px 12px;border-radius:16px}
+.abilities{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px
+}
+@media (max-width:560px){.abilities{grid-template-columns:repeat(2,minmax(0,1fr));}}
+.abox{
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.03);
+  border-radius:18px;padding:10px;
+  display:flex;gap:10px;align-items:center;justify-content:space-between;
+}
+.abox .left{display:flex;flex-direction:column;gap:2px}
+.abox .code{font-weight:950;letter-spacing:.06em}
+.abox .score{font-family:var(--mono);font-weight:1000;font-size:15px}
+.abox .mod{font-family:var(--mono);font-weight:1000;color:var(--muted);font-size:13px}
+.abox .right{display:flex;flex-direction:column;gap:6px;align-items:flex-end}
+.chip{
+  font-family:var(--mono);
+  font-weight:950;
+  padding:8px 10px;
+  border-radius:999px;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.04);
+  min-width:72px;
+  text-align:center;
+}
+.skillsHdr{margin-top:12px;font-size:12px;color:var(--muted2)}
+.skillsGrid{margin-top:10px;max-height:55vh;overflow:auto;padding-right:4px}
+.skillRow{
+  display:flex;gap:10px;align-items:center;
+  border:1px solid var(--stroke);
+  background:rgba(255,255,255,.03);
+  border-radius:16px;padding:10px;
+  margin-bottom:10px;
+}
+.skillRow .name{font-weight:950}
+.skillRow .meta{font-size:12px;color:var(--muted2);margin-top:2px}
+.skillRow .left{min-width:0}
+.skillRow .right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.star{
+  width:38px;height:38px;border-radius:14px;display:grid;place-items:center;
+  border:1px solid rgba(255,223,108,.25);
+  background:rgba(255,223,108,.06);
+  font-size:16px;
+}
+.star.off{opacity:.55;filter:grayscale(.4)}
+.smallbtn{padding:9px 11px;border-radius:14px;font-weight:900}
+.valuechip{min-width:56px}
+hr.sep{border:none;border-top:1px solid var(--stroke);margin:12px 0 0}
+.footerhint{margin-top:10px;color:var(--muted2);font-size:12px}
+
+/* --- Banding killer: subtle noise overlay --- */
+body{position:relative;}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background-image:url("data:image/png;base64,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");
+  background-repeat:repeat;
+  opacity:0.055; /* tweak 0.03–0.08 if needed */
+  mix-blend-mode:overlay;
+}
+main{position:relative; z-index:1;}
+
+</style>
+</head>
+<body>
+<main>
+  <div class="header">
+    <div class="h-left">
+      <div class="badge">🦇</div>
+      <div class="h-title">
+        <h1>Count Fuckoula-la-la · Tap Sheet</h1>
+        <div class="sub">iOS friendly · offline · saves automatically 💾</div>
+      </div>
+    </div>
+    <div class="pillrow">
+      <div class="pill" id="savePill">saved</div>
+      <button class="pill" data-act="export">Export</button>
+      <button class="pill" data-act="import">Import</button>
+      <button class="pill" data-act="reset">Reset</button>
+    </div>
+  </div>
+
+  <div class="grid" id="grid">
+
+    <div class="card" id="healthCard">
+      <div class="title">❤️ Health</div>
+      <div class="subtxt">Soak damage before real HP. Temp is separate.</div>
+
+      <div class="row">
+        <div class="kpi"><small>HP</small><span data-kpi="hp"></span></div>
+        <div class="btnrow">
+          <button class="secondary" data-act="dec" data-key="hp" data-step="1">-1</button>
+          <button class="secondary" data-act="dec" data-key="hp" data-step="5">-5</button>
+          <button class="secondary" data-act="inc" data-key="hp" data-step="1">+1</button>
+          <button class="secondary" data-act="inc" data-key="hp" data-step="5">+5</button>
+          <button class="secondary" data-act="fill" data-key="hp">Fill</button>
+          <button class="secondary" data-act="setMax" data-key="hp">Set Max</button>
+        </div>
+      </div>
+
+      <div class="barwrap">
+        <div class="bar"><div class="fill" data-bar="hp"></div></div>
+      </div>
+
+      <div class="row" style="margin-top:12px">
+        <div class="kpi"><small>Temp</small><span data-kpi="temp"></span></div>
+        <div class="btnrow">
+          <button class="secondary" data-act="dec" data-key="temp" data-step="1">-1</button>
+          <button class="secondary" data-act="dec" data-key="temp" data-step="5">-5</button>
+          <button class="secondary" data-act="inc" data-key="temp" data-step="1">+1</button>
+          <button class="secondary" data-act="inc" data-key="temp" data-step="5">+5</button>
+          <button class="secondary" data-act="clear" data-key="temp">Clear</button>
+          <button class="secondary" data-act="setMax" data-key="temp">Set Max</button>
+        </div>
+      </div>
+
+      <div class="barwrap">
+        <div class="bar"><div class="fill temp" data-bar="temp"></div></div>
+      </div>
+    </div>
+
+    <div class="card" id="bloodCard">
+      <div class="title">🩸 Blood Points</div>
+      <div class="subtxt">Your hunger meter. Don’t be normal about it.</div>
+
+      <div class="row">
+        <div class="kpi"><small>BP</small><span data-kpi="bp"></span></div>
+        <div class="btnrow">
+          <button class="secondary" data-act="dec" data-key="bp" data-step="1">-1</button>
+          <button class="secondary" data-act="inc" data-key="bp" data-step="1">+1</button>
+          <button class="secondary" data-act="fill" data-key="bp">Max</button>
+          <button class="secondary" data-act="clear" data-key="bp">Clear</button>
+          <button class="secondary" data-act="setMax" data-key="bp">Set Max</button>
+        </div>
+      </div>
+      <div class="barwrap">
+        <div class="bar"><div class="fill blood" data-bar="bp"></div></div>
+      </div>
+    </div>
+
+    <div class="card" id="fedCard">
+      <div class="title">🩸 Fed</div>
+      <div class="subtxt">Track feeding state. Use max if your “Well-Fed” matters.</div>
+
+      <div class="row">
+        <div class="kpi"><small>Fed</small><span data-kpi="fed"></span></div>
+        <div class="btnrow">
+          <button class="secondary" data-act="dec" data-key="fed" data-step="1">-1</button>
+          <button class="secondary" data-act="inc" data-key="fed" data-step="1">+1</button>
+          <button class="secondary" data-act="fill" data-key="fed">Max</button>
+          <button class="secondary" data-act="clear" data-key="fed">Clear</button>
+          <button class="secondary" data-act="setMax" data-key="fed">Set Max</button>
+        </div>
+      </div>
+      <div class="barwrap">
+        <div class="bar"><div class="fill fed" data-bar="fed"></div></div>
+      </div>
+    </div>
+
+    <div class="card" id="inspCard">
+      <div class="title">✨ Inspiration <span class="sparkle" id="inspSpark"></span></div>
+      <div class="subtxt">Toggle like a smug hero.</div>
+      <div class="checkbox">
+        <div class="kpi" style="min-width:160px"><small>Status</small><span id="inspStatus">No</span></div>
+        <div class="spacer"></div>
+        <button class="secondary" data-act="toggleInsp" id="inspBtn"><span>Toggle</span></button>
+      </div>
+    </div>
+
+    <!-- Coin Pouch FULL WIDTH near top -->
+    <div class="card" id="coinCard">
+      <div class="title">💰 Coin Pouch</div>
+      <div class="subtxt">Tap Set to enter exact value.</div>
+
+      <div class="coinGrid">
+        <div class="coinTile">
+          <div class="coinHead"><div class="coinName">COPPER</div><div class="coinValue" data-solo="cp"></div></div>
+          <div class="coinBtns">
+            <button class="secondary" data-act="decSolo" data-key="cp" data-step="1">-1</button>
+            <button class="secondary" data-act="incSolo" data-key="cp" data-step="1">+1</button>
+            <button class="secondary wide" data-act="setSolo" data-key="cp">Set</button>
+          </div>
+        </div>
+
+        <div class="coinTile">
+          <div class="coinHead"><div class="coinName">SILVER</div><div class="coinValue" data-solo="sp"></div></div>
+          <div class="coinBtns">
+            <button class="secondary" data-act="decSolo" data-key="sp" data-step="1">-1</button>
+            <button class="secondary" data-act="incSolo" data-key="sp" data-step="1">+1</button>
+            <button class="secondary wide" data-act="setSolo" data-key="sp">Set</button>
+          </div>
+        </div>
+
+        <div class="coinTile">
+          <div class="coinHead"><div class="coinName">GOLD</div><div class="coinValue" data-solo="gp"></div></div>
+          <div class="coinBtns">
+            <button class="secondary" data-act="decSolo" data-key="gp" data-step="1">-1</button>
+            <button class="secondary" data-act="incSolo" data-key="gp" data-step="1">+1</button>
+            <button class="secondary" data-act="incSolo" data-key="gp" data-step="10">+10</button>
+            <button class="secondary wide" data-act="setSolo" data-key="gp">Set</button>
+          </div>
+        </div>
+
+        <div class="coinTile">
+          <div class="coinHead"><div class="coinName">PLATINUM</div><div class="coinValue" data-solo="pp"></div></div>
+          <div class="coinBtns">
+            <button class="secondary" data-act="decSolo" data-key="pp" data-step="1">-1</button>
+            <button class="secondary" data-act="incSolo" data-key="pp" data-step="1">+1</button>
+            <button class="secondary wide" data-act="setSolo" data-key="pp">Set</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- STAT BLOCK FULL WIDTH BOTTOM -->
+    <div class="card" id="statCard">
+      <div class="title">📜 Stat Block</div>
+      <div class="subtxt">Tap numbers to edit base stats. Tap ⭐ to toggle proficiency on skills.</div>
+
+      <div class="statTop">
+        <div class="pbPill">PB: <span id="pbVal">+2</span></div>
+        <button class="secondary" data-act="setPB">Set PB</button>
+      </div>
+
+      <div class="abilities" id="abilityGrid"></div>
+
+      <div class="skillsHdr">Skills</div>
+      <div class="skillsGrid" id="skillsGrid"></div>
+
+      <div class="footerhint">Everything autosaves to this device. Export JSON if you want a backup.</div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+/* =========================
+   Clean rebuild: SINGLE FILE
+   ========================= */
+
+const STORAGE_KEY = "fuckoula_tapsheet_v1";
+
+const SKILLS = [
+  ["Athletics","STR"],
+  ["Acrobatics","DEX"],
+  ["Sleight of Hand","DEX"],
+  ["Stealth","DEX"],
+  ["Arcana","INT"],
+  ["History","INT"],
+  ["Investigation","INT"],
+  ["Nature","INT"],
+  ["Religion","INT"],
+  ["Animal Handling","WIS"],
+  ["Insight","WIS"],
+  ["Medicine","WIS"],
+  ["Perception","WIS"],
+  ["Survival","WIS"],
+  ["Deception","CHA"],
+  ["Intimidation","CHA"],
+  ["Performance","CHA"],
+  ["Persuasion","CHA"],
+];
+
+function defaultState(){
+  const skillState = {};
+  for (const [name, abil] of SKILLS){
+    skillState[name] = { proficient:false, adj:0 };
+  }
+  return {
+    version: 1,
+    savedAt: Date.now(),
+    trackers: {
+      hp:{cur:0,max:0},
+      temp:{cur:0,max:0},
+      bp:{cur:0,max:0},
+      fed:{cur:0,max:0},
+      inspiration:false,
+    },
+    coins:{cp:0,sp:0,gp:0,pp:0},
+    stats:{
+      pb:2,
+      abilities:{STR:6,DEX:16,CON:13,INT:12,WIS:14,CHA:14},
+      skills: skillState
+    }
+  };
+}
+
+let state = loadState();
+
+/* ---------- load / save ---------- */
+function loadState(){
+  try{
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return defaultState();
+    const parsed = JSON.parse(raw);
+    // soft-merge (keep new keys)
+    const base = defaultState();
+    return deepMerge(base, parsed);
+  }catch(e){
+    return defaultState();
+  }
+}
+
+function deepMerge(base, add){
+  if(add === null || add === undefined) return base;
+  if(typeof base !== "object" || typeof add !== "object") return add;
+  const out = Array.isArray(base) ? base.slice() : {...base};
+  for(const k of Object.keys(add)){
+    if(k in base) out[k] = deepMerge(base[k], add[k]);
+    else out[k] = add[k];
+  }
+  return out;
+}
+
+let saveTimer = null;
+function markDirty(){
+  const pill = document.getElementById("savePill");
+  pill.textContent = "saving…";
+  pill.style.opacity = "0.9";
+  if(saveTimer) clearTimeout(saveTimer);
+  saveTimer = setTimeout(()=>{
+    try{
+      state.savedAt = Date.now();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      pill.textContent = "saved";
+      pill.style.opacity = "0.75";
+    }catch(e){
+      pill.textContent = "save failed";
+      pill.style.opacity = "1";
+    }
+  }, 60);
+}
+
+/* ---------- util ---------- */
+function clamp(n, lo, hi){ return Math.max(lo, Math.min(hi, n)); }
+function modFromScore(score){ return Math.floor((score - 10)/2); }
+function fmtMod(m){ return (m>=0?"+":"") + m; }
+
+function promptNumber(msg, current){
+  const v = prompt(msg, String(current ?? ""));
+  if(v === null) return null;
+  const num = Number(String(v).trim());
+  if(!Number.isFinite(num)) return null;
+  return Math.trunc(num);
+}
+
+/* ---------- render ---------- */
+function render(){
+  renderTrackers();
+  renderCoins();
+  renderInspiration();
+  renderStats();
+}
+
+function renderTrackers(){
+  const t = state.trackers;
+
+  // KPIs
+  setKpi("hp", `${t.hp.cur} / ${t.hp.max}`);
+  setKpi("temp", `${t.temp.cur} / ${t.temp.max}`);
+  setKpi("bp", `${t.bp.cur} / ${t.bp.max}`);
+  setKpi("fed", `${t.fed.cur} / ${t.fed.max}`);
+
+  // Bars
+  setBar("hp", ratio(t.hp.cur, t.hp.max));
+  setBar("temp", ratio(t.temp.cur, t.temp.max));
+  setBar("bp", ratio(t.bp.cur, t.bp.max));
+  setBar("fed", ratio(t.fed.cur, t.fed.max));
+}
+
+function ratio(cur, max){
+  if(!max || max <= 0) return 0;
+  return clamp(cur / max, 0, 1);
+}
+
+function setKpi(key, text){
+  const el = document.querySelector(`[data-kpi="${key}"]`);
+  if(el) el.textContent = text;
+}
+function setBar(key, r){
+  const el = document.querySelector(`[data-bar="${key}"]`);
+  if(el) el.style.width = (r*100).toFixed(1) + "%";
+}
+
+function renderInspiration(){
+  const on = !!state.trackers.inspiration;
+  document.getElementById("inspStatus").textContent = on ? "Yes" : "No";
+
+  const spark = document.getElementById("inspSpark");
+  spark.classList.toggle("on", on);
+
+  const card = document.getElementById("inspCard");
+  const btn  = document.getElementById("inspBtn");
+  card.classList.toggle("insp-on", on);
+  btn.classList.toggle("insp-on", on);
+}
+
+function renderCoins(){
+  for(const k of ["cp","sp","gp","pp"]){
+    const el = document.querySelector(`[data-solo="${k}"]`);
+    if(el) el.textContent = String(state.coins[k] ?? 0);
+  }
+}
+
+function renderStats(){
+  document.getElementById("pbVal").textContent = fmtMod(state.stats.pb);
+
+  // abilities
+  const grid = document.getElementById("abilityGrid");
+  grid.innerHTML = "";
+  const order = ["STR","DEX","CON","INT","WIS","CHA"];
+  for(const code of order){
+    const score = state.stats.abilities[code];
+    const m = modFromScore(score);
+    const box = document.createElement("div");
+    box.className = "abox";
+    box.innerHTML = `
+      <div class="left">
+        <div class="code">${code}</div>
+        <div class="score"><span class="chip" data-act="setAbility" data-abil="${code}">${score}</span></div>
+        <div class="mod">${fmtMod(m)}</div>
+      </div>
+      <div class="right">
+        <button class="secondary smallbtn" data-act="setAbility" data-abil="${code}">Score</button>
+      </div>
+    `;
+    grid.appendChild(box);
+  }
+
+  // skills
+  const sgrid = document.getElementById("skillsGrid");
+  sgrid.innerHTML = "";
+  for(const [name, abil] of SKILLS){
+    const ss = state.stats.skills[name] || {proficient:false, adj:0};
+    const baseMod = modFromScore(state.stats.abilities[abil]);
+    const prof = ss.proficient ? state.stats.pb : 0;
+    const total = baseMod + prof + (ss.adj || 0);
+
+    const row = document.createElement("div");
+    row.className = "skillRow";
+    row.innerHTML = `
+      <div class="left">
+        <div class="name">${name}</div>
+        <div class="meta">${abil} · ${ss.proficient ? "Proficient" : "Not proficient"} · Adj ${fmtMod(ss.adj||0)}</div>
+      </div>
+      <div class="right">
+        <button class="star ${ss.proficient ? "" : "off"}" data-act="toggleProf" data-skill="${escapeAttr(name)}">⭐</button>
+        <button class="secondary smallbtn" data-act="setAdj" data-skill="${escapeAttr(name)}">Adj</button>
+        <div class="chip valuechip">${fmtMod(total)}</div>
+      </div>
+    `;
+    sgrid.appendChild(row);
+  }
+}
+
+function escapeAttr(s){
+  return String(s).replace(/"/g,'&quot;');
+}
+
+/* ---------- actions ---------- */
+function incDecTracker(key, delta){
+  const t = state.trackers;
+  if(!(key in t)) return;
+  const obj = t[key];
+  obj.cur = clamp((obj.cur||0) + delta, 0, Math.max(0, obj.max||0));
+  markDirty(); renderTrackers();
+}
+
+function fillTracker(key){
+  const t = state.trackers[key];
+  if(!t) return;
+  t.cur = Math.max(0, t.max||0);
+  markDirty(); renderTrackers();
+}
+
+function clearTracker(key){
+  const t = state.trackers[key];
+  if(!t) return;
+  t.cur = 0;
+  markDirty(); renderTrackers();
+}
+
+function setMaxTracker(key){
+  const t = state.trackers[key];
+  if(!t) return;
+  const v = promptNumber(`Set MAX for ${key.toUpperCase()}`, t.max||0);
+  if(v === null) return;
+  const max = Math.max(0, v);
+  t.max = max;
+  // if cur > max clamp
+  t.cur = clamp(t.cur||0, 0, max);
+  markDirty(); renderTrackers();
+}
+
+function setPB(){
+  const v = promptNumber("Set proficiency bonus (PB). Example: 2", state.stats.pb||2);
+  if(v === null) return;
+  state.stats.pb = clamp(v, 0, 20);
+  markDirty(); renderStats();
+}
+
+function setAbility(code){
+  const cur = state.stats.abilities[code];
+  const v = promptNumber(`Set ${code} score`, cur);
+  if(v === null) return;
+  state.stats.abilities[code] = clamp(v, 1, 30);
+  markDirty(); renderStats();
+}
+
+function toggleProf(skill){
+  const ss = state.stats.skills[skill];
+  if(!ss) return;
+  ss.proficient = !ss.proficient;
+  markDirty(); renderStats();
+}
+
+function setAdj(skill){
+  const ss = state.stats.skills[skill];
+  if(!ss) return;
+  const v = promptNumber(`Set adjustment for ${skill} (can be negative)`, ss.adj||0);
+  if(v === null) return;
+  ss.adj = clamp(v, -20, 20);
+  markDirty(); renderStats();
+}
+
+function coinIncDec(key, delta){
+  state.coins[key] = Math.max(0, (state.coins[key]||0) + delta);
+  markDirty(); renderCoins();
+}
+
+function coinSet(key){
+  const v = promptNumber(`Set ${key.toUpperCase()} amount`, state.coins[key]||0);
+  if(v === null) return;
+  state.coins[key] = Math.max(0, v);
+  markDirty(); renderCoins();
+}
+
+function toggleInspiration(){
+  state.trackers.inspiration = !state.trackers.inspiration;
+  markDirty(); renderInspiration();
+}
+
+/* ---------- export / import / reset ---------- */
+function exportJSON(){
+  const blob = new Blob([JSON.stringify(state,null,2)], {type:"application/json"});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Count_Fuckoula_TapSheet_Save.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
+function importJSON(){
+  const input = document.createElement("input");
+  input.type = "file";
+  input.accept = "application/json";
+  input.onchange = ()=>{
+    const file = input.files && input.files[0];
+    if(!file) return;
+    const reader = new FileReader();
+    reader.onload = ()=>{
+      try{
+        const parsed = JSON.parse(String(reader.result||""));
+        state = deepMerge(defaultState(), parsed);
+        markDirty();
+        render();
+        alert("Imported. Saved to this device.");
+      }catch(e){
+        alert("Import failed. Not valid JSON.");
+      }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+}
+
+function resetAll(){
+  if(!confirm("Reset everything on this device?")) return;
+  state = defaultState();
+  try{ localStorage.removeItem(STORAGE_KEY); }catch(e){}
+  markDirty();
+  render();
+}
+
+/* ---------- event delegation ---------- */
+document.addEventListener("click", (e)=>{
+  const btn = e.target.closest("[data-act]");
+  if(!btn) return;
+  const act = btn.getAttribute("data-act");
+
+  // trackers
+  if(act === "inc" || act === "dec"){
+    const key = btn.getAttribute("data-key");
+    const step = Number(btn.getAttribute("data-step")||"1");
+    incDecTracker(key, (act==="inc"?+step:-step));
+    return;
+  }
+  if(act === "fill"){ fillTracker(btn.getAttribute("data-key")); return; }
+  if(act === "clear"){ clearTracker(btn.getAttribute("data-key")); return; }
+  if(act === "setMax"){ setMaxTracker(btn.getAttribute("data-key")); return; }
+
+  // inspiration
+  if(act === "toggleInsp"){ toggleInspiration(); return; }
+
+  // coins
+  if(act === "incSolo" || act === "decSolo"){
+    const key = btn.getAttribute("data-key");
+    const step = Number(btn.getAttribute("data-step")||"1");
+    coinIncDec(key, (act==="incSolo"?+step:-step));
+    return;
+  }
+  if(act === "setSolo"){ coinSet(btn.getAttribute("data-key")); return; }
+
+  // stats
+  if(act === "setPB"){ setPB(); return; }
+  if(act === "setAbility"){ setAbility(btn.getAttribute("data-abil")); return; }
+  if(act === "toggleProf"){ toggleProf(btn.getAttribute("data-skill").replace(/&quot;/g,'"')); return; }
+  if(act === "setAdj"){ setAdj(btn.getAttribute("data-skill").replace(/&quot;/g,'"')); return; }
+
+  // export/import/reset
+  if(act === "export"){ exportJSON(); return; }
+  if(act === "import"){ importJSON(); return; }
+  if(act === "reset"){ resetAll(); return; }
+});
+
+// Also allow tapping on ability score chip itself
+document.addEventListener("click", (e)=>{
+  const chip = e.target.closest('[data-act="setAbility"]');
+  if(!chip) return;
+  setAbility(chip.getAttribute("data-abil"));
+});
+
+/* ---------- init ---------- */
+render();
+markDirty(); // ensures structure saved for first run
+</script>
+</body>
+</html>
